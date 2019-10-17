@@ -63,28 +63,28 @@
 <meta name="keywords" content="Kotlin,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【译】Kotlin 类型层级结构一览">
-<meta property="og:url" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/index.html">
+<meta property="og:url" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/index.html">
 <meta property="og:site_name" content="DemoJameson&#39;s Blog">
 <meta property="og:description" content="作者 原文     Nat Pryce A Whirlwind Tour of the Kotlin Type Hierarchy    Kotlin 有大量优秀的语言文档和教程。但是我没有找到任何描述 Kotlin 类型层级结构（type hierarchy）是如何组成的文章。那真是太可惜了，因为我觉得这个类型系统很棒1。 关于 Kotlin 的类型层级结构只有很少的几条规则需要了解，这">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/entire-hierarchy.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-intrinsics.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-user-defined-type.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-user-defined-type-hierarchy.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/interfaces.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/parallel-nullable-and-non-nullable-hierarchies.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-string.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-hierarchy.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-unit.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nothing.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-nothing.png">
-<meta property="og:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/entire-hierarchy.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/entire-hierarchy.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-intrinsics.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-user-defined-type.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-user-defined-type-hierarchy.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/interfaces.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/parallel-nullable-and-non-nullable-hierarchies.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-string.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-hierarchy.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-unit.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nothing.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-nothing.png">
+<meta property="og:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/entire-hierarchy.png">
 <meta property="og:updated_time" content="2017-05-28T21:10:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【译】Kotlin 类型层级结构一览">
 <meta name="twitter:description" content="作者 原文     Nat Pryce A Whirlwind Tour of the Kotlin Type Hierarchy    Kotlin 有大量优秀的语言文档和教程。但是我没有找到任何描述 Kotlin 类型层级结构（type hierarchy）是如何组成的文章。那真是太可惜了，因为我觉得这个类型系统很棒1。 关于 Kotlin 的类型层级结构只有很少的几条规则需要了解，这">
-<meta name="twitter:image" content="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/entire-hierarchy.png">
-  <link rel="canonical" href="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/">
+<meta name="twitter:image" content="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/entire-hierarchy.png">
+  <link rel="canonical" href="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/">
 
 
 <script id="page-configurations">
@@ -279,7 +279,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/">
+    <link itemprop="mainEntityOfPage" href="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DemoJameson">
@@ -449,7 +449,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/" title="【译】Kotlin 类型层级结构一览">http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/</a>
+    <a href="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/" title="【译】Kotlin 类型层级结构一览">https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -766,7 +766,7 @@
       api: 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
       apikey: 'ZZaxq6dfjxnb7KCheqS8FtRecoMRToXqteIeESSSmJN85T2ewtgEwECHNMtfDIo6',
       shortname: 'demojameson',
-      url: "http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/",
+      url: "https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/",
       identifier: "2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/",
       title: '【译】Kotlin 类型层级结构一览',
     });

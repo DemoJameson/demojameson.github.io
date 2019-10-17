@@ -5,9 +5,9 @@
   <subtitle>LIFE IS A GAME , SO LEVEL UP</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.demojameson.com/"/>
+  <link href="https://www.demojameson.com/"/>
   <updated>2017-12-25T15:42:00.000Z</updated>
-  <id>http://www.demojameson.com/</id>
+  <id>https://www.demojameson.com/</id>
   
   <author>
     <name>DemoJameson</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>自动识别 B 站排行榜类视频中的 av 号</title>
-    <link href="http://www.demojameson.com/2017/05/30/bilibili-video-number-ocr/"/>
-    <id>http://www.demojameson.com/2017/05/30/bilibili-video-number-ocr/</id>
+    <link href="https://www.demojameson.com/2017/05/30/bilibili-video-number-ocr/"/>
+    <id>https://www.demojameson.com/2017/05/30/bilibili-video-number-ocr/</id>
     <published>2017-05-29T21:21:00.000Z</published>
     <updated>2017-12-25T15:42:00.000Z</updated>
     
@@ -32,21 +32,21 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="工具" scheme="http://www.demojameson.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://www.demojameson.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="JavaScript" scheme="http://www.demojameson.com/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://www.demojameson.com/tags/JavaScript/"/>
     
-      <category term="UserScript" scheme="http://www.demojameson.com/tags/UserScript/"/>
+      <category term="UserScript" scheme="https://www.demojameson.com/tags/UserScript/"/>
     
   </entry>
   
   <entry>
     <title>JSON 转换为 Kotlin Data Class 工具</title>
-    <link href="http://www.demojameson.com/2017/05/29/convert-json-to-kotlin-data-class/"/>
-    <id>http://www.demojameson.com/2017/05/29/convert-json-to-kotlin-data-class/</id>
+    <link href="https://www.demojameson.com/2017/05/29/convert-json-to-kotlin-data-class/"/>
+    <id>https://www.demojameson.com/2017/05/29/convert-json-to-kotlin-data-class/</id>
     <published>2017-05-29T08:13:00.000Z</published>
     <updated>2017-05-19T08:13:00.000Z</updated>
     
@@ -59,21 +59,21 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="Kotlin" scheme="http://www.demojameson.com/tags/Kotlin/"/>
+      <category term="Kotlin" scheme="https://www.demojameson.com/tags/Kotlin/"/>
     
-      <category term="Java" scheme="http://www.demojameson.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.demojameson.com/tags/Java/"/>
     
-      <category term="JSON" scheme="http://www.demojameson.com/tags/JSON/"/>
+      <category term="JSON" scheme="https://www.demojameson.com/tags/JSON/"/>
     
   </entry>
   
   <entry>
     <title>【译】Kotlin 类型层级结构一览</title>
-    <link href="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/"/>
-    <id>http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/</id>
+    <link href="https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/"/>
+    <id>https://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/</id>
     <published>2017-05-28T21:10:00.000Z</published>
     <updated>2017-05-28T21:10:00.000Z</updated>
     
@@ -101,19 +101,19 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="Kotlin" scheme="http://www.demojameson.com/tags/Kotlin/"/>
+      <category term="Kotlin" scheme="https://www.demojameson.com/tags/Kotlin/"/>
     
-      <category term="Java" scheme="http://www.demojameson.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.demojameson.com/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>Java 与 Kotlin 中各种 findViewById 的方式</title>
-    <link href="http://www.demojameson.com/2017/05/22/best-way-to-find-view-by-id/"/>
-    <id>http://www.demojameson.com/2017/05/22/best-way-to-find-view-by-id/</id>
+    <link href="https://www.demojameson.com/2017/05/22/best-way-to-find-view-by-id/"/>
+    <id>https://www.demojameson.com/2017/05/22/best-way-to-find-view-by-id/</id>
     <published>2017-05-21T16:09:00.000Z</published>
     <updated>2017-05-21T16:09:00.000Z</updated>
     
@@ -127,21 +127,21 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="Android" scheme="http://www.demojameson.com/tags/Android/"/>
+      <category term="Android" scheme="https://www.demojameson.com/tags/Android/"/>
     
-      <category term="Kotlin" scheme="http://www.demojameson.com/tags/Kotlin/"/>
+      <category term="Kotlin" scheme="https://www.demojameson.com/tags/Kotlin/"/>
     
-      <category term="Java" scheme="http://www.demojameson.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.demojameson.com/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>游戏《死亡细胞 Dead Cells》道具敌人关卡速查表</title>
-    <link href="http://www.demojameson.com/2017/05/21/dead-cells-cheat-sheet/"/>
-    <id>http://www.demojameson.com/2017/05/21/dead-cells-cheat-sheet/</id>
+    <link href="https://www.demojameson.com/2017/05/21/dead-cells-cheat-sheet/"/>
+    <id>https://www.demojameson.com/2017/05/21/dead-cells-cheat-sheet/</id>
     <published>2017-05-20T17:03:00.000Z</published>
     <updated>2017-12-25T15:39:00.000Z</updated>
     
@@ -154,19 +154,19 @@
     
     </summary>
     
-      <category term="游戏" scheme="http://www.demojameson.com/categories/%E6%B8%B8%E6%88%8F/"/>
+      <category term="游戏" scheme="https://www.demojameson.com/categories/%E6%B8%B8%E6%88%8F/"/>
     
     
-      <category term="dead cells" scheme="http://www.demojameson.com/tags/dead-cells/"/>
+      <category term="dead cells" scheme="https://www.demojameson.com/tags/dead-cells/"/>
     
-      <category term="javascript" scheme="http://www.demojameson.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://www.demojameson.com/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>朋友，你听说过即刻吗？</title>
-    <link href="http://www.demojameson.com/2017/05/11/did-you-hear-of-jike/"/>
-    <id>http://www.demojameson.com/2017/05/11/did-you-hear-of-jike/</id>
+    <link href="https://www.demojameson.com/2017/05/11/did-you-hear-of-jike/"/>
+    <id>https://www.demojameson.com/2017/05/11/did-you-hear-of-jike/</id>
     <published>2017-05-10T16:43:00.000Z</published>
     <updated>2017-05-27T09:43:00.000Z</updated>
     
@@ -184,17 +184,17 @@
     
     </summary>
     
-      <category term="软件" scheme="http://www.demojameson.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="软件" scheme="https://www.demojameson.com/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-      <category term="即刻" scheme="http://www.demojameson.com/tags/%E5%8D%B3%E5%88%BB/"/>
+      <category term="即刻" scheme="https://www.demojameson.com/tags/%E5%8D%B3%E5%88%BB/"/>
     
   </entry>
   
   <entry>
     <title>无需越狱任意摆放 iPhone 主屏幕应用图标</title>
-    <link href="http://www.demojameson.com/2017/04/11/generate-ios-transparent-icon/"/>
-    <id>http://www.demojameson.com/2017/04/11/generate-ios-transparent-icon/</id>
+    <link href="https://www.demojameson.com/2017/04/11/generate-ios-transparent-icon/"/>
+    <id>https://www.demojameson.com/2017/04/11/generate-ios-transparent-icon/</id>
     <published>2017-04-11T10:00:00.000Z</published>
     <updated>2017-04-11T10:00:00.000Z</updated>
     
@@ -207,21 +207,21 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="iOS" scheme="http://www.demojameson.com/tags/iOS/"/>
+      <category term="iOS" scheme="https://www.demojameson.com/tags/iOS/"/>
     
-      <category term="越狱" scheme="http://www.demojameson.com/tags/%E8%B6%8A%E7%8B%B1/"/>
+      <category term="越狱" scheme="https://www.demojameson.com/tags/%E8%B6%8A%E7%8B%B1/"/>
     
-      <category term="工具" scheme="http://www.demojameson.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://www.demojameson.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>黑暗之魂受死版繁体中文文本校正补丁</title>
-    <link href="http://www.demojameson.com/2016/10/17/darksouls-revised-text/"/>
-    <id>http://www.demojameson.com/2016/10/17/darksouls-revised-text/</id>
+    <link href="https://www.demojameson.com/2016/10/17/darksouls-revised-text/"/>
+    <id>https://www.demojameson.com/2016/10/17/darksouls-revised-text/</id>
     <published>2016-10-17T07:12:00.000Z</published>
     <updated>2016-10-17T07:12:03.000Z</updated>
     
@@ -234,25 +234,25 @@
     
     </summary>
     
-      <category term="游戏" scheme="http://www.demojameson.com/categories/%E6%B8%B8%E6%88%8F/"/>
+      <category term="游戏" scheme="https://www.demojameson.com/categories/%E6%B8%B8%E6%88%8F/"/>
     
     
-      <category term="darksouls" scheme="http://www.demojameson.com/tags/darksouls/"/>
+      <category term="darksouls" scheme="https://www.demojameson.com/tags/darksouls/"/>
     
-      <category term="黑暗之魂" scheme="http://www.demojameson.com/tags/%E9%BB%91%E6%9A%97%E4%B9%8B%E9%AD%82/"/>
+      <category term="黑暗之魂" scheme="https://www.demojameson.com/tags/%E9%BB%91%E6%9A%97%E4%B9%8B%E9%AD%82/"/>
     
-      <category term="受苦" scheme="http://www.demojameson.com/tags/%E5%8F%97%E8%8B%A6/"/>
+      <category term="受苦" scheme="https://www.demojameson.com/tags/%E5%8F%97%E8%8B%A6/"/>
     
-      <category term="传火" scheme="http://www.demojameson.com/tags/%E4%BC%A0%E7%81%AB/"/>
+      <category term="传火" scheme="https://www.demojameson.com/tags/%E4%BC%A0%E7%81%AB/"/>
     
-      <category term="MOD" scheme="http://www.demojameson.com/tags/MOD/"/>
+      <category term="MOD" scheme="https://www.demojameson.com/tags/MOD/"/>
     
   </entry>
   
   <entry>
     <title>黑暗之魂受死版繁体中文文字高清 MOD</title>
-    <link href="http://www.demojameson.com/2016/10/17/darksouls-hd-text/"/>
-    <id>http://www.demojameson.com/2016/10/17/darksouls-hd-text/</id>
+    <link href="https://www.demojameson.com/2016/10/17/darksouls-hd-text/"/>
+    <id>https://www.demojameson.com/2016/10/17/darksouls-hd-text/</id>
     <published>2016-10-17T06:42:03.000Z</published>
     <updated>2016-10-17T06:42:03.000Z</updated>
     
@@ -265,25 +265,25 @@
     
     </summary>
     
-      <category term="游戏" scheme="http://www.demojameson.com/categories/%E6%B8%B8%E6%88%8F/"/>
+      <category term="游戏" scheme="https://www.demojameson.com/categories/%E6%B8%B8%E6%88%8F/"/>
     
     
-      <category term="darksouls" scheme="http://www.demojameson.com/tags/darksouls/"/>
+      <category term="darksouls" scheme="https://www.demojameson.com/tags/darksouls/"/>
     
-      <category term="黑暗之魂" scheme="http://www.demojameson.com/tags/%E9%BB%91%E6%9A%97%E4%B9%8B%E9%AD%82/"/>
+      <category term="黑暗之魂" scheme="https://www.demojameson.com/tags/%E9%BB%91%E6%9A%97%E4%B9%8B%E9%AD%82/"/>
     
-      <category term="受苦" scheme="http://www.demojameson.com/tags/%E5%8F%97%E8%8B%A6/"/>
+      <category term="受苦" scheme="https://www.demojameson.com/tags/%E5%8F%97%E8%8B%A6/"/>
     
-      <category term="传火" scheme="http://www.demojameson.com/tags/%E4%BC%A0%E7%81%AB/"/>
+      <category term="传火" scheme="https://www.demojameson.com/tags/%E4%BC%A0%E7%81%AB/"/>
     
-      <category term="MOD" scheme="http://www.demojameson.com/tags/MOD/"/>
+      <category term="MOD" scheme="https://www.demojameson.com/tags/MOD/"/>
     
   </entry>
   
   <entry>
     <title>Genymotion 安装记 —— 曾经最快的 Android 模拟器</title>
-    <link href="http://www.demojameson.com/2015/12/15/genymotion-bug/"/>
-    <id>http://www.demojameson.com/2015/12/15/genymotion-bug/</id>
+    <link href="https://www.demojameson.com/2015/12/15/genymotion-bug/"/>
+    <id>https://www.demojameson.com/2015/12/15/genymotion-bug/</id>
     <published>2015-12-15T09:42:03.000Z</published>
     <updated>2015-12-16T07:33:05.000Z</updated>
     
@@ -300,23 +300,23 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="安卓" scheme="http://www.demojameson.com/tags/%E5%AE%89%E5%8D%93/"/>
+      <category term="安卓" scheme="https://www.demojameson.com/tags/%E5%AE%89%E5%8D%93/"/>
     
-      <category term="Android" scheme="http://www.demojameson.com/tags/Android/"/>
+      <category term="Android" scheme="https://www.demojameson.com/tags/Android/"/>
     
-      <category term="bug" scheme="http://www.demojameson.com/tags/bug/"/>
+      <category term="bug" scheme="https://www.demojameson.com/tags/bug/"/>
     
-      <category term="genymotion" scheme="http://www.demojameson.com/tags/genymotion/"/>
+      <category term="genymotion" scheme="https://www.demojameson.com/tags/genymotion/"/>
     
   </entry>
   
   <entry>
     <title>曾经造过的轮子——《以撒的结合》Roll 不崩插件</title>
-    <link href="http://www.demojameson.com/2015/12/04/binding-of-isaac-plugin/"/>
-    <id>http://www.demojameson.com/2015/12/04/binding-of-isaac-plugin/</id>
+    <link href="https://www.demojameson.com/2015/12/04/binding-of-isaac-plugin/"/>
+    <id>https://www.demojameson.com/2015/12/04/binding-of-isaac-plugin/</id>
     <published>2015-12-04T13:18:26.000Z</published>
     <updated>2016-10-17T06:34:18.000Z</updated>
     
@@ -330,25 +330,25 @@
     
     </summary>
     
-      <category term="游戏" scheme="http://www.demojameson.com/categories/%E6%B8%B8%E6%88%8F/"/>
+      <category term="游戏" scheme="https://www.demojameson.com/categories/%E6%B8%B8%E6%88%8F/"/>
     
     
-      <category term="以撒的结合" scheme="http://www.demojameson.com/tags/%E4%BB%A5%E6%92%92%E7%9A%84%E7%BB%93%E5%90%88/"/>
+      <category term="以撒的结合" scheme="https://www.demojameson.com/tags/%E4%BB%A5%E6%92%92%E7%9A%84%E7%BB%93%E5%90%88/"/>
     
-      <category term="游戏" scheme="http://www.demojameson.com/tags/%E6%B8%B8%E6%88%8F/"/>
+      <category term="游戏" scheme="https://www.demojameson.com/tags/%E6%B8%B8%E6%88%8F/"/>
     
-      <category term="插件" scheme="http://www.demojameson.com/tags/%E6%8F%92%E4%BB%B6/"/>
+      <category term="插件" scheme="https://www.demojameson.com/tags/%E6%8F%92%E4%BB%B6/"/>
     
-      <category term="轮子" scheme="http://www.demojameson.com/tags/%E8%BD%AE%E5%AD%90/"/>
+      <category term="轮子" scheme="https://www.demojameson.com/tags/%E8%BD%AE%E5%AD%90/"/>
     
-      <category term="isaac" scheme="http://www.demojameson.com/tags/isaac/"/>
+      <category term="isaac" scheme="https://www.demojameson.com/tags/isaac/"/>
     
   </entry>
   
   <entry>
     <title>随机莫名无法输入中文的问题 “IME 已停用” 治标法</title>
-    <link href="http://www.demojameson.com/2015/12/02/windows-ime-stop/"/>
-    <id>http://www.demojameson.com/2015/12/02/windows-ime-stop/</id>
+    <link href="https://www.demojameson.com/2015/12/02/windows-ime-stop/"/>
+    <id>https://www.demojameson.com/2015/12/02/windows-ime-stop/</id>
     <published>2015-12-02T12:40:34.000Z</published>
     <updated>2015-12-03T09:07:51.000Z</updated>
     
@@ -361,19 +361,19 @@
     
     </summary>
     
-      <category term="Windows" scheme="http://www.demojameson.com/categories/Windows/"/>
+      <category term="Windows" scheme="https://www.demojameson.com/categories/Windows/"/>
     
     
-      <category term="Windows" scheme="http://www.demojameson.com/tags/Windows/"/>
+      <category term="Windows" scheme="https://www.demojameson.com/tags/Windows/"/>
     
-      <category term="系统" scheme="http://www.demojameson.com/tags/%E7%B3%BB%E7%BB%9F/"/>
+      <category term="系统" scheme="https://www.demojameson.com/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>搭建使用 Hexo 的些许经验</title>
-    <link href="http://www.demojameson.com/2015/11/26/about-hexo/"/>
-    <id>http://www.demojameson.com/2015/11/26/about-hexo/</id>
+    <link href="https://www.demojameson.com/2015/11/26/about-hexo/"/>
+    <id>https://www.demojameson.com/2015/11/26/about-hexo/</id>
     <published>2015-11-25T20:43:47.000Z</published>
     <updated>2015-11-29T05:55:52.000Z</updated>
     
@@ -387,19 +387,19 @@
     
     </summary>
     
-      <category term="博客" scheme="http://www.demojameson.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://www.demojameson.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="Blog" scheme="http://www.demojameson.com/tags/Blog/"/>
+      <category term="Blog" scheme="https://www.demojameson.com/tags/Blog/"/>
     
-      <category term="Hexo" scheme="http://www.demojameson.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://www.demojameson.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>[译] 为什么 Kotlin 是我下一门要使用的语言</title>
-    <link href="http://www.demojameson.com/2015/11/08/why-kotlin/"/>
-    <id>http://www.demojameson.com/2015/11/08/why-kotlin/</id>
+    <link href="https://www.demojameson.com/2015/11/08/why-kotlin/"/>
+    <id>https://www.demojameson.com/2015/11/08/why-kotlin/</id>
     <published>2015-11-08T12:49:11.000Z</published>
     <updated>2015-12-11T03:02:06.000Z</updated>
     
@@ -428,23 +428,23 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.demojameson.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="Android" scheme="http://www.demojameson.com/tags/Android/"/>
+      <category term="Android" scheme="https://www.demojameson.com/tags/Android/"/>
     
-      <category term="Kotlin" scheme="http://www.demojameson.com/tags/Kotlin/"/>
+      <category term="Kotlin" scheme="https://www.demojameson.com/tags/Kotlin/"/>
     
-      <category term="Java" scheme="http://www.demojameson.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.demojameson.com/tags/Java/"/>
     
-      <category term="JVM" scheme="http://www.demojameson.com/tags/JVM/"/>
+      <category term="JVM" scheme="https://www.demojameson.com/tags/JVM/"/>
     
   </entry>
   
   <entry>
     <title>在 OpenShift 上免费搭建 Ghost 博客的过程</title>
-    <link href="http://www.demojameson.com/2015/08/09/publish-ghost-blog/"/>
-    <id>http://www.demojameson.com/2015/08/09/publish-ghost-blog/</id>
+    <link href="https://www.demojameson.com/2015/08/09/publish-ghost-blog/"/>
+    <id>https://www.demojameson.com/2015/08/09/publish-ghost-blog/</id>
     <published>2015-08-09T12:49:11.000Z</published>
     <updated>2017-07-21T07:15:12.062Z</updated>
     
@@ -460,12 +460,12 @@
     
     </summary>
     
-      <category term="博客" scheme="http://www.demojameson.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://www.demojameson.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="Blog" scheme="http://www.demojameson.com/tags/Blog/"/>
+      <category term="Blog" scheme="https://www.demojameson.com/tags/Blog/"/>
     
-      <category term="Ghost" scheme="http://www.demojameson.com/tags/Ghost/"/>
+      <category term="Ghost" scheme="https://www.demojameson.com/tags/Ghost/"/>
     
   </entry>
   
