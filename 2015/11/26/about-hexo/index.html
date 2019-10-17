@@ -22,6 +22,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -32,10 +33,10 @@
     version: '7.4.1',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":"default"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
     lazyload: false,
     pangu: true,
@@ -332,6 +333,14 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
   
   <span class="post-meta-item">
     
@@ -369,14 +378,8 @@
 <h3 id="同时兼顾本地编辑时图片的预览以及网页的正常显示"><a href="#同时兼顾本地编辑时图片的预览以及网页的正常显示" class="headerlink" title="同时兼顾本地编辑时图片的预览以及网页的正常显示"></a>同时兼顾本地编辑时图片的预览以及网页的正常显示</h3><p>Markdown 中引用网络上绝对地址的图片即可，可<a href="http://yotuku.cn/" target="_blank" rel="noopener">使用七牛云存储当图床</a>。</p>
 <p>不过最终我还是选择了直接将文章中的图片上传到 GitHub 中（本地编辑无法预览图片），如果文章中图片使用的是相对路径需要<a href="https://hexo.io/docs/asset-folders.html" target="_blank" rel="noopener">进行一些变动</a></p>
 <h3 id="百度无法抓取-GitHub-Pages-内容的问题"><a href="#百度无法抓取-GitHub-Pages-内容的问题" class="headerlink" title="百度无法抓取 GitHub Pages 内容的问题"></a>百度无法抓取 GitHub Pages 内容的问题</h3><p>GitHub 禁止了百度的爬虫，<a href="http://jerryzou.com/posts/feasibility-of-allowing-baiduSpider-for-Github-Pages/" target="_blank" rel="noopener">解决方法挺多</a>，一箭双雕的方案是同时部署到 GitHub 以及 GitCafe，<a href="http://godera.org/2015/03/16/Mac%E4%B8%8B%E7%A8%8B%E5%BA%8F%E5%91%98%E5%8D%9A%E5%AE%A2%E4%B9%8BHexo-GitHub-Pages-GitCafe-Pages-DNSPod/" target="_blank" rel="noopener">通过 DNSPod 将国内线路解析到 GitCafe</a>。然并卵，百度可以抓取到 sitemap，抓取诊断也没有问题，但是索引量依旧是零，哈哈哈哈~</p>
-<pre><code># _config.yml 文件同时部署到 GitHub 与 GitCafe 的配置
-deploy:
-  type: git
-  message: [message]
-  repo:
-    github: &lt;repository url&gt;,[branch]
-    gitcafe: &lt;repository url&gt;,[branch]
-</code></pre><h3 id="从根域名自动跳转到-www-子域名"><a href="#从根域名自动跳转到-www-子域名" class="headerlink" title="从根域名自动跳转到 www 子域名"></a>从根域名自动跳转到 www 子域名</h3><p>GitHub 会帮你自动跳转，但是 GitCafe 需要自己到域名解析服务商设置，可用 DNSPod 的显性转发功能（域名托管 30 天后才可使用该功能）</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta"># _config.yml 文件同时部署到 GitHub 与 GitCafe 的配置</span></span><br><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  message:</span> [message]</span><br><span class="line"><span class="symbol">  repo:</span></span><br><span class="line"><span class="symbol">    github:</span> <span class="params">&lt;repository url&gt;</span>,[branch]</span><br><span class="line"><span class="symbol">    gitcafe:</span> <span class="params">&lt;repository url&gt;</span>,[branch]</span><br></pre></td></tr></table></figure>
+<h3 id="从根域名自动跳转到-www-子域名"><a href="#从根域名自动跳转到-www-子域名" class="headerlink" title="从根域名自动跳转到 www 子域名"></a>从根域名自动跳转到 www 子域名</h3><p>GitHub 会帮你自动跳转，但是 GitCafe 需要自己到域名解析服务商设置，可用 DNSPod 的显性转发功能（域名托管 30 天后才可使用该功能）</p>
 <h3 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h3><ul>
 <li><a href="https://github.com/hexojs/hexo-browsersync" target="_blank" rel="noopener">hexo-browsersync</a> 本地调试时修改文章后可在浏览器马上看到效果</li>
 <li><a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a> 配置好后可以很方便的更新文章到 GitHub Pages</li>
@@ -394,6 +397,24 @@ deploy:
     
     
         
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>DemoJameson
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.demojameson.com/2015/11/26/about-hexo/" title="搭建使用 Hexo 的些许经验">http://www.demojameson.com/2015/11/26/about-hexo/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
       
 
       <footer class="post-footer">
@@ -498,7 +519,7 @@ deploy:
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -556,9 +577,14 @@ deploy:
       
         
       
-        <a href="https://space.bilibili.com/21222" title="B 站 &rarr; https://space.bilibili.com/21222" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv-retro"></i>B 站</a>
+        <a href="https://space.bilibili.com/21222" title="B 站 &rarr; https://space.bilibili.com/21222" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>B 站</a>
       </span>
     
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
 
@@ -590,8 +616,34 @@ deploy:
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1
   </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5da6e60de5263c3f" async="async"></script>
+  </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+  
+</div>
 
 
 
@@ -611,6 +663,8 @@ deploy:
 
   
   <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>

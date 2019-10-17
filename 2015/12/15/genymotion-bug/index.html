@@ -22,6 +22,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -32,10 +33,10 @@
     version: '7.4.1',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":"default"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
     lazyload: false,
     pangu: true,
@@ -332,6 +333,14 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
   
   <span class="post-meta-item">
     
@@ -377,16 +386,10 @@
 <li>运行后弹错误提示 balabala 的，然后我打开 VirtualBox 查看详细信息，具体错误信息没有记录下来。Google 一发后没有找到解决方案，我就将 VirtualBox 从 5.0.4 升级到 5.0.10。</li>
 <li>可惜还是不能运行，不过错误信息变成了 <code>Unable to load R3 module</code>，从网络中找到了<a href="http://tieba.baidu.com/p/3369724797" target="_blank" rel="noopener">解决方案</a>，大意是因为破解了 uxtheme.dll 文件所以出错了云云，借用工具将其还原即可</li>
 <li><p>今天开机又出现刚一开始的错误了：</p>
-<pre><code>    The virtual machine &#39;Custom Phone - 4.1.1 - API 16 - 768x1280&#39; has terminated unexpectedly during startup with exit code -1073741819 (0xc0000005).
-
-    返回代码:    E_FAIL (0x80004005)
-    组件:        MachineWrap
-    界面:        IMachine {f30138d4-e5ea-4b3a-8858-a059de4c93fd}
-</code></pre><p> 经过搜索发现是 Mactype 的锅，也就表明一开始升级 VirtualBox 并不能解决问题，正确的姿势应该是将 VirtualBox 的相关进程从 Mactype 中排除，将以下内容添加到配置文件中：</p>
-<pre><code> [UnloadDll]
- VBoxSVC.exe
- VirtualBox.exe
-</code></pre></li>
+ <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">The virtual machine <span class="string">'Custom Phone - 4.1.1 - API 16 - 768x1280'</span> has terminated unexpectedly during startup with <span class="keyword">exit</span> code -<span class="number">1073741819</span> (<span class="number">0</span>xc0000005).</span><br><span class="line"></span><br><span class="line">返回代码:    E_FAIL (<span class="number">0</span>x80004005)</span><br><span class="line">组件:        MachineWrap</span><br><span class="line">界面:        IMachine &#123;f30138d4-e5ea-<span class="number">4</span>b3a-<span class="number">8858</span>-a059de4c93fd&#125;</span><br></pre></td></tr></table></figure>
+<p> 经过搜索发现是 Mactype 的锅，也就表明一开始升级 VirtualBox 并不能解决问题，正确的姿势应该是将 VirtualBox 的相关进程从 Mactype 中排除，将以下内容添加到配置文件中：</p>
+ <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[UnloadDll]</span></span><br><span class="line"><span class="selector-tag">VBoxSVC</span><span class="selector-class">.exe</span></span><br><span class="line"><span class="selector-tag">VirtualBox</span><span class="selector-class">.exe</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h3 id="更新记录"><a href="#更新记录" class="headerlink" title="更新记录"></a>更新记录</h3><ul>
 <li>2015 年 12 月 15 日 - 发布</li>
@@ -400,6 +403,24 @@
     
     
         
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>DemoJameson
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.demojameson.com/2015/12/15/genymotion-bug/" title="Genymotion 安装记 —— 曾经最快的 Android 模拟器">http://www.demojameson.com/2015/12/15/genymotion-bug/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
       
 
       <footer class="post-footer">
@@ -508,7 +529,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -566,9 +587,14 @@
       
         
       
-        <a href="https://space.bilibili.com/21222" title="B 站 &rarr; https://space.bilibili.com/21222" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv-retro"></i>B 站</a>
+        <a href="https://space.bilibili.com/21222" title="B 站 &rarr; https://space.bilibili.com/21222" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>B 站</a>
       </span>
     
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
 
@@ -600,8 +626,34 @@
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1
   </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5da6e60de5263c3f" async="async"></script>
+  </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+  
+</div>
 
 
 
@@ -621,6 +673,8 @@
 
   
   <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>

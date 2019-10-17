@@ -22,6 +22,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -32,10 +33,10 @@
     version: '7.4.1',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":"default"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
     lazyload: false,
     pangu: true,
@@ -331,6 +332,14 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
   
   <span class="post-meta-item">
     
@@ -382,50 +391,25 @@
 <img src="/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-intrinsics.png">
 <p><code>Any</code> 相当于 Java 中的 <code>Object</code> 类型。与 Java 不同的是 Kotlin 不区分<strong>原始类型</strong>（primitive type）和其它的类型。它们都是同一类型层级结构的一部分。</p>
 <p>如果定义了一个没有指定父类型的类型，则该类型将是 <code>Any</code> 的直接子类型。</p>
-<pre><code class="kotlin">class Fruit(val ripeness: Double)
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fruit</span></span>(<span class="keyword">val</span> ripeness: <span class="built_in">Double</span>)</span><br></pre></td></tr></table></figure>
 <img src="/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-user-defined-type.png">
 <p>如果你为定义的类型指定了父类型，则该父类型将是新类型的直接父类型，并且新类型的最终祖先为 <code>Any</code>。</p>
-<pre><code class="kotlin">abstract class Fruit(val ripeness: Double)
-class Banana(ripeness: Double, val bendiness: Double): 
-    Fruit(ripeness)
-class Peach(ripeness: Double, val fuzziness: Double): 
-    Fruit(ripeness)
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span></span>(<span class="keyword">val</span> ripeness: <span class="built_in">Double</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Banana</span></span>(ripeness: <span class="built_in">Double</span>, <span class="keyword">val</span> bendiness: <span class="built_in">Double</span>): </span><br><span class="line">    Fruit(ripeness)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Peach</span></span>(ripeness: <span class="built_in">Double</span>, <span class="keyword">val</span> fuzziness: <span class="built_in">Double</span>): </span><br><span class="line">    Fruit(ripeness)</span><br></pre></td></tr></table></figure>
 <img src="/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/any-user-defined-type-hierarchy.png">
 <p>如果你的类型实现了多个接口，那么它将具有多个直接的父类型，而 <code>Any</code> 同样是最终的祖先。</p>
-<pre><code class="kotlin">interface ICanGoInASalad
-interface ICanBeSunDried
-
-class Tomato(ripeness: Double): 
-    Fruit(ripeness), 
-    ICanGoInASalad, 
-    ICanBeSunDried 
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">ICanGoInASalad</span></span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">ICanBeSunDried</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tomato</span></span>(ripeness: <span class="built_in">Double</span>): </span><br><span class="line">    Fruit(ripeness), </span><br><span class="line">    ICanGoInASalad, </span><br><span class="line">    ICanBeSunDried</span><br></pre></td></tr></table></figure>
 <img src="/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/interfaces.png">
 <p>Kotlin 的类型检查器实施父类型/子类型关系。</p>
 <p>例如你可以将子类型值存储到父类型变量中：</p>
-<pre><code class="kotlin">var f: Fruit = Banana(bendiness=0.5)
-f = Peach(fuzziness=0.8)
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> f: Fruit = Banana(bendiness=<span class="number">0.5</span>)</span><br><span class="line">f = Peach(fuzziness=<span class="number">0.8</span>)</span><br></pre></td></tr></table></figure>
 <p>但是你不能将父类型值存储到子类型变量中：</p>
-<pre><code class="kotlin">val b = Banana(bendiness=0.5)
-val f: Fruit = b
-val b2: Banana = f
-// Error: Type mismatch: inferred type is Fruit but Banana was expected 
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> b = Banana(bendiness=<span class="number">0.5</span>)</span><br><span class="line"><span class="keyword">val</span> f: Fruit = b</span><br><span class="line"><span class="keyword">val</span> b2: Banana = f</span><br><span class="line"><span class="comment">// Error: Type mismatch: inferred type is Fruit but Banana was expected</span></span><br></pre></td></tr></table></figure>
 <h1 id="可空类型（Nullable-Types）"><a href="#可空类型（Nullable-Types）" class="headerlink" title="可空类型（Nullable Types）"></a>可空类型（Nullable Types）</h1><p>与 Java 不同，Kotlin 区分<strong>非空</strong>（non-null）和<strong>可空</strong>（nullable）类型。到目前为止，我们看到的类型都是<strong>非空类型</strong>，Kotlin 不允许 <code>null</code> 作为这些类型的值。访问<strong>非空类型</strong>的变量将永远不会抛出空指针异常。</p>
 <p>类型检查器拒绝尝试在非空类型上使用 <code>null</code> 或可空类型的代码。</p>
 <p>例如：</p>
-<pre><code class="kotlin">var s : String = null
-// Error: Null can not be a value of a non-null type String
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> s : String = <span class="literal">null</span></span><br><span class="line"><span class="comment">// Error: Null can not be a value of a non-null type String</span></span><br></pre></td></tr></table></figure>
 <p>如果一个变量存储的值可能为空，则需要使用与值对应的可空类型。例如 <code>String?</code> 类型是与 <code>String</code> 对应的可空类型，<code>String?</code> 类型的变量可以存储任意的 <code>String</code> 值以及 <code>null</code>。</p>
-<pre><code class="kotlin">var s : String? = null
-s = &quot;foo&quot;
-s = null
-s = bar
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> s : String? = <span class="literal">null</span></span><br><span class="line">s = <span class="string">"foo"</span></span><br><span class="line">s = <span class="literal">null</span></span><br><span class="line">s = bar</span><br></pre></td></tr></table></figure>
 <p>类型检查器能确保你在使用一个可空类型的变量前不会忘记检查是否非空。Kotlin 提供了一些操作符用以便捷的使用可空类型。有关例子请参阅 <a href="https://kotlinlang.org/docs/reference/null-safety.html" target="_blank" rel="noopener">Kotlin 语言文档的 Null Safety 部分</a>。</p>
 <p>可空类型具有与对应的非空类型相同的层级结构。例如 <code>String</code> 是 <code>Any</code> 的子类型，则 <code>String?</code> 是 <code>Any?</code> 的子类型；<code>Banana</code> 是 <code>Fruit</code> 的子类型，则 <code>Banana?</code> 是 <code>Fruit?</code> 的子类型。</p>
 <p> <code>Any</code> 是非空类型层级结构的顶层，<code>Any?</code> 则是可空类型层级结构的顶层。因为 <code>Any?</code> 是 <code>Any</code> 的父类型，所以 <code>Any?</code> 是 Kotlin 类型层级结构的最顶端。</p>
@@ -437,12 +421,7 @@ s = bar
 <img src="/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-hierarchy.png">
 <h1 id="Unit"><a href="#Unit" class="headerlink" title="Unit"></a>Unit</h1><p>Kotlin 是一种表达式导向的语言，所有流程控制语句都是表达式。它没有 Java 和 C 中的 <code>void</code> 函数，函数总是会返回一个值。通常我们为了副作用（side effect）而调用的那些没有实际计算任何东西的函数，将会返回 <code>Unit</code>——一种只有一个值的类型。</p>
 <p>大多数情况下，你不需要明确指定 <code>Unit</code> 作为返回类型或从函数返回 <code>Unit</code>。如果编写的函数具有块代码体，并且不指定返回类型，则编译器会将其视为返回 <code>Unit</code> 类型，否则编译器会使用推断的类型。</p>
-<pre><code class="kotlin">fun example() {
-    println(&quot;block body and no explicit return type, so returns Unit&quot;)
-}
-
-val u: Unit = example()
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">example</span><span class="params">()</span></span> &#123;</span><br><span class="line">    println(<span class="string">"block body and no explicit return type, so returns Unit"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> u: <span class="built_in">Unit</span> = example()</span><br></pre></td></tr></table></figure>
 <p><code>Unit</code> 并没什么特别之处。就像任何其他类型一样，它是 <code>Any</code> 的子类型，而 <code>Unit?</code> 是 <code>Any?</code> 的子类型。</p>
 <img src="/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/nullable-unit.png">
 <p>然而 <code>Unit?</code> 类型却是一个奇怪的特殊例子，这是 Kotlin 的类型系统一致性的结果。<code>Unit?</code> 类型只有两个值：<code>Unit</code> 单例和 <code>null</code>。我从来没有发现需要明确使用 <code>Unit?</code> 类型的地方，但是在类型系统中没有特殊的 <code>void</code> 这一事实，使得处理各种函数泛型变得更加容易。</p>
@@ -454,32 +433,13 @@ val u: Unit = example()
 <p>什么样的表达式类型为 <code>Nothing</code> 呢？<a href="https://kotlinlang.org/docs/reference/grammar.html#jump" target="_blank" rel="noopener">流程控制中与跳转相关的表达式</a>。</p>
 <p>例如 <code>throw</code> 关键字打断表达式的计算，并从函数中抛出异常。因此 <code>throw</code> 就是 <code>Nothing</code> 类型的表达式。</p>
 <p>通过将 <code>Nothing</code> 作为所有类型的子类型，类型系统允许程序中的任何表达求值失败。这是真实世界的模型，例如 JVM 在计算表达式时内存不足，或者是有人拔掉了计算机的电源插头。这也意味着我们可以从任何表达式中抛出异常。</p>
-<pre><code class="kotlin">fun formatCell(value: Double): String =
-    if (value.isNaN()) 
-        throw IllegalArgumentException(&quot;$value is not a number&quot;) 
-    else 
-        value.toString()
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">formatCell</span><span class="params">(value: <span class="type">Double</span>)</span></span>: String =</span><br><span class="line">    <span class="keyword">if</span> (value.isNaN()) </span><br><span class="line">        <span class="keyword">throw</span> IllegalArgumentException(<span class="string">"<span class="variable">$value</span> is not a number"</span>) </span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        value.toString()</span><br></pre></td></tr></table></figure>
 <p>你可能会惊奇地发现，<code>return</code> 语句的类型也为 <code>Nothing</code>。<code>return</code> 是一个流程控制语句，它立即从函数中返回一个值，打断其所在表达式的求值。</p>
-<pre><code class="kotlin">fun formatCellRounded(value: Double): String =
-    val rounded: Long = if (value.isNaN()) return &quot;#ERROR&quot; else Math.round(value)
-    rounded.toString()
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">formatCellRounded</span><span class="params">(value: <span class="type">Double</span>)</span></span>: String =</span><br><span class="line">    <span class="keyword">val</span> rounded: <span class="built_in">Long</span> = <span class="keyword">if</span> (value.isNaN()) <span class="keyword">return</span> <span class="string">"#ERROR"</span> <span class="keyword">else</span> Math.round(value)</span><br><span class="line">    rounded.toString()</span><br></pre></td></tr></table></figure>
 <p>进入无限循环或杀死当前进程的函数返回类型也为 <code>Nothing</code>。例如 Kotlin 标准库将 <code>exitProcess</code> 函数声明为：</p>
-<pre><code class="kotlin">fun exitProcess(status: Int): Nothing
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">exitProcess</span><span class="params">(status: <span class="type">Int</span>)</span></span>: <span class="built_in">Nothing</span></span><br></pre></td></tr></table></figure>
 <p>如果你编写返回 <code>Nothing</code> 的自定义函数，编译器同样能检查出调用函数后无法得到执行的代码，就像使用语言本身的流程控制语句一样。</p>
-<pre><code class="kotlin">inline fun forever(action: ()-&gt;Unit): Nothing {
-    while(true) action()
-}
-
-fun example() {
-    forever {
-        println(&quot;doing...&quot;)
-    }
-    println(&quot;done&quot;) // Warning: Unreachable code
-}
-</code></pre>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">inline</span> <span class="function"><span class="keyword">fun</span> <span class="title">forever</span><span class="params">(action: ()-&gt;<span class="type">Unit</span>)</span></span>: <span class="built_in">Nothing</span> &#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>) action()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">example</span><span class="params">()</span></span> &#123;</span><br><span class="line">    forever &#123;</span><br><span class="line">        println(<span class="string">"doing..."</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">"done"</span>) <span class="comment">// Warning: Unreachable code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>与空安全一样，不可达代码分析是类型系统的一个特性。无需像 Java 一样在编译器和 IDE 中使用一些手段进行特殊处理。</p>
 <h1 id="可空的-Nothing"><a href="#可空的-Nothing" class="headerlink" title="可空的 Nothing?"></a>可空的 Nothing?</h1><p><code>Nothing</code> 像任何其他类型一样，如果允许其为空则可以得到对应的类型 <code>Nothing?</code>。<code>Nothing?</code> <strong>只能</strong>包含一个值：<code>null</code>。事实上 <code>Nothing?</code> 就是 <code>null</code> 的类型。</p>
 <p><code>Nothing?</code> 是所有可空类型的最终子类型，所以我们可以使用 <code>null</code> 作为任何可空类型的值。</p>
@@ -497,6 +457,24 @@ fun example() {
     
     
         
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>DemoJameson
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/" title="【译】Kotlin 类型层级结构一览">http://www.demojameson.com/2017/05/29/a-whirlwind-tour-of-the-kotlin-type-hierarchy/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
       
 
       <footer class="post-footer">
@@ -601,7 +579,7 @@ fun example() {
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -659,9 +637,14 @@ fun example() {
       
         
       
-        <a href="https://space.bilibili.com/21222" title="B 站 &rarr; https://space.bilibili.com/21222" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv-retro"></i>B 站</a>
+        <a href="https://space.bilibili.com/21222" title="B 站 &rarr; https://space.bilibili.com/21222" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>B 站</a>
       </span>
     
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
 
@@ -693,8 +676,34 @@ fun example() {
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1
   </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5da6e60de5263c3f" async="async"></script>
+  </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+  
+</div>
 
 
 
@@ -714,6 +723,8 @@ fun example() {
 
   
   <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>

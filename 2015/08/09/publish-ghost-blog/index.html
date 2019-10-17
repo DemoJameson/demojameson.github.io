@@ -22,6 +22,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -32,10 +33,10 @@
     version: '7.4.1',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":"default"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
     lazyload: false,
     pangu: true,
@@ -333,6 +334,14 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
   
   <span class="post-meta-item">
     
@@ -396,42 +405,22 @@
 <li><p>也是因为众所周知的原因，需要替换 Google Font 使用 360 CDN 提供的字体库，打开 <code>ghost/content/themes/[主题]/default.hbs</code> 文件，搜索<code>fonts.googleapis.com</code>全部替换为<code>fonts.useso.com</code></p>
 </li>
 <li><p>参考<a href="http://www.kisshc.com/ghost-gravatar/" target="_blank" rel="noopener">《解决 Ghost 中 gravatar 被墙不能显示的问题》</a>，数据库相关信息可在 OpenShift 中找到：</p>
-<pre><code> mysql -u [数据库用户名] -p -D [数据库名称]
- Enter password:[数据库密码]
- select image from users where email = &quot;your email address&quot;;
- update users set image = &quot;//去掉www的Gravatar地址&quot; where email = &quot;your email address&quot;;
+<pre><code>mysql -u [数据库用户名] -p -D [数据库名称]
+Enter password:[数据库密码]
+select image from users where email = &quot;your email address&quot;;
+update users set image = &quot;//去掉www的Gravatar地址&quot; where email = &quot;your email address&quot;;
 </code></pre></li>
 <li><p>主题安装：</p>
-<pre><code> cd ~/ghost/content/themes/
- git clone [git地址]
+<pre><code>cd ~/ghost/content/themes/
+git clone [git地址]
 </code></pre><p>可能需要为 git 设置默认的用户名以及邮箱，下载完主题后需删除目录下的 .git 目录以及 .gitignore，以免稍后无法应用更新。</p>
 </li>
 <li><p>添加<del><a href="http://duoshuo.com/" target="_blank" rel="noopener">多说</a></del>（试用多说过程中弹出了广告）<a href="https://disqus.com" target="_blank" rel="noopener">Disqus</a>评论区以及 <a href="https://swiftype.com/" target="_blank" rel="noopener">Swiftype</a> 站内搜索的代码可以放置在后台<code>Setting -&gt; Code Injection</code>中，不必修改主题。以下是我修改过的多说脚本（请将 short_name 改为自己的）：</p>
-<pre><code class="javascript">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
- var s = document.createElement(&quot;section&quot;);
- s.className = &quot;post-comments&quot;;
- s.innerHTML = &#39;&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&#39; + location.pathname.replace(/\//g,&quot;&quot;) + &#39;&quot; data-title=&quot;&#39;+ document.title +&#39;&quot; data-url=&quot;&#39; + location.href.replace(/^https/, &quot;http&quot;) + &#39;&quot;&gt;&lt;/div&gt;&#39;;
- document.querySelector(&quot;.post-container&quot;).parentNode.appendChild(s);
- var duoshuoQuery = {short_name:&quot;xxxxxxxxx&quot;};
- (function() {
-     var ds = document.createElement(&#39;script&#39;);
-     ds.type = &#39;text/javascript&#39;;ds.async = true;
-     ds.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//static.duoshuo.com/embed.js&#39;;
-     ds.charset = &#39;UTF-8&#39;;
-     (document.getElementsByTagName(&#39;head&#39;)[0]
-      || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(ds);
- })();
-&lt;/script&gt;
-&lt;!-- 多说公共JS代码 end --&gt;
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.createElement(<span class="string">"section"</span>);</span><br><span class="line">    s.className = <span class="string">"post-comments"</span>;</span><br><span class="line">    s.innerHTML = <span class="string">'&lt;div class="ds-thread" data-thread-key="'</span> + location.pathname.replace(<span class="regexp">/\//g</span>,<span class="string">""</span>) + <span class="string">'" data-title="'</span>+ <span class="built_in">document</span>.title +<span class="string">'" data-url="'</span> + location.href.replace(<span class="regexp">/^https/</span>, <span class="string">"http"</span>) + <span class="string">'"&gt;&lt;/div&gt;'</span>;</span><br><span class="line">    <span class="built_in">document</span>.querySelector(<span class="string">".post-container"</span>).parentNode.appendChild(s);</span><br><span class="line">    <span class="keyword">var</span> duoshuoQuery = &#123;<span class="attr">short_name</span>:<span class="string">"xxxxxxxxx"</span>&#125;;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">        ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span><br><span class="line">        ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</span><br><span class="line">        ds.charset = <span class="string">'UTF-8'</span>;</span><br><span class="line">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>]</span><br><span class="line">         || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span><br><span class="line">    &#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>更新应用，在 nirtous 中做的所有更改均需通过 git 同步到 OpenShift 中，使用以下命令即可：</p>
-<pre><code>cd ~/ghost
-git add .
-git commit -m &quot;[随便输入什么内容]&quot;
-git push
-</code></pre><p>等待更新成功提示出现：<code>remote: Deployment completed with status: success</code></p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">cd ~/ghost</span><br><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m <span class="string">"[随便输入什么内容]"</span></span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure>
+<p>等待更新成功提示出现：<code>remote: Deployment completed with status: success</code></p>
 </li>
 <li><p>开始写作，通过网址<code>http://[你的域名]/ghost</code>初始化博客，设置管理员账号密码，然后进入后台写作以及配置</p>
 </li>
@@ -458,6 +447,24 @@ git push
     
     
         
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>DemoJameson
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.demojameson.com/2015/08/09/publish-ghost-blog/" title="在 OpenShift 上免费搭建 Ghost 博客的过程">http://www.demojameson.com/2015/08/09/publish-ghost-blog/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
       
 
       <footer class="post-footer">
@@ -558,7 +565,7 @@ git push
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -616,9 +623,14 @@ git push
       
         
       
-        <a href="https://space.bilibili.com/21222" title="B 站 &rarr; https://space.bilibili.com/21222" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv-retro"></i>B 站</a>
+        <a href="https://space.bilibili.com/21222" title="B 站 &rarr; https://space.bilibili.com/21222" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>B 站</a>
       </span>
     
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
 
@@ -650,8 +662,34 @@ git push
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1
   </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5da6e60de5263c3f" async="async"></script>
+  </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+  
+</div>
 
 
 
@@ -671,6 +709,8 @@ git push
 
   
   <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
