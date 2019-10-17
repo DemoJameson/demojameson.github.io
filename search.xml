@@ -36,7 +36,7 @@
 <li>2019年10月17日更新到 v0.4<ol>
 <li>修复因为 Tesseract 更新而不可用的问题</li>
 <li>修复识别成功后获取视频标题失败的问题（番剧类视频依然无法获取标题）</li>
-<li>设置识别区域的快捷键从 <code>Alt+S</code> 改为 <code>Alt+W</code> </li>
+<li>设置识别区域的快捷键从 <code>Alt+A</code> 改为 <code>Alt+Z</code> </li>
 </ol>
 </li>
 </ul>
