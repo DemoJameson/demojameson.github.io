@@ -1,0 +1,4445 @@
+msgid "\"Pay the tribute, or be gone!\""
+msgstr "\"虔诚上供或是离去\""
+
+msgid ""
+"\"WORK IN PROGRESS\"\n"
+"Good job! You made it the (temporary) end of the game!"
+msgstr ""
+"\"正在施工\"\n"
+"干得漂亮!你到达了游戏(当前的)终点!"
+
+msgid "\"Ygdar Orus Li Ox !\""
+msgstr "\"Ygdar Orus Li Ox!\""
+
+msgid "(::d::/::m::/::y:: ::hour::)"
+msgstr "(::d::/::m::/::y:: ::hour::)"
+
+msgid "(Bonus +::combo:: pts)"
+msgstr "(奖励 +::combo:: 分)"
+
+msgid "(HOLD)"
+msgstr "(按住)"
+
+msgid "(empty)"
+msgstr "(空的)"
+
+msgid "(hold)"
+msgstr "(按住)"
+
+msgid "(locked)"
+msgstr "(被锁了)"
+
+msgid "*cough*"
+msgstr "*咳嗽*"
+
+msgid "+1 Health"
+msgstr "生命值 +1"
+
+msgid "+1 Skills"
+msgstr "技能 +1"
+
+msgid "+1 Strength"
+msgstr "力量 +1"
+
+msgid "+::+power:: HP after a successful parry with a shield."
+msgstr "当你用盾牌成功格挡时,恢复 ::+power:: 生命值."
+
+msgid "+::+power:: HP when you kill an enemy."
+msgstr "当你杀死一个敌人时,+::+power:: 生命值."
+
+msgid "+::n:: GOLD"
+msgstr "获得 ::n:: 金币"
+
+msgid "+::n:: HP"
+msgstr "+ ::n:: 生命值"
+
+msgid "+::n:: pt"
+msgstr "+ ::n:: 分"
+
+msgid "+::n:: pts"
+msgstr "+ ::n:: 分"
+
+msgid "+::n::% Power"
+msgstr "增加 ::n::% 伤害"
+
+msgid "+::prct::% HP"
+msgstr "+::prct::% 生命值."
+
+msgid "+::prct::% damage for GREEN equipment."
+msgstr "+::prct::% 伤害对\"绿色\"装备."
+
+msgid "+::prct::% damage for RED equipment."
+msgstr "+::prct::% 伤害对\"红色\"装备."
+
+msgid "+::prct::% damage for VIOLET equipment."
+msgstr "+::prct::% 伤害对\"紫色\"装备."
+
+msgid "+::prct::% damage on a bleeding target"
+msgstr "对流血的敌人增加 ::prct::% 伤害"
+
+msgid "+::prct::% damage on a burning target"
+msgstr "对燃烧的敌人增加 ::prct::% 伤害"
+
+msgid "+::prct::% damage on a frozen target."
+msgstr "对冰冻的敌人增加 ::prct::% 伤害"
+
+msgid "+::prct::% damage on a poisoned target."
+msgstr "对中毒的敌人增加 ::prct::% 伤害"
+
+msgid "+::prct::% damage on a slowed down target."
+msgstr "对减速的敌人增加 ::prct::% 伤害"
+
+msgid "+::prct::% damage on a stunned target"
+msgstr "对眩晕的敌人增加 ::prct::% 伤害"
+
+msgid "+::prct::% damage on a stunned target."
+msgstr "对眩晕的敌人增加 ::prct::% 伤害"
+
+msgid "+::prct::% damage when inflicting a CRITICAL HIT."
+msgstr "暴击时,增加 ::prct::% 伤害."
+
+msgid "+::prct::% damage when your health is at its maximum."
+msgstr "生命值全满时伤害增加 ::prct::%."
+
+msgid "+::prct::% health."
+msgstr "+::prct::% 生命值."
+
+msgid "-::cdr::% cool down delay when using your skills."
+msgstr "使用技能时,减少 ::cdr::% 冷却时间."
+
+msgid "-::n:: GOLD"
+msgstr "失去 ::n:: 金币"
+
+msgid "..."
+msgstr "..."
+
+msgid "1 boss cell required"
+msgstr "需求一个领主细胞"
+
+msgid "1 mutation available"
+msgstr "有1项突变可用"
+
+msgid "::d:: damage/s"
+msgstr "::d:: 伤害/秒"
+
+msgid "::d:: seconds recharge time"
+msgstr "::d:: 秒冷却时间"
+
+msgid "::d::/::m::/::y::"
+msgstr "::d::/::m::/::y::"
+
+msgid "::h:: hour(s) ::m:: minute(s) ::s:: second(s)"
+msgstr "::h:: 时 ::m:: 分 ::s:: 秒"
+
+msgid "::h::h ::m::m ::s::s"
+msgstr "::h:: 时 ::m:: 分 ::s:: 秒"
+
+msgid "::m:: minute(s) ::s:: second(s)"
+msgstr "::m:: 分 ::s:: 秒"
+
+msgid "::m::m ::s::s"
+msgstr "::m:: 分 ::s:: 秒"
+
+msgid "::n:: GOLD retrieved"
+msgstr "获得 ::n:: 金币"
+
+msgid "::n:: boss cells required"
+msgstr "需求 ::n:: 个领主细胞"
+
+msgid "::n:: cell left"
+msgstr "剩余 ::n:: 个细胞"
+
+msgid "::n:: cells left"
+msgstr "剩余 ::n:: 个细胞"
+
+msgid "::n:: mutations available"
+msgstr "::n:: 项突变可用"
+
+msgid "::name:: needed"
+msgstr "需要 ::name::"
+
+msgid "::name:: used"
+msgstr "使用 ::name::"
+
+msgid "::name::!"
+msgstr "::name::!"
+
+msgid "::power::x ammunition on your ranged weapons."
+msgstr "远程武器的弹药量 x::power::"
+
+msgid "::rune:: Boss Source Cell injected"
+msgstr "已注入 ::rune:: 个领主原细胞"
+
+msgid "::s:: second(s)"
+msgstr "::s:: 秒"
+
+msgid "::s::s"
+msgstr "::s:: 秒"
+
+msgid "::val:: (::crit::) damage/s"
+msgstr "::val:: ( ::crit:: ) 伤害/秒"
+
+msgid "???"
+msgstr "???"
+
+msgid "A bow designed for close combat."
+msgstr "专为近战打造的弓."
+
+msgid ""
+"A fine object, adroitly hidden under your clothes to make less work for the "
+"artists."
+msgstr "华丽的饰品.你熟练地将它戴在了你的衣服下,这给美工减少了很多麻烦."
+
+msgid "A gold tooth worth ::$power:: GOLD. He had it coming to him anyway..."
+msgstr "一颗金牙值 ::$power:: 金币. 怪物们永远也想不到他们的牙齿也能卖钱..."
+
+msgid "A large explosion dealing ::+power:: damage."
+msgstr "产生巨大的爆炸,造成 ::+power:: 伤害."
+
+msgid "A little courage my man!"
+msgstr "是男人就拿出点勇气!"
+
+msgid "A little slow... But you seem to understand what I'm saying..."
+msgstr "慢一点,但你似乎明白我在说什么..."
+
+msgid "A magnificent jewel worth ::$power:: GOLD!"
+msgstr "宏伟的宝石,价值 ::$power:: 金币!"
+
+msgid "A magnificent jewel worth ::$power:: points!"
+msgstr "华丽的珠宝,价值 ::$power:: 积分!"
+
+msgid ""
+"A melee attack on a nearby enemy with a projectile stuck in it causes the "
+"projectile to fall out and inflicts ::+power:: damage."
+msgstr "近战攻击中弹的敌人,使弹药掉落并造成 ::+power:: 伤害."
+
+msgid "A nice prize worth ::$power:: GOLD."
+msgstr "::$power:: 金币是个完美的价格."
+
+msgid ""
+"A rapid shot freezes enemies. A long fire inflicts heavy critical damage."
+msgstr "快速射击使敌人冻结.长按蓄力攻击可以造成巨大的伤害."
+
+msgid "A rusty old weapon that gets more dangerous in a pinch..."
+msgstr "一把生锈的旧武器使困境更加危险."
+
+msgid "A scrap of parchment"
+msgstr "一张羊皮纸"
+
+msgid "A swarm of biters crawls from your victims."
+msgstr "敌人死后召唤一些食人虫."
+
+msgid ""
+"A transmuted arrow worth ::$power:: GOLD. For the aristocratic marksman."
+msgstr "对那些那些贵族射手来说,一个变形的箭值 ::$power:: 金币."
+
+msgid "A weapon popularised by the Baron Valmont du Cul."
+msgstr "贝尔蒙特家族推荐使用此鞭.<恶魔城>"
+
+msgid "ADMIN WEAPON"
+msgstr "管理者之刃"
+
+msgid "AHHHH!"
+msgstr "噢噢!"
+
+msgid "Abort Current Game"
+msgstr "结束当前的游戏"
+
+msgid ""
+"About +::+dps:: damage/s for ::duration:: seconds after killing an enemy."
+msgstr "当你杀死一个敌人后,增加 ::+dps:: 伤害/秒,持续 ::duration:: 秒."
+
+msgid "About +::+dps:: damage/s for ::duration:: seconds after taking damage."
+msgstr "受到伤害后增加 ::+dps:: 伤害/秒 持续 ::duration:: 秒."
+
+msgid "About +::+dps:: damage/s for while there are no enemies nearby."
+msgstr "当周围没有敌人时,增加 ::+dps:: 伤害/秒."
+
+msgid ""
+"About +::+dps:: damage/s if a nearby enemy is taking Poison, Bleed or Burn "
+"damage."
+msgstr "如果附近有中毒,流血,燃烧的敌人,增加 ::+dps:: 伤害/秒."
+
+msgid ""
+"About +::+dps:: damage/s while there are at least ::count:: enemies nearby."
+msgstr "当你周围至少有 ::count:: 个敌人时,增加 ::+dps:: 伤害/秒."
+
+msgid "About +::+dps:: damage/s while you're nearby a deployed skill."
+msgstr "当你周围有一个部署技能时,增加 ::+dps:: 伤害/秒."
+
+msgid "Absorb"
+msgstr "吸收"
+
+msgid "Absorb ::v::% damage"
+msgstr "吸收 ::v::% 伤害"
+
+msgid ""
+"Absorbes extra damage when held up. Creates a force field for ::duration:: "
+"seconds when you parry correctly."
+msgstr "举盾时,吸收额外伤害.盾反时,创造一个持续 ::duration:: 秒的力场."
+
+msgid "Absorbes extra damage. Can not be used to parry."
+msgstr "吸收额外伤害.不能用来盾反."
+
+msgid "Absorbs ::prct::% damage when it's help up."
+msgstr "举盾时格挡 ::prct::% 伤害."
+
+msgid "Absorbs ::prct::% projectile and explosion damage when held up."
+msgstr "举盾时格挡 ::prct::% 弹射物和爆炸伤害."
+
+msgid "Absorption"
+msgstr "吸收"
+
+msgid ""
+"Accelerates the use of your health flask by ::prct::% and completely "
+"protects you for ::duration:: seconds."
+msgstr "血瓶的使用更加快速,提升 ::prct::% 且能保持无敌 ::duration:: 秒."
+
+msgid "Accept"
+msgstr "接受"
+
+msgid "Access to the Clock Tower is forbidden."
+msgstr "禁止进入钟楼."
+
+msgid "Activate"
+msgstr "激活"
+
+msgid "Activate Steam Cloud synchronization"
+msgstr "激活Steam云同步"
+
+msgid "Activate vibration"
+msgstr "震动"
+
+msgid "Active skill blueprints recovered"
+msgstr "已发现技能蓝图数量"
+
+msgid "Active skills"
+msgstr "主动技能"
+
+msgid "Add extra points"
+msgstr "加入额外积分"
+
+msgid "Add/Remove"
+msgstr "添加/删除"
+
+msgid "Adda a score bonus for ::duration:: seconds. Single use!"
+msgstr "获得奖励分数,持续 ::duration:: 秒.只能使用一次!"
+
+msgid "Aggressive apparition"
+msgstr "暴躁幻影"
+
+msgid "Ah ha! A customer!"
+msgstr "啊哈! 是客人啊!"
+
+msgid "Ah ha! There you are!"
+msgstr "啊哈哈! 你在这里!"
+
+msgid "Ahhh, yes... Obviously all this is your doing."
+msgstr "啊,是的…显然这一切都是你在做的."
+
+msgid "Ahhh, yes... Of course you're working on it."
+msgstr "喔,是的...当然你十分努力."
+
+msgid "Alienation"
+msgstr "异化"
+
+msgid "All damage taken -::n::%"
+msgstr "受到的所有伤害 -::n::%"
+
+msgid "All diving attacks leave flammable oil on the ground."
+msgstr "下冲震击地面后使地面铺上一层可燃油."
+
+msgid "All of your progress with the Collector and your runes will be safe."
+msgstr "所有的收藏品及符文将安全保留下来."
+
+msgid "All the damage you take is also dealt to nearby enemies."
+msgstr "受伤时将反噬周围的敌人."
+
+msgid "Allies"
+msgstr "盟友"
+
+msgid "Allows you to collect Boss Source Cells"
+msgstr "允许你收集领主原细胞."
+
+msgid "Allows you to improve either Brutality or Survival."
+msgstr "允许你提升残暴或生存能力."
+
+msgid "Allows you to improve either Brutality or Tactics."
+msgstr "允许你提升残暴或战术能力."
+
+msgid "Allows you to improve either Tactics or Survival."
+msgstr "允许你提升战术或生存能力."
+
+msgid "Allows you to stab right through your enemies and appear behind them. "
+msgstr "刺穿你的敌人并出现在他们背后."
+
+msgid "Ally"
+msgstr "盟友"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Alt L."
+msgstr "Alt L."
+
+msgid "Alt R."
+msgstr "Alt R."
+
+msgid "Ambient noise volume"
+msgstr "环境噪音音量"
+
+msgid "Amethyst"
+msgstr "紫水晶"
+
+msgid "Ammo +::power::"
+msgstr "增加 ::power:: 弹药"
+
+msgid "Ammo stuck in this enemy"
+msgstr "弹药卡在这个敌人身上"
+
+msgid "Ammo: ::n::"
+msgstr "弹药: ::n::"
+
+msgid "Ammunition"
+msgstr "弹药"
+
+msgid "Amulet"
+msgstr "护符"
+
+msgid "Amulets"
+msgstr "护符"
+
+msgid "An precious gem worth ::$power:: GOLD!"
+msgstr "珍贵的宝石,价值 ::$power:: 金币!"
+
+msgid "And I NEED my rune you see..."
+msgstr "我需要你帮我找我的符文..."
+
+msgid "And I'm noting it all down in my little book."
+msgstr "而且我注意到我的小册子写得很详细."
+
+msgid ""
+"And don't forget... The shortest path is not always the path to victory..."
+msgstr "但是,别忘了...捷径并不总是意味着通往胜利."
+
+msgid "And that's recent..."
+msgstr "就在最近..."
+
+msgid "Any enemy that touches you is frozen."
+msgstr "任何攻击你的敌人使其冰冻."
+
+msgid "Any object is a deadly weapon if you apply enough velocity."
+msgstr "如果你反应够快,任何物体都将是致命的武器."
+
+msgid ""
+"Apparently there are things hidden in the walls... Perhaps it REALLY is "
+"worth looking around..."
+msgstr "很明显,有些东西藏在墙上…也许真的值得四处看看…"
+
+msgid "Applies flammable oil around this upon deployment."
+msgstr "摆放时,使附近的地面沾满可燃油."
+
+msgid "Applies flammable oil to the victim upon deployment."
+msgstr "摆放时,使敌人身上沾满可燃油."
+
+msgid "Applies flammable oil to victims."
+msgstr "使你的敌人沾满油."
+
+msgid "Architect's key"
+msgstr "设计师的钥匙"
+
+msgid "Are you going to buy something, or are you just hanging around?"
+msgstr "你是要买些东西,还是在闲晃?"
+
+msgid "Are you sure you want to reset slot ::index::?"
+msgstr "你确定要重置存档 ::index:: ?"
+
+msgid "Are you the same one?"
+msgstr "你是同一人吗?"
+
+msgid "Are you wanting to buy something from me?"
+msgstr "你想在我这里买点东西?"
+
+msgid "Around here, only the best of the best..."
+msgstr "在这里,没有最好,只有更好…"
+
+msgid "As long as the game window is open, lock the cursor in it."
+msgstr "只要游戏窗口是打开的,光标就不会离开游戏画面."
+
+msgid "Assassin's Source Cell"
+msgstr "刺客的原细胞"
+
+msgid "Assassin's dagger"
+msgstr "刺客匕首"
+
+msgid "Assault Shield"
+msgstr "突击盾"
+
+msgid "Attacking immediately after parrying inflicts ::prct::% damage."
+msgstr "格挡后立即攻击造成 ::prct::% 伤害."
+
+msgid "Attempts remaining ::n::"
+msgstr "剩余尝试次数 ::n::"
+
+msgid "Attracts anything close to it and deals ::+dps:: damage/s."
+msgstr "攻击附近敌人,造成 ::+dps:: 伤害/秒."
+
+msgid "Aura of laceration"
+msgstr "破碎光环"
+
+msgid "Automatically targets the closest enemy."
+msgstr "自动攻击附近的敌人."
+
+msgid "BEWARE!"
+msgstr "当心!"
+
+msgid "BRUTALITY"
+msgstr "残暴"
+
+msgid "BUY SOMETHING OR GET OUT OF HERE!"
+msgstr "要么买,要么滚!"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Back already?"
+msgstr "又回来了?"
+
+msgid "Back click."
+msgstr "向后滚轮."
+
+msgid "Back to menu"
+msgstr "返回选单"
+
+msgid "Back to the game"
+msgstr "返回游戏"
+
+msgid "Balanced blade"
+msgstr "平衡之刃"
+
+msgid "Bat"
+msgstr "蝙蝠"
+
+msgid "Bear trap"
+msgstr "捕兽夹"
+
+msgid "Beginner's bow"
+msgstr "初学者之弓"
+
+msgid "Behind you, THE BIG LIGHT! Right there!"
+msgstr "在你身后,那耀眼的光!就在那里!"
+
+msgid "Belier's Rune"
+msgstr "践踏符文"
+
+msgid "Big ol' radish"
+msgstr "变异萝卜"
+
+msgid "Biomes"
+msgstr "区域"
+
+msgid "Biomes reached"
+msgstr "区域到达"
+
+msgid "Biter swarm"
+msgstr "吞噬虫群"
+
+msgid "Black heart"
+msgstr "黑心"
+
+msgid "Bleeding inflicts poison damage too."
+msgstr "出血同时造成中毒."
+
+msgid "Blocked!"
+msgstr "格挡!"
+
+msgid ""
+"Blocks attacks and causes bleeding (::+dps:: damage/s for ::duration:: "
+"seconds) on all nearby enemies."
+msgstr "格挡后造成附近敌人流血( ::+dps:: 伤害/秒,持续 ::duration:: 秒)."
+
+msgid "Blocks attacks and inflicts heavy damage."
+msgstr "格挡后造成大量伤害."
+
+msgid ""
+"Blocks attacks and shakes out any loose gold from your enemy's teeth (once "
+"per enemy). Also transforms enemy arrows into gold."
+msgstr ""
+"格挡攻击并从敌人的牙齿中震出一些松散的黄金,也能把敌人的弓箭变成金箭.(每个敌人"
+"触发一次)"
+
+msgid "Blocks attacks and stuns the attacker."
+msgstr "格挡后眩晕敌人."
+
+msgid "Blocks attacks and violently shoves blocked enemies backwards."
+msgstr "格挡会将敌人大力击退."
+
+msgid "Blood shield"
+msgstr "嗜血盾"
+
+msgid "Blood sword"
+msgstr "嗜血剑"
+
+msgid "Blue saphire"
+msgstr "蓝宝石"
+
+msgid "Blueprint Extractor"
+msgstr "蓝图提取器"
+
+msgid "Blueprint acquired:"
+msgstr "获得蓝图:"
+
+msgid "Blueprint for finishing the Daily Run ::num:: times:"
+msgstr "完成每日挑战 ::num:: 次,解锁蓝图成功!"
+
+msgid "Blueprints found"
+msgstr "发现蓝图"
+
+msgid "Body Desecrated"
+msgstr "肉身坏灭"
+
+msgid "Body Desecrated (damage x::n::)"
+msgstr "肉身坏灭 (伤害 x::n::)"
+
+msgid "Body worm"
+msgstr "蠕虫身体"
+
+msgid "Bombardier"
+msgstr "炮手"
+
+msgid "Bonus"
+msgstr "奖励"
+
+msgid "Bonus +::num:: points!"
+msgstr "奖励 +::num:: 分!"
+
+msgid "Bonus attributes: ::n::"
+msgstr "奖励属性: ::n::"
+
+msgid "Bonus to quality level ::n::"
+msgstr "奖励物品等级 ::n::"
+
+msgid "Boss Source Cell"
+msgstr "领主原细胞"
+
+msgid "BossRune4"
+msgstr "领主符文4"
+
+msgid "BossRune5"
+msgstr "领主符文5"
+
+msgid "Bow and infinite arrows"
+msgstr "无限之弓"
+
+msgid "Break"
+msgstr "打破"
+
+msgid "Bright flashes"
+msgstr "光影效果"
+
+msgid "Bring it to me now!"
+msgstr "把它给我吧!"
+
+msgid "Bring the gold, or beat it!"
+msgstr "给我金币,否则趁早滚开!"
+
+msgid "Broad sword"
+msgstr "大剑"
+
+msgid "Brutality"
+msgstr "残暴"
+
+msgid "Brutality +1"
+msgstr "残暴 +1"
+
+msgid "Brutality increased!"
+msgstr "残暴能力提升!"
+
+msgid "Bull"
+msgstr "公牛"
+
+msgid "Burn enemies when you parry."
+msgstr "格挡时使敌人燃烧."
+
+msgid "Burns enemies when you parry."
+msgstr "格挡时使敌人燃烧."
+
+msgid "Burns ground and enemies at close range."
+msgstr "近距离燃烧地面和敌人."
+
+msgid "Burns nearby enemies for ::duration:: seconds (::+dps:: damage/s)."
+msgstr "烧伤附近敌人持续 ::duration:: 秒(::+dps:: 伤害/秒)."
+
+msgid "But for how long?"
+msgstr "但是能维持多久?"
+
+msgid "But surely, you must have noticed!?"
+msgstr "说真的,你没有注意到吗!?"
+
+msgid "Buy"
+msgstr "购买"
+
+msgid "Buy for ::price:: GOLD"
+msgstr "花费 ::price:: 金币来购买"
+
+msgid ""
+"Bye the way, it's an odd thing to say... But you kind of look like these "
+"guys..."
+msgstr "顺便说一句,虽然很奇怪…但你看起来有点像这堆东西…"
+
+msgid "Cakes"
+msgstr "蛋糕"
+
+msgid ""
+"Can not be held up permanently. Deflected grenades and shots are sent back "
+"with more power."
+msgstr "无法持续举盾.盾反会以更大的伤害回弹给敌人."
+
+msgid "Can not be sold."
+msgstr "不能被出售."
+
+msgid "Can't do that right now"
+msgstr "现在不能这样做"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Cancel the purchase"
+msgstr "取消付款"
+
+msgid "Canibal"
+msgstr "食人魔"
+
+msgid "Carefully balanced to allow consecutive rapid strikes."
+msgstr "被小心的平衡过,以造成稳定的持续输出."
+
+msgid "Carnivore"
+msgstr "食肉动物"
+
+msgid "Carrot"
+msgstr "胡萝卜"
+
+msgid "Castle"
+msgstr "城堡"
+
+msgid "Castlevaniesque"
+msgstr "恶魔之宴"
+
+msgid "Catch 'em all!"
+msgstr "把它们全都抓,抓住!"
+
+msgid "Catcher"
+msgstr "屠夫"
+
+msgid "Causes ::count:: arrows to fall from victims."
+msgstr "敌人身上将掉落 ::count:: 支箭矢."
+
+msgid "Causes all arrows to fall from victims."
+msgstr "敌人身上将掉落所有箭矢."
+
+msgid ""
+"Causes bleeding (::+dps:: damage/s for ::duration:: seconds) when you block "
+"an enemy. Bleeding affects nearby enemies if you parry."
+msgstr ""
+"当你举起盾牌阻挡敌人时将导致其出血( ::+dps:: 伤害/秒,持续 ::duration:: 秒).如"
+"果你正确格挡,流血会影响附近的敌人."
+
+msgid ""
+"Causes bleeding (::+dps:: damage/s for ::duration:: seconds). The attack "
+"automatically targets the closest enemy."
+msgstr ""
+"使命中的敌人出血( ::+dps:: 伤害/秒,持续 ::duration:: 秒).飞刀会自动追踪附近敌"
+"人."
+
+msgid "Causes bleeding (::+dps:: damage/s)."
+msgstr "造成出血( ::+dps:: 伤害/秒)"
+
+msgid "Causes you to charge forward while blocking."
+msgstr "格挡并向前突进."
+
+msgid "Cavern"
+msgstr "洞穴"
+
+msgid "Ceiling turret"
+msgstr "高空炮塔"
+
+msgid "Cells collected"
+msgstr "已经收集的细胞数"
+
+msgid "Cells lost"
+msgstr "损失细胞"
+
+msgid "Cells spent"
+msgstr "已经花费的细胞"
+
+msgid "Challenge"
+msgstr "挑战"
+
+msgid "Challenge area opened"
+msgstr "挑战区域已经开启"
+
+msgid "Challenge failed!"
+msgstr "挑战失败!"
+
+msgid "Challenge overcome!"
+msgstr "挑战成功!"
+
+msgid "Challenger Rune"
+msgstr "挑战者符文"
+
+msgid "Challenges failed"
+msgstr "挑战失败次数"
+
+msgid "Challenges succeed"
+msgstr "挑战成功次数"
+
+msgid "Cheikha Lyra"
+msgstr "天琴座谢哈"
+
+msgid "Cherry"
+msgstr "樱桃"
+
+msgid "Chicken"
+msgstr "鸡肉"
+
+msgid "Choose 1 mutation"
+msgstr "选择一项突变"
+
+msgid "Choose ::n:: mutations"
+msgstr "选择 ::n:: 项突变"
+
+msgid "Choose one of your three stats to improve!"
+msgstr "三选一来强化!"
+
+msgid "Clocktower key"
+msgstr "钟楼钥匙"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Cluster bomb"
+msgstr "集束炸弹"
+
+msgid "Collect cells and gold without needing to be in range."
+msgstr "收集细胞和金币不受距离限制."
+
+msgid "Colorless (your highest tier applies to this object)"
+msgstr "无色(你最高等级的属性将加成此物品)"
+
+msgid "Combat"
+msgstr "战斗"
+
+msgid "Come on... Just a little peek..."
+msgstr "来吧,就打一下..."
+
+msgid "Come over here for a bit!"
+msgstr "过来一下吧!"
+
+msgid "Competitive mode"
+msgstr "对战模式"
+
+msgid "Condition not met: unlock \"::name::\""
+msgstr "条件不符合: 解锁 \"::name::\""
+
+msgid "Condition not met: unlock 1 more item"
+msgstr "条件不符合: 解锁一个以上的物品"
+
+msgid "Condition not met: unlock ::n:: more items"
+msgstr "条件不符合: 解锁 ::n:: 个物品"
+
+msgid "Confirm"
+msgstr "确定"
+
+msgid "Confirm deletion"
+msgstr "确定删除"
+
+msgid "Confirm the import"
+msgstr "确定输入"
+
+msgid "Confirm the purchase"
+msgstr "确定付款"
+
+msgid "Congratulations!"
+msgstr "恭喜!"
+
+msgid ""
+"Congratulations!\n"
+"You've completed the daily run!"
+msgstr ""
+"恭喜!\n"
+"你已经完成了日常挑战!"
+
+msgid "Congratulations! You have reached the end of the demo!"
+msgstr "恭喜! 你已经到了体验版的尽头了!"
+
+msgid "Congratulations! You've managed to beat the boss in this demo!"
+msgstr "恭喜! 你成功击败了体验版本的魔王!"
+
+msgid "Conjures an apparition that attacks nearby enemies."
+msgstr "产生一个幻影,攻击附近敌人."
+
+msgid "Connecting to the server..."
+msgstr "正在连接服务器..."
+
+msgid ""
+"Connection to server failed.\n"
+"Please check your Internet connection."
+msgstr ""
+"连接服务器失败.\n"
+"请检查你的网络连接."
+
+msgid "Consumable"
+msgstr "消耗品"
+
+msgid "Consumables"
+msgstr "消耗品"
+
+msgid "Continue"
+msgstr "继续"
+
+msgid "Continue the current run"
+msgstr "继续当前游戏"
+
+msgid ""
+"Continuously casting deals critical hits. But be wary of too much power..."
+msgstr "持续输出将产生暴击.但别沉迷于力量..."
+
+msgid "Control configuration"
+msgstr "控制器配置"
+
+msgid "Controller"
+msgstr "控制器"
+
+msgid ""
+"Controls the different flashes that impact the entire game screen "
+"(explosions, being wounded etc.) You can deactivate them if they bother you "
+"or pose a risk to your health."
+msgstr ""
+"通过控制不同的光影效果影响整个游戏屏幕(爆炸,受伤等),如果他们打扰你或对你的健"
+"康造成伤害,你可以取消它."
+
+msgid "Corpse biter"
+msgstr "食尸者"
+
+msgid "Corpse worm"
+msgstr "食尸虫"
+
+msgid "Corrupted Prison"
+msgstr "损坏的监狱"
+
+msgid "Corrupted Ramparts"
+msgstr "腐朽城楼"
+
+msgid "Corrupted power"
+msgstr "腐败之力"
+
+msgid "Corruption"
+msgstr "腐败"
+
+msgid "Counter attack"
+msgstr "反击"
+
+msgid "Counter shield"
+msgstr "守护盾"
+
+msgid "Cover the ground around you with flammable oil."
+msgstr "使你周围的地面覆盖可燃油."
+
+msgid "Cover the ground around you with oil and light it up!"
+msgstr "使你附近的地面覆满可燃油并点燃它!"
+
+msgid "Covers the victim in flammable oil."
+msgstr "使敌人身上沾满可燃油."
+
+msgid "Craaaawwwww!"
+msgstr "啊鸦鸦鸦鸦鸦鸦鸦!"
+
+msgid "Create a new save"
+msgstr "创建一个新的存档"
+
+msgid "Credits"
+msgstr "制作名单"
+
+msgid "Crow's wings"
+msgstr "鸦之羽翼"
+
+msgid "Crusher"
+msgstr "粉碎机"
+
+msgid "Crypt key"
+msgstr "地穴钥匙"
+
+msgid "Ctrl"
+msgstr "Ctrl"
+
+msgid "Ctrl L."
+msgstr "Ctrl L."
+
+msgid "Ctrl R."
+msgstr "Ctrl R."
+
+msgid "Current configuration"
+msgstr "当前状态"
+
+msgid "Curse lifted."
+msgstr "诅咒已经解除!"
+
+msgid "Cursed chests looted"
+msgstr "已开启诅咒箱"
+
+msgid "Cursed sword"
+msgstr "诅咒之剑"
+
+msgid "Cursed treasure found"
+msgstr "发现诅咒箱"
+
+msgid ""
+"Curses restore ::prct::% HP and require ::count::x less kills to be rid of "
+"them."
+msgstr "诅咒恢复 ::prct::% 生命值且杀死敌人数量都x ::count::,风险更少收益更大."
+
+msgid "Curses survived"
+msgstr "诅咒幸存次数"
+
+msgid "Custom"
+msgstr "自定义"
+
+msgid "DID YOU THINK THAT WE WOULDN'T FIND YOU? EVEN HERE!?"
+msgstr "你以为我们找不到你吗?即使在这里!?"
+
+msgid "Dagger of the sadistic cult"
+msgstr "狂热邪教匕首"
+
+msgid "Daily Run Leaderboard"
+msgstr "日常挑战排行榜"
+
+msgid "Daily run"
+msgstr "日常挑战"
+
+msgid "Damage +::n::%"
+msgstr "伤害 +::n::%"
+
+msgid "Damage bonus:"
+msgstr "伤害加成:"
+
+msgid "Damage dealt x::power::, damage received x::power2::!"
+msgstr "伤害x ::power:: ,受到 ::power2:: 倍伤害!"
+
+msgid "Damage from projectiles reduced by ::prct::%"
+msgstr "减少飞行物 ::prct::% 伤害"
+
+msgid "Damage from this equipment is reduced by -::prct::%."
+msgstr "来自这件装备的伤害减少 ::prct::%"
+
+msgid "Damage taken reduced by ::prct::%"
+msgstr "减少 ::prct::% 伤害"
+
+msgid "Dark is the path your choices set before you..."
+msgstr "身后的黑暗是你唯一能选择的道路.."
+
+msgid "Deactivate the barrier."
+msgstr "解除屏障."
+
+msgid "Dead Cells Alpha [build ::build::]"
+msgstr "Dead Cells Alpha [版本::build::]"
+
+msgid ""
+"Dead Cells has not been optimized for this type of graphics card for the "
+"moment, it's possible that you will experience some bugs."
+msgstr "Dead Cells现在并未优化你所使用的显卡,你可能会遇到一些麻烦."
+
+msgid "Dead Cells is developed by Motion Twin"
+msgstr "Dead Cells 是由 Motion Twin 开发的"
+
+msgid ""
+"Dead Cells is in Early Access! This means there will be bugs... Hopefully "
+"not too many though... Some will be funny (getting your head stuck in a "
+"wall, falling through the floor etc), others won't be (losing your save in a "
+"crash and the like)."
+msgstr ""
+"Dead Cells 现在处于抢先体验!这意味着有许多错误,希望不会太多,有些有趣的Bug(让"
+"你的头卡在墙上,穿越地面等等),有的则很可怕(游戏崩溃后记录消失之类)."
+
+msgid "Dead Cells is the evil offspring of Motion Twin"
+msgstr "Dead Cells 是由 Motion Twin 开发的"
+
+msgid ""
+"Dead Cells was created with the help of the FAJV - National Center for "
+"Cinema and Animation in France."
+msgstr "Dead Cells 是在 FAJV(法国国家电影和动画中心)帮助下开发的."
+
+msgid "Dead again eh?"
+msgstr "又死啦?"
+
+msgid "Dead for a while now."
+msgstr "死了一阵子了."
+
+msgid "Dead man's purse"
+msgstr "死者的钱包"
+
+msgid ""
+"Deals damage to all nearby enemies when you block an attack. Deals critical "
+"damage when you parry."
+msgstr "格挡时对附近敌人造成伤害.在盾反成功时暴击."
+
+msgid "Deals damage to nearby ennemies."
+msgstr "对附近的敌人造成伤害."
+
+msgid "Death by curse!"
+msgstr "诅咒致死!"
+
+msgid "Death by poison"
+msgstr "剧毒致死"
+
+msgid "Death cheated."
+msgstr "死里逃生!"
+
+msgid "Death orb"
+msgstr "死亡黑球"
+
+msgid "Death spitter"
+msgstr "亡者归来"
+
+msgid "Deaths"
+msgstr "死亡"
+
+msgid "Deaths by fall"
+msgstr "从高处摔死"
+
+msgid "Deaths by monster"
+msgstr "被怪物杀死"
+
+msgid "Deaths by trap"
+msgstr "被陷阱杀死"
+
+msgid "Debug Gwen"
+msgstr "调试 : Gwen"
+
+msgid "Debug Looping"
+msgstr "调试 : Looping"
+
+msgid "Debug Skool"
+msgstr "调试 : Skool"
+
+msgid "Debug Thomas"
+msgstr "调试 : Thomas"
+
+msgid "Debug Tipyx"
+msgstr "调试 : Tipyx"
+
+msgid "Debug seb"
+msgstr "调试 : seb"
+
+msgid "Decapitated corpse"
+msgstr "被斩首的尸体"
+
+msgid "Defence breached!"
+msgstr "破防!"
+
+msgid "Defender"
+msgstr "防御者"
+
+msgid "Deflector"
+msgstr "导流器"
+
+msgid "Del."
+msgstr "Del."
+
+msgid "Demo version"
+msgstr "测试版本"
+
+msgid "Denial wave"
+msgstr "抵抗波"
+
+msgid ""
+"Destroys all nearby projectiles, stuns the source for ::effectCharge:: "
+"seconds and inflicts ::+power:: damage."
+msgstr "摧毁附近所有飞行物,眩晕 ::effectCharge:: 秒并造成 ::+power:: 伤害."
+
+msgid "Did you find it yet!?"
+msgstr "你找到了吗?"
+
+msgid "Did you... Find it?"
+msgstr "你有...发现它吗?"
+
+msgid "Diet"
+msgstr "饮食习惯"
+
+msgid "Displays a \"!\" when an enemy is about to strike."
+msgstr "当敌人即将发动攻击时提示\"!\"."
+
+msgid "Displays a light visual feedback when you can roll again."
+msgstr "当你可以再次翻滚时,有一个光效提醒."
+
+msgid ""
+"Do you at least know to whom belongs the unfortunate vessel you've chosen to "
+"parasite?"
+msgstr "你是否知道,至少,你寄居的这具不幸的躯体是属于谁的?"
+
+msgid "Do you think you're up to it?"
+msgstr "你认为你能做到吗?"
+
+msgid "Do you want to return to the title screen?"
+msgstr "要返回主菜单么?"
+
+msgid "Does massive damage."
+msgstr "造成大量伤害."
+
+msgid "Don't panic!"
+msgstr "不要慌张!"
+
+msgid "Don't show this anymore"
+msgstr "不再提示"
+
+msgid "Don't think I won't get my rune back..."
+msgstr "不要以为我拿不回我的符文!"
+
+msgid "Don't you worry though! I know how to take care of people."
+msgstr "不要担心! 我知道如何照顾人."
+
+msgid "Done"
+msgstr "完成"
+
+msgid "Door opened"
+msgstr "门已打开"
+
+msgid "Double jump"
+msgstr "二段跳"
+
+msgid "Double-notched bow"
+msgstr "双生之弓"
+
+msgid "Down"
+msgstr "下"
+
+msgid "Download another language"
+msgstr "下载其他语言"
+
+msgid "Dramatically increases the difficulty"
+msgstr "戏剧性地增加难度"
+
+msgid "Dramatically increases the number of cells dropped by enemies"
+msgstr "极大地增加敌人掉落的细胞数量."
+
+msgid "Drop down"
+msgstr "落下"
+
+msgid "Drops a bomb (::+power:: damage) when you roll."
+msgstr "翻滚后落下炸弹( ::+power:: 伤害)."
+
+msgid "Duelist"
+msgstr "决斗者"
+
+msgid "ERROR: no target"
+msgstr "错误: 没有目标"
+
+msgid "Early Access Forum"
+msgstr "抢先体验交流论坛"
+
+msgid "Early access (::date:: - ::git::)"
+msgstr "抢先体验版 ( ::date:: - ::git:: )"
+
+msgid "Early access (::version::)"
+msgstr "抢先体验版 (::version::)"
+
+msgid "EatMyGold"
+msgstr "吃我的金币"
+
+msgid ""
+"Eating food gives you +::+dps:: damage/s for ::duration:: seconds. The "
+"healing effect is also increased by +::prct::%."
+msgstr ""
+"吃食物后增加 ::+dps:: 伤害/秒,持续 ::duration:: 秒.治疗的效果也会提升 ::"
+"prct::%."
+
+msgid "Efficiency"
+msgstr "效率"
+
+msgid "Eh. Hello, I guess?"
+msgstr "呃.你好,我想?"
+
+msgid "Electric whip"
+msgstr "电鞭"
+
+msgid "Elevator"
+msgstr "电梯"
+
+msgid "Elite monster"
+msgstr "精英怪"
+
+msgid "Emergency triage"
+msgstr "急救"
+
+msgid "Enable VSync"
+msgstr "开启垂直同步"
+
+msgid "Enable arrow keys to move "
+msgstr "使用方向键移动 "
+
+msgid "Enable the use of the d-pad for moving around"
+msgstr "能够使用十字方向键进行移动"
+
+msgid "End"
+msgstr "End"
+
+msgid "Enemies burn when they die."
+msgstr "敌人死后燃烧地面."
+
+msgid "Enemies release a toxic cloud when they die."
+msgstr "敌人死后释放剧毒云雾."
+
+msgid "Enemies remaining ::n::"
+msgstr "剩余怪物: ::n::"
+
+msgid "Enlighten your path."
+msgstr "照亮你的前路."
+
+msgid "Enter"
+msgstr "进入"
+
+msgid "Epic scroll of power"
+msgstr "史诗能力卷轴"
+
+msgid "Equip"
+msgstr "装备"
+
+msgid "Equipment"
+msgstr "装备"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Errrr..."
+msgstr "呃..."
+
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Every step you take burns the ground for ::duration:: seconds."
+msgstr "行走时使地面燃烧 ::duration:: 秒."
+
+msgid "Everything is for sale!"
+msgstr "清仓大甩卖!"
+
+msgid ""
+"Everything you buy here is yours FOREVER. Not even Death can take it from "
+"you."
+msgstr "在这买下的东西永远都是你的,即使死亡也无法带走."
+
+msgid "Evil eye"
+msgstr "邪恶之眼"
+
+msgid "Excellent! Now give it to me!"
+msgstr "太棒了! 快把它给我吧!"
+
+msgid "Explodes freezing nearby enemies and inflicting ::+power:: damage."
+msgstr "冰冻附近的敌人,造成 ::+power:: 伤害."
+
+msgid "Explodes into ::count:: mini bombs inflicting ::+power:: damage each."
+msgstr "分裂成 ::count:: 个小炸弹,每个造成 ::+power:: 伤害."
+
+msgid "Explodes, inflicting ::+power:: damage."
+msgstr "爆炸,造成 ::+power:: 伤害."
+
+msgid "Exploration"
+msgstr "探索"
+
+msgid "Explosive crossbow"
+msgstr "爆炸弩"
+
+msgid "Explosive lure"
+msgstr "爆炸诱饵"
+
+msgid "Extra level!"
+msgstr "额外关卡!"
+
+msgid "Extra points"
+msgstr "额外积分"
+
+msgid "Extra points for beating the Boss:"
+msgstr "干掉魔王获得额外加分:"
+
+msgid ""
+"Failed to send your score:\n"
+"(::reason::)"
+msgstr ""
+"上传分数失败\n"
+"(::reason::)"
+
+msgid "Filter by category"
+msgstr "依类型分类"
+
+msgid "Find the boss and eliminate it!"
+msgstr "找到领主并消灭它!"
+
+msgid "Fire brands"
+msgstr "火焰烙印"
+
+msgid "Fire grenade"
+msgstr "燃烧手雷"
+
+msgid "Fire torrent"
+msgstr "火焰洪流"
+
+msgid "Fires a volley of arrows (::+power:: damage / arrow)"
+msgstr "发射一串箭矢( ::+power:: 伤害/支)"
+
+msgid "Fires an arrow behind you (::+power:: damage)"
+msgstr "向后发射箭矢( ::+power:: 伤害)"
+
+msgid "Fires an arrow in front of you (::+power:: damage)"
+msgstr "向前发射箭矢( ::+power:: 伤害)"
+
+msgid "Fires an arrow upward (::+power:: damage)"
+msgstr "向上发射箭矢( ::+power:: 伤害)"
+
+msgid ""
+"Fires explosive bolts that deal area damage. A direct hit on an enemy "
+"inflicts a critical blow."
+msgstr "射出爆炸性箭矢造成区域伤害,对敌人直接射击造成暴击。"
+
+msgid ""
+"Fires on all nearby enemies and inflicts ::+dps:: damage/s. Your own damage "
+"is increased by ::prct::% if you are close to the turret."
+msgstr "攻击附近的敌人 ::+dps:: 伤害/秒,当你靠近塔时增加 ::prct::％ 伤害."
+
+msgid "Fires powerful bursts of bolts."
+msgstr "点火!开炮!一气呵成!"
+
+msgid ""
+"Fires rapidly on any enemies passing below inflicting ::+dps:: damage/s."
+msgstr "高速射击下方经过的敌人 ::+dps:: 伤害/秒."
+
+msgid ""
+"Fires saws on nearby enemies, inflicting ::+dps:: damage/s, plus ::+dps2:: "
+"damage/s bleeding damage."
+msgstr ""
+"火焰剧过周围的敌人,造成 ::+dps:: 伤害/秒,追加流血伤害 ::+dps2:: 伤害/秒."
+
+msgid "Flamethrower turret"
+msgstr "火焰塔"
+
+msgid "Flashbang"
+msgstr "闪光弹"
+
+msgid "Flask level ::lvl::"
+msgstr "血瓶等级 ::lvl::"
+
+msgid "Flask rechage"
+msgstr "变异烧瓶"
+
+msgid "Flings enemies and bombs backwards."
+msgstr "击飞讨厌的敌人和炸弹."
+
+msgid "Flow"
+msgstr "连贯"
+
+msgid "Flying biter"
+msgstr "飞咬虫"
+
+msgid "Fogger"
+msgstr "施雾者"
+
+msgid "Follow the light."
+msgstr "跟着光."
+
+msgid "Fool key"
+msgstr "愚人钥匙"
+
+msgid "For short range bloodshed."
+msgstr "近距离杀戮的利器."
+
+msgid "Force shield"
+msgstr "力场盾"
+
+msgid "Forgotten Sepulchre"
+msgstr "遗忘墓穴"
+
+msgid "Forward click."
+msgstr "向前滚轮."
+
+msgid "Found in a wall... Now to find out what it's for..."
+msgstr "在墙上发现它…现在来找出它的用途…"
+
+msgid "Frantic sword"
+msgstr "狂暴之刃"
+
+msgid "Freeze enemies when you parry."
+msgstr "格挡时使敌人冰冻."
+
+msgid "Freezes enemies hit by the blast."
+msgstr "冰冻冲击范围内的敌人."
+
+msgid ""
+"Freezes enemies in front of you. Does not deal damage is the enemy is "
+"already frozen."
+msgstr "冻结身前的敌人.当敌人已经处于冰冻状态时,不再造成伤害."
+
+msgid "Freezes enemies struck by your arrows."
+msgstr "将击中的敌人冰冻."
+
+msgid "Freezes enemies when you parry."
+msgstr "格挡时使敌人冰冻."
+
+msgid "From now on, whenever this item appears it will be more powerful!"
+msgstr "从现在起,每当这个道具出现,它会更强大!"
+
+msgid "Front line shield"
+msgstr "先锋盾"
+
+msgid "Frost blast"
+msgstr "冰霜爆破"
+
+msgid "Frost related slowdown lasts ::power::x longer."
+msgstr "冰冻减速持续时间x ::power:: ."
+
+msgid "Frozen archer"
+msgstr "寒冰射手"
+
+msgid "Fruitarian"
+msgstr "水果超人"
+
+msgid "Full screen mode"
+msgstr "全屏"
+
+msgid "Fullscreen windowed"
+msgstr "全屏窗口模式"
+
+msgid "GIME ME THE RUNE!"
+msgstr "交出符文!"
+
+msgid "GIVE IT TO ME!"
+msgstr "把它给我!"
+
+msgid "GO ON!"
+msgstr "继续!"
+
+msgid "Gardener's key"
+msgstr "园丁钥匙"
+
+msgid "Gastronomy"
+msgstr "美食"
+
+msgid "General"
+msgstr "常规"
+
+msgid "General improvement"
+msgstr "基础提升"
+
+msgid "General improvements"
+msgstr "基础提升"
+
+msgid "General mutations"
+msgstr "基础突变"
+
+msgid "Ghost"
+msgstr "鬼魂"
+
+msgid "Go on! Please!"
+msgstr "请!继续你的表演!"
+
+msgid "Go!"
+msgstr "出发!"
+
+msgid "Gold recovery I"
+msgstr "回收金币 I"
+
+msgid "Gold recovery II"
+msgstr "回收金币 II"
+
+msgid "Gold recovery III"
+msgstr "回收金币 III"
+
+msgid "Gold recovery IV"
+msgstr "回收金币 IV"
+
+msgid "Gold recovery level ::lvl::"
+msgstr "金币储存等级 ::lvl::"
+
+msgid "Gold tooth"
+msgstr "金牙"
+
+msgid "Golden amulet"
+msgstr "金色护符"
+
+msgid "Golden arrow"
+msgstr "金色弓箭"
+
+msgid "Golden cell"
+msgstr "金色细胞"
+
+msgid "Golem"
+msgstr "魔像"
+
+msgid "Good ol' wooden shield"
+msgstr "旧木盾"
+
+msgid "Goodbye, for no... Ohh ho ho ho ho..."
+msgstr "再见,这里什么都没有!喔!呵呵呵!"
+
+msgid "Goodbye, for now... Ohh ho ho ho ho..."
+msgstr "再见,这里什么都没有!喔!呵呵呵!"
+
+msgid "Grappling hook"
+msgstr "抓钩"
+
+msgid "Graveyard"
+msgstr "墓地"
+
+msgid "Graveyard key"
+msgstr "墓地钥匙"
+
+msgid "Greatly increases the difficulty"
+msgstr "大大增加了难度"
+
+msgid "Greatly increases the number of cells dropped by enemies"
+msgstr "大大增加敌人掉落的细胞数量."
+
+msgid "Greed shield"
+msgstr "贪婪盾"
+
+msgid "Grenade"
+msgstr "手雷"
+
+msgid "Grenades"
+msgstr "手雷"
+
+msgid "Grenadier"
+msgstr "掷弹兵"
+
+msgid "Guardian's Scroll"
+msgstr "守护者卷轴"
+
+msgid "Guts"
+msgstr "内脏"
+
+msgid "HEY, YOU!"
+msgstr "嘿,你!"
+
+msgid "HOLD ::key:: To Pass"
+msgstr "长按::key::跳过"
+
+msgid "Have you noticed how everything seems a little different each time?"
+msgstr "你有没有注意到,每次这里都有点不同?"
+
+msgid "Hayabusa boots"
+msgstr "隼鸟长靴"
+
+msgid "He won't hide forever..."
+msgstr "他不会永远躲起来…"
+
+msgid "He's DEAD."
+msgstr "他死了.."
+
+msgid "He's dead."
+msgstr "他已经死了."
+
+msgid "He's got his head... In the clouds! Oh eh ha he haw..."
+msgstr "他终于有头了?在雾里! 哦哈哈哈..."
+
+msgid "He's not here..."
+msgstr "他不在这儿..."
+
+msgid "Heal"
+msgstr "治疗"
+
+msgid "Healing Potion I"
+msgstr "血瓶 I"
+
+msgid "Healing Potion II"
+msgstr "血瓶 II"
+
+msgid "Healing Potion III"
+msgstr "血瓶 III"
+
+msgid "Healing Potion IV"
+msgstr "血瓶 IV"
+
+msgid "Healing flasks used"
+msgstr "生命烧瓶使用次数"
+
+msgid ""
+"Heals ::+power:: HP and completely protects you for ::duration:: seconds."
+msgstr "在 ::duration:: 秒内回复 ::+power:: 生命值且保持无敌状态."
+
+msgid ""
+"Heals ::+power:: HP and completely protects you for ::duration:: seconds. "
+"Single use."
+msgstr "在 ::duration:: 秒内回复 ::+power:: 生命值且保持无敌状态.只能使用一次."
+
+msgid "Heals you when you parry (once per enemy)"
+msgstr "格挡后回复生命值(每个敌人只触发一次)"
+
+msgid "Health flask"
+msgstr "生命烧瓶"
+
+msgid "Health flask (::n:: HP)"
+msgstr "生命烧瓶( ::n:: HP)"
+
+msgid "Health flask +1"
+msgstr "血瓶 +1"
+
+msgid "Health flask I"
+msgstr "生命烧瓶 I"
+
+msgid "Health flask II"
+msgstr "生命烧瓶 II"
+
+msgid "Health flask III"
+msgstr "生命烧瓶 III"
+
+msgid "Health flask IV"
+msgstr "生命烧瓶 IV"
+
+msgid "Health flask refilled"
+msgstr "血瓶恢复"
+
+msgid "Health flask refilled and health restored"
+msgstr "血瓶和生命值恢复"
+
+msgid "Health flasks used"
+msgstr "生命烧瓶使用次数"
+
+msgid ""
+"Health flasks' healing effect is spread over ::duration:: seconds, but "
+"during this period you deal +::+dps:: extra damage/s."
+msgstr ""
+"生命药水变为缓慢治愈,持续 ::duration:: 秒,但此期间你额外造成 ::+dps:: 伤害/"
+"秒."
+
+msgid "Health increased!"
+msgstr "提升生命值上限!"
+
+msgid "Health potion"
+msgstr "血瓶"
+
+msgid "Health potion (::n:: HP)"
+msgstr "血瓶 ( ::n:: HP)"
+
+msgid "Health restored"
+msgstr "生命值恢复"
+
+msgid "Heavy crossbow"
+msgstr "重型十字弩"
+
+msgid "Heavy grenade"
+msgstr "重型榴弹"
+
+msgid "Heavy turret"
+msgstr "重炮塔"
+
+msgid "Held Shield"
+msgstr "举起盾牌"
+
+msgid "Hello hello Mr Prisoner sir!"
+msgstr "你好!你好!囚犯先生!"
+
+msgid "Here I am!"
+msgstr "我在这里!"
+
+msgid "Here lie the Architects."
+msgstr "这里躺着一个设计师."
+
+msgid "Here, have a lolly, it's on the house."
+msgstr "这个房子上有根棒棒糖."
+
+msgid "Hey! Over here!"
+msgstr "嘿!过来一下吧!"
+
+msgid "Hey! You there! Open me!"
+msgstr "嘿!这里!帮我打开!"
+
+msgid "Hide controls in UI"
+msgstr "在界面中隐藏按键提示"
+
+msgid "Hide obsolete entries"
+msgstr "隐藏已解锁类目"
+
+msgid "Hide the unavailable items"
+msgstr "隐藏无法使用的道具"
+
+msgid "Hides button names in the interface."
+msgstr "在界面中隐藏按钮名称."
+
+msgid "Hit me!"
+msgstr "打我!"
+
+msgid ""
+"Ho ho! Thank you! It's somewhere around here in these sewers, on your side "
+"of these bars..."
+msgstr "啊,哈!谢谢你!它就在这附近的下水道里,就在这边上..."
+
+msgid "Ho. Ho. Ho."
+msgstr "哈!哈!哈!"
+
+msgid "Hokuto's bow"
+msgstr "北斗神弓"
+
+msgid ""
+"Hold the shield up to reduce some damage. Parry at the right time to cancel "
+"all damage."
+msgstr "扛起盾牌来减轻部分伤害.在正确的时间举盾将完成盾反,免受伤害."
+
+msgid "Hold to block attacks."
+msgstr "持盾来格挡攻击."
+
+msgid "Hold to heal"
+msgstr "长按使用血瓶"
+
+msgid "Hold to refresh the shop"
+msgstr "长按以刷新商店道具"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Horizontal turret"
+msgstr "自动箭塔"
+
+msgid "Host zombie"
+msgstr "宿主僵尸"
+
+msgid "Hunter's grenade"
+msgstr "猎人手雷"
+
+msgid "Hunter's longbow"
+msgstr "猎人长弓"
+
+msgid "I 'm a man of science!"
+msgstr "我是科学家!"
+
+msgid "I WANT MY RUNE!"
+msgstr "我要我的符文!"
+
+msgid ""
+"I am the Collector and I'm about the closest thing to company you will get "
+"down here."
+msgstr "我是收藏家,在这是你最亲近的伙伴."
+
+msgid "I cannot open it from here."
+msgstr "我不能从这打开."
+
+msgid "I don't have a head, remember?"
+msgstr "还记得吗?我没有头!"
+
+msgid "I don't need that now."
+msgstr "我现在不需要它."
+
+msgid "I guess my usual gag is not use here..."
+msgstr "我猜在这里不适合讲些平时的烂笑话...."
+
+msgid "I haven't got a lot to offer, sorry."
+msgstr "对不起,我没有这么多钱."
+
+msgid ""
+"I hear that the monsters become more and more pugnacious as you approach the "
+"end..."
+msgstr "我听说当你越接近关底,怪物会变得更加好斗…"
+
+msgid "I knew it! You're just like all the rest!"
+msgstr "我就知道!你就和别人一样!"
+
+msgid "I know it's good, but you be abusing it..."
+msgstr "我知道它很棒,但你滥用它.."
+
+msgid "I know what you've done."
+msgstr "我知道你做了什么."
+
+msgid "I lost a ru.. I mean MY rune. So you see I'm a little stuck..."
+msgstr "我失去了个符 ...我的意思是我的符文,所以我有点麻烦了..."
+
+msgid "I need a key..."
+msgstr "我需要钥匙...."
+
+msgid ""
+"I noticed your... \"achievements\", if that's what you want to call them."
+msgstr "我记录着到你的\"成就\",如果你想要这样称呼它."
+
+msgid "I said..."
+msgstr "我就说了..."
+
+msgid "I saw you fight... Not bad at all."
+msgstr "我刚刚看了你的战姿,还不赖嘛."
+
+msgid "I still don't understand..."
+msgstr "我仍不了解..."
+
+msgid "I suppose you didn't think to find yourself back here..."
+msgstr "你可能没想到自己会回到这里...."
+
+msgid "I swore on my honour to find him, failure is not an option."
+msgstr "我发誓要找到他,绝不容许失败."
+
+msgid "I wonder if... What do you make of all this?"
+msgstr "我想知道...为什么你要做这些呢?"
+
+msgid "I work with the Collector guy right there."
+msgstr "我和收藏家在一起工作."
+
+msgid "I'll see you again I guess..."
+msgstr "回头见,如果还能见到你的话..."
+
+msgid "I'm a naughty chest. I deserve to be punished."
+msgstr "我是一个调皮的箱子,我应该受到惩罚."
+
+msgid "I'm defenceless..."
+msgstr "我手无寸铁..."
+
+msgid "I'm not one of those rip-off merchant alchemists!"
+msgstr "我才不是那些会骗人的术士!"
+
+msgid "I'm really happy I found this great stinking pile of corpses!"
+msgstr "我真的很高兴发现了这个巨大的臭尸堆!"
+
+msgid "I'm the Blacksmith."
+msgstr "我是铁匠."
+
+msgid "I've been naughty."
+msgstr "我一直很顽皮哦."
+
+msgid "Ice bow"
+msgstr "寒冰之弓"
+
+msgid "Ice crossbow"
+msgstr "冰弩"
+
+msgid "Ice grenade"
+msgstr "冰冻手雷"
+
+msgid "Ice shock"
+msgstr "寒冰震爆"
+
+msgid ""
+"If an enemy dies while bleeding, nearby enemies will begin to bleed too."
+msgstr "敌人死于出血时,使附近的敌人出血."
+
+msgid ""
+"If you uncover any BLUEPRINTS, I may be able to provide you with some "
+"more... experimental items."
+msgstr "如果你发现任何蓝图,我就可以提供你更多道具."
+
+msgid ""
+"If you're computer has a dedicated 3rd party graphics card, we strongly "
+"recommend that you force the game to run on that card in the card's settings."
+msgstr "如果你的计算机有其他显卡时,我们强烈建议用该显卡执行游戏."
+
+msgid "If you're hit, you're dead."
+msgstr "只要受到伤害立即死亡."
+
+msgid "Ignite the ground around you."
+msgstr "点燃你周围地面."
+
+msgid ""
+"Ignites the ground and your enemies inflicting ::+dps:: damage/sec for ::"
+"duration:: seconds."
+msgstr "点燃地面,造成敌人 ::+dps:: 伤害/秒,持续 ::duration:: 秒."
+
+msgid ""
+"Ignites your enemies and inflicts ::+dps:: damage/sec for ::duration:: "
+"seconds."
+msgstr "点燃造成 ::+dps:: 伤害/秒,持续 ::duration:: 秒."
+
+msgid ""
+"Ignores shields and deals a CRITICAL HIT when striking at maximum range."
+msgstr "无视盾牌,于极限距离处暴击."
+
+msgid "Ignores shields. Wrenches victims towards you."
+msgstr "无视盾牌,并将敌人向你拉近."
+
+msgid ""
+"Immobilizes all nearby enemies for ::duration:: seconds and inflicts ::"
+"+dps::  damage/s while they are trapped."
+msgstr "缠绕住附近所有敌人,持续 ::duration:: 秒,造成 ::+dps:: 伤害/秒."
+
+msgid "Impaler"
+msgstr "穿刺长矛"
+
+msgid "Import ::slot::"
+msgstr "输入 ::slot::"
+
+msgid "Improve your 3 stats. Yes, the 3!"
+msgstr "提升你的三项属性.没看错!3项!"
+
+msgid "Improved"
+msgstr "提升"
+
+msgid "In any case, it beats selling a bunch of old ju... Stuff... Yeah stuff."
+msgstr "不管怎么说,总比卖一大堆旧垃圾好...口误...旧物资..."
+
+msgid "In any case... You'll go no further."
+msgstr "无论如何…你再也走不动了."
+
+msgid ""
+"In exchange for the CELLS you pillage from your foes, I can provide you with "
+"a few useful items..."
+msgstr "从敌人身上获取细胞来换取一些有用的东西."
+
+msgid ""
+"In that case, head down and defeat this level's boss as fast as you can "
+"while scoring as many points as you can manage."
+msgstr "在这种模式中,尽可能快地杀死领主,同时尽可能多地得分."
+
+msgid "Increase active skill damage and reduce their cooldown timer."
+msgstr "增加主动技能伤害并减少冷却时间."
+
+msgid "Increase damage:"
+msgstr "增加伤害:"
+
+msgid "Increase health."
+msgstr "生命值上限提升."
+
+msgid "Increase weapon damage."
+msgstr "增加武器伤害."
+
+msgid "Increase your damage by ::prct::% when you are close."
+msgstr "当你靠近塔时,增加伤害 ::prct::%."
+
+msgid "Increases the level of the Foundry"
+msgstr "提升铸造等级"
+
+msgid "Infantry bow"
+msgstr "步兵短弓"
+
+msgid "Infantry grenade"
+msgstr "步兵手雷"
+
+msgid "Infection level CRITICAL"
+msgstr "感染等级\"危险\""
+
+msgid "Infection level high"
+msgstr "感染等级\"高\""
+
+msgid "Inflict ::d:: (::crit::) damage"
+msgstr "造成 ::d:: (::crit::) 伤害"
+
+msgid "Inflict ::d:: damage"
+msgstr "造成 ::d:: 伤害"
+
+msgid ""
+"Inflicts ::+dps:: damage/s and bleeding (::+dotDps:: damage/s) to enemies "
+"walking on it."
+msgstr "敌人走过时,造成 ::+dps:: 伤害/秒,持续出血( ::+dotDps:: 伤害/秒)."
+
+msgid "Inflicts ::+dps:: damage/s to nearby enemies."
+msgstr "对周围的敌人造成 ::+dps:: 伤害/秒."
+
+msgid ""
+"Inflicts ::+power:: damage and burns nearby enemies for ::duration:: seconds "
+"(::+dps:: damage/s)."
+msgstr "造成 ::+power:: 伤害,燃烧敌人 ::duration:: 秒( ::+dps:: 伤害/秒)."
+
+msgid ""
+"Inflicts ::+power:: damage and covers nearby enemies with flammable oil."
+msgstr "使敌人沾满可燃油,造成 ::+power:: 伤害."
+
+msgid ""
+"Inflicts ::+power:: damage and stuns nearby enemies for ::duration:: seconds."
+msgstr "造成 ::+power:: 伤害,眩晕敌人 ::duration:: 秒."
+
+msgid "Inflicts a CRITICAL BLOW  when you strike at close range."
+msgstr "近距离攻击时造成暴击."
+
+msgid "Inflicts a CRITICAL BLOW if the kick interrupts an attack."
+msgstr "打断敌人攻击后造成暴击."
+
+msgid "Inflicts a CRITICAL BLOW if the victim is bleeding or poisoned."
+msgstr "攻击出血或者中毒的敌人时造成暴击."
+
+msgid "Inflicts a CRITICAL BLOW if the victim is up against a wall."
+msgstr "敌人靠近墙壁时暴击."
+
+msgid "Inflicts a CRITICAL BLOW if the victime is up against a wall."
+msgstr "敌人靠近墙壁时暴击."
+
+msgid "Inflicts a CRITICAL BLOW if you have an active speed buff."
+msgstr "如果你有一个活跃的速度增益,将会造成暴击."
+
+msgid "Inflicts a CRITICAL BLOW if you have been hurt recently."
+msgstr "受到伤害将必定暴击."
+
+msgid "Inflicts a CRITICAL BLOW if you strike from far away."
+msgstr "远距离攻击时造成暴击."
+
+msgid "Inflicts a CRITICAL BLOW on the third consecutive hit."
+msgstr "第三下攻击必定暴击."
+
+msgid "Inflicts a CRITICAL BLOW when you backstab your enemies."
+msgstr "攻击敌人背后将造成暴击."
+
+msgid ""
+"Inflicts a CRITICAL HIT if the target has ::count:: or more arrows in its "
+"body."
+msgstr "敌人身上有 ::count:: 支以上箭矢将暴击."
+
+msgid "Inflicts a CRITICAL HIT immediately after rolling."
+msgstr "翻滚后下次攻击暴击."
+
+msgid ""
+"Inflicts a CRITICAL HIT when you strike several enemies at the same time."
+msgstr "同时攻击多个敌人时暴击."
+
+msgid "Inflicts a CRITICAL HIT when you're below ::prct::% health."
+msgstr "生命值低于 ::prct::% 造成暴击."
+
+msgid "Inflicts significant damage to blocked enemies."
+msgstr "对被格挡的敌人造成巨大伤害."
+
+msgid "Inhabit"
+msgstr "居住"
+
+msgid "Inoculate boss cells"
+msgstr "注入领主细胞"
+
+msgid "Inquisitor"
+msgstr "审判者"
+
+msgid "Insert."
+msgstr "Insert."
+
+msgid "Interruption"
+msgstr "中断"
+
+msgid "Inventory"
+msgstr "库存"
+
+msgid "Invest cells"
+msgstr "投资细胞"
+
+msgid "Invest cells (hold A)"
+msgstr "投资细胞 (按住)"
+
+msgid "Invest cells (hold)"
+msgstr "投资细胞 (按住)"
+
+msgid "It cannot be opened."
+msgstr "无法打开."
+
+msgid "It does not seem to work."
+msgstr "这似乎起不了作用."
+
+msgid "It doesn't seem to work."
+msgstr "这似乎并不奏效."
+
+msgid "It seems that being cursed might just be worth it..."
+msgstr "似乎被诅咒可能是值得的…"
+
+msgid "It seems to be very old."
+msgstr "它看上去非常的陈旧."
+
+msgid "It was like this with the others, for a while..."
+msgstr "这里好像看起来和过去一样..."
+
+msgid ""
+"It won't hurt you to wait, unfortunately, I don't have any time for you "
+"right now."
+msgstr "等你不会有什么损失,不幸的是,我现在没有时间陪你."
+
+msgid "It's MY rune!"
+msgstr "那是我的符文!"
+
+msgid "It's all in the wrist..."
+msgstr "一切尽在掌握..."
+
+msgid "It's going to be a sight to see when all of these flasks are lit up..."
+msgstr "当这些玻璃瓶都点亮时,这将是个美景!"
+
+msgid "It's here that you'll find it, I mean, MY rune!"
+msgstr "你找到它了!我说,我的符文!"
+
+msgid "It's just here."
+msgstr "就在这里."
+
+msgid "It's missing some parts"
+msgstr "它缺少一些零件"
+
+msgid "It's somewhere here! I know it, I can FEEL it!"
+msgstr "我知道它在某个地方,我可以\"感觉到\"它!"
+
+msgid "It's your doing this isn't it?"
+msgstr "是你做的,对吧?"
+
+msgid "Item improved!"
+msgstr "物品属性提升!"
+
+msgid "Ivy grenade"
+msgstr "藤蔓手雷"
+
+msgid "Join the dark side."
+msgstr "加入原力的黑暗面吧."
+
+msgid "Jump"
+msgstr "跳跃"
+
+msgid "KO shield"
+msgstr "击倒盾"
+
+msgid "Kamikaze"
+msgstr "自爆蝙蝠"
+
+msgid "Kebab"
+msgstr "烤肉串"
+
+msgid "Key"
+msgstr "钥匙"
+
+msgid "Key required: ::name::"
+msgstr "需要 ::name::"
+
+msgid "Keyboard/mouse"
+msgstr "键盘/鼠标"
+
+msgid "Kicks victims backwards and interrupts their attacks."
+msgstr "打断敌人的攻击并将之踢飞."
+
+msgid "Kill all nearby enemies first!"
+msgstr "先杀死附近的所有敌人!"
+
+msgid "Kill all the enemies and make it to the exit without getting hit!"
+msgstr "在不被击中的情况下杀死所有敌人并到达出口!"
+
+msgid "Kills things. Sometimes..."
+msgstr "偶尔..杀死东西."
+
+msgid "Knife storm"
+msgstr "圆舞飞刀"
+
+msgid "Knife thrower"
+msgstr "掷刀者"
+
+msgid ""
+"Knocks all nearby enemies back and inflicts ::+power:: damage. If the victim "
+"is hurled against a wall, it takes ::+power2:: extra damage."
+msgstr ""
+"击退附近所有敌人并对他们造成 ::+power:: 伤害.如果目标被击退至墙壁,它将受到额"
+"外 ::+power2:: 伤害."
+
+msgid ""
+"Knocks enemies back and interrupts their attacks. Inflicts extra damage if "
+"the victim is hurled against a wall."
+msgstr "击退敌人并打断其攻击.如果目标被击退至墙上,将造成额外伤害."
+
+msgid "Lancer"
+msgstr "枪骑兵"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Last chance failed!"
+msgstr "最后一次机会,失败了!"
+
+msgid ""
+"Launched several flaming projectiles. Inflicts critical damage on enemies "
+"covered with oil."
+msgstr "发射数个火焰射弹.对身覆油渍的敌人暴击."
+
+msgid ""
+"Launches ::count:: traps which immobilize enemies for ::duration:: seconds. "
+"Increases all damage taken by trapped enemies by ::+dps:: damage/s."
+msgstr ""
+"发射 ::count:: 个陷阱,夹住敌人 ::duration:: 秒.对被困住敌人的攻击将额外造"
+"成 ::+dps:: 伤害/秒."
+
+msgid ""
+"Launches ::count:: traps which immobilize enemies for ::duration:: seconds. "
+"Increases all damage taken by trapped enemies by ::prct::%."
+msgstr ""
+"发射 ::count:: 个陷阱,夹住敌人 ::duration:: 秒,受到的所有伤害增加 ::prct::% ."
+
+msgid ""
+"Launches a storm of knives around you which causes bleed damage for ::"
+"duration:: seconds (::+dps:: damage/s)."
+msgstr ""
+"在你周围发出一阵刀扇,对敌人造成流血伤害持续 ::duration:: 秒( ::+dps:: 伤害/"
+"秒)."
+
+msgid "Lava Worm"
+msgstr "熔岩蠕虫"
+
+msgid "Leave"
+msgstr "离开"
+
+msgid "Left"
+msgstr "左"
+
+msgid "Left click."
+msgstr "鼠标左键."
+
+msgid "Left trigger skill"
+msgstr "左主动技能"
+
+msgid "Let's finish this!"
+msgstr "让我们结束这一切!"
+
+msgid "Library"
+msgstr "图书馆"
+
+msgid "Lieutenant"
+msgstr "僵尸副官"
+
+msgid "Ligament slicer"
+msgstr "锯齿飞刀"
+
+msgid "Lightning bolt"
+msgstr "闪电光束"
+
+msgid "Like all the rest, I guess."
+msgstr "我猜就像其他人一样."
+
+msgid ""
+"Like any old shield, it allows you to block attacks and temporarily protects "
+"you if you take damage."
+msgstr "像任何旧盾牌一样,它允许你格挡攻击并在你受伤后提供保护."
+
+msgid "Loading..."
+msgstr "载入中..."
+
+msgid "Locked"
+msgstr "已上锁"
+
+msgid "Locked chest"
+msgstr "已解锁的宝箱"
+
+msgid "Long dive attacks cause the ground to ignite."
+msgstr "下冲震击地面后使地面燃烧."
+
+msgid "Look"
+msgstr "看"
+
+msgid "Lost our head now did we..."
+msgstr "我们的头都没了,那现在我们..."
+
+msgid "Lure"
+msgstr "诱饵"
+
+msgid "MINE!"
+msgstr "我的!"
+
+msgid "Magical barrier deactivated!"
+msgstr "魔法屏障已失效!"
+
+msgid "Magnetic grenade"
+msgstr "磁力手雷"
+
+msgid "Main volume"
+msgstr "主要音量"
+
+msgid "Main weapon"
+msgstr "主武器"
+
+msgid "Make an offering and return from whence you came."
+msgstr "献上祭品,从哪里来回哪里去."
+
+msgid ""
+"Make you invisible after ::duration:: without attacking. You next strike "
+"while still being invisible inflicts +::prct::% damage."
+msgstr "停止攻击后 ::duration:: 秒隐形,破隐一击伤害增加 ::prct::%."
+
+msgid ""
+"Makes you invisible after ::duration::/sec without attacking. While "
+"invisible your first hit will do +::prct::% damage."
+msgstr "停止攻击后 ::duration:: 秒隐形,破隐一击伤害增加 ::prct::%."
+
+msgid "Malachite"
+msgstr "孔雀石"
+
+msgid "Map"
+msgstr "地图"
+
+msgid "Map: Left"
+msgstr "地图:左"
+
+msgid "Map: Zoom in"
+msgstr "地图:放大"
+
+msgid "Map: Zoom out"
+msgstr "地图:缩小"
+
+msgid "Map: down"
+msgstr "地图:下"
+
+msgid "Map: focus"
+msgstr "地图:中心"
+
+msgid "Map: right"
+msgstr "地图:右"
+
+msgid "Map: up"
+msgstr "地图:上"
+
+msgid "Marketing"
+msgstr "销售"
+
+msgid ""
+"Marks the victim for ::duration:: seconds. The enemy takes ::+dps:: extra "
+"damage/s while they're marked. If they die the mark spreads to nearby "
+"enemies."
+msgstr ""
+"标记一名敌人 ::duration:: 秒.被标记的敌人在标记期间将额外受到 ::+dps:: 伤害."
+"如果他们死亡,标记将会传播给附近的敌人."
+
+msgid "Maybe the Collector has something to do with that... Who knows?"
+msgstr "也许收藏家和那件事有关…谁知道呢?"
+
+msgid "Maybe they'll stop calling me \"Guilain the intern\"..."
+msgstr "也许他们会停下来叫我,\"格蕾实习生\"…"
+
+msgid "Meat grinder"
+msgstr "绞肉机"
+
+msgid "Meat skewer"
+msgstr "突刺叉"
+
+msgid "Mechanical spider"
+msgstr "机械蜘蛛"
+
+msgid "Melee"
+msgstr "近战"
+
+msgid "Melee weapon"
+msgstr "近战武器"
+
+msgid "Melee weapons"
+msgstr "近战武器"
+
+msgid "Merchandise category"
+msgstr "商品类目"
+
+msgid "Middle click."
+msgstr "鼠标中键."
+
+msgid "Misc"
+msgstr "杂项"
+
+msgid "Miscellaneous skills"
+msgstr "其它技能"
+
+msgid ""
+"Miserable abomination, you owe your meagre success to this pitiful body!"
+msgstr "真是可悲,你将你那卑微的成功建立在这可怜的躯体上..."
+
+msgid "Monster"
+msgstr "我是怪物"
+
+msgid "Monster's eye"
+msgstr "怪物的眼睛"
+
+msgid "Monsters"
+msgstr "怪物"
+
+msgid "Moonstone amulet"
+msgstr "月光石护符"
+
+msgid "Most cells held at any time"
+msgstr "最多同时拥有细胞数"
+
+msgid "Most gold held at any time"
+msgstr "最多同时拥有金币数"
+
+msgid "Mouse capture (mouse can't leave the game screen)"
+msgstr "锁定鼠标(鼠标无法离开游戏画面)."
+
+msgid "Mouse capture (mouse can't leave the game screen)."
+msgstr "锁定鼠标(鼠标无法离开游戏画面)."
+
+msgid "Music"
+msgstr "音乐"
+
+msgid "Music volume"
+msgstr "音乐音量"
+
+msgid "Mutation"
+msgstr "基因突变"
+
+msgid "Mutations"
+msgstr "基因突变"
+
+msgid "Mute"
+msgstr "静音"
+
+msgid "My precious little rune, where are you?"
+msgstr "我的宝贝符文,你在哪里?"
+
+msgid "My score"
+msgstr "我的分数"
+
+msgid "My stuff is too good for you! Scram!"
+msgstr "我的东西都对你有益! 快买!"
+
+msgid "NOT IMPLEMENTED"
+msgstr "[尚未投入使用]"
+
+msgid "NOT MEANT TO BE SEEN"
+msgstr "并不代表不会被发现"
+
+msgid "Nada!"
+msgstr "还没有!"
+
+msgid "Necromancy"
+msgstr "招魂"
+
+msgid ""
+"Need more power? Damage dealt x::power::, but... damage received x::"
+"power2::!!"
+msgstr "你渴望力量吗?伤害x ::power:: ,但承受 ::power2:: 倍伤害!"
+
+msgid "Never mind, come closer and relax. This might sting a little."
+msgstr "别在意,靠近点放轻松, 这只会有点痛."
+
+msgid "New amulet (::price:: Gold):"
+msgstr "新护身符 ( ::price:: 金币):"
+
+msgid "New amulet:"
+msgstr "新护身符:"
+
+msgid "New blueprint discovered"
+msgstr "发现新蓝图"
+
+msgid "New challenge"
+msgstr "新挑战"
+
+msgid "New game"
+msgstr "开始新的挑战"
+
+msgid "New item unlocked!"
+msgstr "新物品已解锁!"
+
+msgid "New melee weapon unlocked!"
+msgstr "新近战武器已解锁!"
+
+msgid "New mutation unlocked!"
+msgstr "新突变已解锁!"
+
+msgid "New ranged weapon unlocked!"
+msgstr "新远程武器已解锁!"
+
+msgid "New shield unlocked!"
+msgstr "新盾牌已解锁!"
+
+msgid "New weapon unlocked!"
+msgstr "新武器已解锁!"
+
+msgid "Next"
+msgstr "下一页"
+
+msgid "Next page."
+msgstr "下一页."
+
+msgid "Next reward in ::num:: Daily Run victories"
+msgstr "下一个奖励在通关 ::num:: 次日常挑战后"
+
+msgid "Next reward in ::num:: Daily Run victory"
+msgstr "下一个奖励在通关 ::num:: 次日常挑战后"
+
+msgid "Night light"
+msgstr "暗夜之光"
+
+msgid "No BLUEPRINTS available!"
+msgstr "无蓝图可用!"
+
+msgid "No Boss Source Cells injected"
+msgstr "没有注入领主原细胞"
+
+msgid "No active skill BLUEPRINTS available!"
+msgstr "无可用技能蓝图!"
+
+msgid "No active skill blueprints available."
+msgstr "无可用技能蓝图."
+
+msgid "No blueprints available."
+msgstr "无可用蓝图."
+
+msgid "No gold? NO GOODIES!"
+msgstr "没金币?不给东西!"
+
+msgid "No meta BLUEPRINTS available!"
+msgstr "无可用基础蓝图!"
+
+msgid "No meta blueprints available."
+msgstr "无可用基础蓝图."
+
+msgid "No new blueprint to be retrieved from this creature."
+msgstr "这个生物身上没有搜到新的蓝图."
+
+msgid "No new blueprints"
+msgstr "没有新的蓝图"
+
+msgid "No new items to unlock"
+msgstr "没有要解锁的新物品"
+
+msgid "No objects to improve"
+msgstr "没有可提升的物品"
+
+msgid "No target"
+msgstr "没有目标"
+
+msgid "No time left, too bad!"
+msgstr "糟糕!没时间了!"
+
+msgid "No use"
+msgstr "无法使用"
+
+msgid "No weapon BLUEPRINTS available!"
+msgstr "无可用武器蓝图!"
+
+msgid "No weapon blueprints available."
+msgstr "无可用武器蓝图."
+
+msgid "No! We don't offer credit!"
+msgstr "不! 我们不提供贷款!"
+
+msgid "None"
+msgstr "无"
+
+msgid "None for now."
+msgstr "基因尚未突变."
+
+msgid "None!"
+msgstr "还没有!"
+
+msgid "Not enough gold"
+msgstr "金币不足!"
+
+msgid "Not enough gold!"
+msgstr "金币不足!"
+
+msgid "Not useful for now"
+msgstr "现在用不到"
+
+msgid "Not useful for now."
+msgstr "现在用不到"
+
+msgid "Nothing worth mentioning, except maybe a vague whiff of dead rat..."
+msgstr "没什么值得一提的,除了一股死老鼠的气味..."
+
+msgid "Now you see me, now you don't!"
+msgstr "你看到我了?现在又看不到了!"
+
+msgid "Now... Prisoner."
+msgstr "现在...囚犯."
+
+msgid "Num. *"
+msgstr "数字键 *"
+
+msgid "Num. +"
+msgstr "数字键 +"
+
+msgid "Num. -"
+msgstr "数字键 -"
+
+msgid "Num. ."
+msgstr "数字键 ."
+
+msgid "Num. /"
+msgstr "数字键 /"
+
+msgid "Num. 0"
+msgstr "数字键 0"
+
+msgid "Num. 1"
+msgstr "数字键 1"
+
+msgid "Num. 2"
+msgstr "数字键 2"
+
+msgid "Num. 3"
+msgstr "数字键 3"
+
+msgid "Num. 4"
+msgstr "数字键 4"
+
+msgid "Num. 5"
+msgstr "数字键 5"
+
+msgid "Num. 6"
+msgstr "数字键 6"
+
+msgid "Num. 7"
+msgstr "数字键 7"
+
+msgid "Num. 8"
+msgstr "数字键 8"
+
+msgid "Num. 9"
+msgstr "数字键 9"
+
+msgid "Num. Entrée"
+msgstr "数字键 Enter"
+
+msgid "OK"
+msgstr "确定"
+
+msgid "OUT OF MY SIGHT! Your presence grows tiring."
+msgstr "滚开!你很碍眼!"
+
+msgid "Obtain objects from the ::c:: category (this choice is final)."
+msgstr "从::c::物品库选择道具(无法反悔)."
+
+msgid "Of course you don't..."
+msgstr "你当然不知道..."
+
+msgid "Oh well. \"Alive\"... Sort of."
+msgstr "哦,好吧,看起来像是\"活着\"."
+
+msgid "Oh yeah, sorry about the smell..."
+msgstr "哦,对不起,我说的是你身上的味道..."
+
+msgid "Oh, hey kid."
+msgstr "哦,嘿,孩子."
+
+msgid "Oh, now don't be like that..."
+msgstr "哦,现在不要这样了..."
+
+msgid "Oh, you..."
+msgstr "哦,你…"
+
+msgid "Oh. Hello."
+msgstr "喔,你好."
+
+msgid "Oh... Interesting!"
+msgstr "喔,真有趣!"
+
+msgid "Oh... Well. Yes, I see the problem..."
+msgstr "喔,噢,是的,我发现问题了..."
+
+msgid "Ohh ho ho ho... There's nothing for you here, outsider..."
+msgstr "喔!呵呵呵!乡巴佬,这里对你来说什么都没有~"
+
+msgid "Ohhh ho ho... The vessel you're looking for hasn't docked yet..."
+msgstr "喔!呵呵呵!你要找的船还没有靠岸..."
+
+msgid "Ohhh.... I've got so much to give you..."
+msgstr "喔...我最多就给你这么多了..."
+
+msgid "Oi, losers! Over here!"
+msgstr "喔呦, 弱者! 过来一下!"
+
+msgid "Oil grenade"
+msgstr "油渍手雷"
+
+msgid "Oiled Sword"
+msgstr "油腻之剑"
+
+msgid "Oiled sword"
+msgstr "油腻之剑"
+
+msgid "Ok"
+msgstr "确定"
+
+msgid "Ok! You have it?"
+msgstr "好!你得到它了?"
+
+msgid "Old amulet:"
+msgstr "旧护符:"
+
+msgid "Once lifted you'll gain 25 extra points!"
+msgstr "一旦解除,你将会得到额外的25分!"
+
+msgid "One could think the island is alive..."
+msgstr "有人以为这座岛还活着...."
+
+msgid "One day, I'll have a real shopfront!"
+msgstr "总有一天,我会拥有一个真正的店铺!"
+
+msgid "One of the gears is broken."
+msgstr "其中一个装备坏了."
+
+msgid "Open"
+msgstr "打开"
+
+msgid "Open ME GODDAMIT!"
+msgstr "他妈的打我啊!"
+
+msgid "Open me real HARD!"
+msgstr "痛打我一顿吧!"
+
+msgid "Open the gates of Hell..."
+msgstr "打开地狱之门.."
+
+msgid "Opened with: ::key::!"
+msgstr "使用 ::key:: 开启!"
+
+msgid "Orb caster"
+msgstr "球之施法者"
+
+msgid "Ossuary"
+msgstr "藏骨堂"
+
+msgid "Ouch!"
+msgstr "哎哟!"
+
+msgid "Ouch!!"
+msgstr "哎哟!!"
+
+msgid "Out of ammo"
+msgstr "弹药耗尽"
+
+msgid "Out of order Teleporter"
+msgstr "无序传送"
+
+msgid "Outside, peasant!"
+msgstr "滚出去,乡巴佬!"
+
+msgid "Parry!"
+msgstr "格挡!"
+
+msgid "Parting gift"
+msgstr "遗物"
+
+msgid "Patchnotes"
+msgstr "更新资讯"
+
+msgid "Pause"
+msgstr "暂停"
+
+msgid "Pay ::price:: GOLD"
+msgstr "付 ::price:: 个金币"
+
+msgid "Pendant"
+msgstr "项链"
+
+msgid "Periodic AoE"
+msgstr "定期范围伤"
+
+msgid "Permanent improvement unlocked!"
+msgstr "永久提升解锁!"
+
+msgid "Permanent rune acquired"
+msgstr "获得永久符文"
+
+msgid "Phaser"
+msgstr "位移"
+
+msgid "Phazer"
+msgstr "速魔"
+
+msgid "Pick up"
+msgstr "捡起"
+
+msgid "Pirate captain"
+msgstr "海盗船长"
+
+msgid "Play"
+msgstr "开始"
+
+msgid "Playing Dead Cells with a controller is strongly advised!"
+msgstr "我们强烈建议使用控制器来玩 Dead Cells !"
+
+msgid "Please buy something, else they'll punish me!"
+msgstr "请务必买点东西,否则他们会惩罚我!"
+
+msgid ""
+"Please, do not attempt to take this shortcut if you're not properly "
+"equipped... You've been warned."
+msgstr "如果你装备很差,请不要走这条捷径...你已经被警告过了!"
+
+msgid "Poison enemies that hurt you."
+msgstr "任何攻击你的敌人使其中毒."
+
+msgid "Poison enemies when you parry."
+msgstr "格挡时使敌人中毒."
+
+msgid "Poison heals you rather than hurting you."
+msgstr "中毒会治愈你,并非伤害你."
+
+msgid "Poison no longer affects you. Sewers, here we come..."
+msgstr "免疫中毒.下水道,我们来了!"
+
+msgid "Poison the victim."
+msgstr "攻击使敌人中毒."
+
+msgid "Poisons enemies when you parry."
+msgstr "格挡时使敌人中毒."
+
+msgid "Power"
+msgstr "能力"
+
+msgid "Powers"
+msgstr "能力"
+
+msgid "Press again to confirm"
+msgstr "请再次确认"
+
+msgid "Previous"
+msgstr "上一页"
+
+msgid "Previous page."
+msgstr "上一页."
+
+msgid "Prisoner's collar"
+msgstr "囚犯项圈"
+
+msgid ""
+"Probably fake, but you should be able to trick a poor soul into buying it "
+"for ::$power:: GOLD."
+msgstr "八成是赝品,但你应该能找到冤大头把它换成 ::$power:: 金币."
+
+msgid ""
+"Probably fake, but you should be able to trick a poor soul into buying it "
+"for ::$power:: points."
+msgstr "八成是赝品,但你应该能找到冤大头把它换成 ::$power:: 金币."
+
+msgid "Projectile burn the ground behind them."
+msgstr "飞行物将点燃附近地面."
+
+msgid "Projectiles explode in a cloud of toxic gas."
+msgstr "飞行物将释放毒雾."
+
+msgid "Prolonged healing"
+msgstr "缓愈"
+
+msgid ""
+"Pulls an enemy to you. Your next melee attacks on the victim deal ::prct::% "
+"extra damage."
+msgstr "把敌人拉到你身边.对这个敌人的下次近战攻击将额外造成 ::prct::% 伤害."
+
+msgid "Punishment"
+msgstr "惩戒盾"
+
+msgid "Pyrotechnics"
+msgstr "烟火"
+
+msgid "Quick bow"
+msgstr "迅捷之弓"
+
+msgid "Quick-fire turret"
+msgstr "速射炮塔"
+
+msgid "Quit"
+msgstr "离开"
+
+msgid "Rally"
+msgstr "恢复"
+
+msgid "Random"
+msgstr "随机"
+
+msgid "Random melee weapon"
+msgstr "随机初始近战武器"
+
+msgid "Random skills"
+msgstr "随机技能"
+
+msgid "Random starter bow"
+msgstr "随机初始弓"
+
+msgid "Random starter shield"
+msgstr "随机初始盾"
+
+msgid "Random weapons"
+msgstr "随机武器"
+
+msgid "Randomly obtain some equipment (this choice is final)."
+msgstr "随机获得一些道具(无法反悔)."
+
+msgid "Randomly obtain some skills (this choice is final)."
+msgstr "随机获得一些技能(无法反悔)."
+
+msgid "Randomly obtain some weapons (this choice is final)."
+msgstr "随机获得一些武器(无法反悔)."
+
+msgid "Ranged"
+msgstr "远程"
+
+msgid "Ranged weapon"
+msgstr "远程武器"
+
+msgid "Ranged weapons"
+msgstr "远程武器"
+
+msgid "Rapid fires on nearby enemies, inflicting ::+dps:: damage/s."
+msgstr "高速射击,造成 ::+dps:: 伤害/秒."
+
+msgid "Rapier"
+msgstr "刺剑"
+
+msgid "Rare, medium or well-done?"
+msgstr "来份牛排?三分,七分,还是全熟?"
+
+msgid "Read"
+msgstr "阅读"
+
+msgid ""
+"Recover ::prct::% of your life with each melee attack, but take x::power:: "
+"damage!"
+msgstr "每次近战攻击恢复你当前生命值的 ::prct::% ,但受到 ::power:: 倍伤害!"
+
+msgid "Recycle (::v:: GOLD)"
+msgstr "回收(::v:: 金币)"
+
+msgid "Recycling I"
+msgstr "回收 I"
+
+msgid "Recycling II"
+msgstr "回收 II"
+
+msgid "Recycling level ::lvl::"
+msgstr "道具回收等级 ::lvl::"
+
+msgid "Reduce damage taken by ::prct::% as long as you are close."
+msgstr "当你靠近塔时,减少受到伤害 ::prct::%."
+
+msgid "Reduces the chance of unfreezing an enemy when attacking."
+msgstr "减少攻击敌人使其破冰而出的概率."
+
+msgid "Reduces the number of health fountains"
+msgstr "减少生命烧瓶的数量"
+
+msgid "Refresh"
+msgstr "刷新"
+
+msgid "Refresh the shop (::p:: GOLD)"
+msgstr "刷新商店 (::p:: 金币)"
+
+msgid "Regenerates ::n:: health."
+msgstr "恢复 ::n:: 生命值."
+
+msgid "Regenerates when you leave a level."
+msgstr "当你过图时恢复."
+
+msgid "Release a cloud of poisonous gas around you."
+msgstr "在身周释放毒雾."
+
+msgid "Releases a cloud of poison around the victim."
+msgstr "在敌人周围产生毒雾."
+
+msgid ""
+"Releases a toxic cloud of poison which inflicts ::+dps:: damage/s for ::"
+"duration:: seconds."
+msgstr "释放出大片毒雾,对其中的敌人造成::+dps:: 伤害/秒 持续 ::duration:: 秒."
+
+msgid "Removes all health fountains"
+msgstr "移除所有的生命烧瓶"
+
+msgid "Repeater crossbow"
+msgstr "连发重弩"
+
+msgid "Repository of the Architects"
+msgstr "设计师仓库"
+
+msgid "Reset slot ::index::"
+msgstr "重置存档 ::index::"
+
+msgid "Reset the alpha branch save slot"
+msgstr "重置A测存档"
+
+msgid "Reset your mutations (cost ::cost:: GOLD)."
+msgstr "重置你的基因突变(花费 ::cost:: 金币)."
+
+msgid "Resisted"
+msgstr "抵抗"
+
+msgid "Restore default configuration"
+msgstr "回复至初始设定"
+
+msgid "Restore default options"
+msgstr "恢复默认选项"
+
+msgid "Restore the default keyboard configuration"
+msgstr "恢复键盘至初始设定"
+
+msgid "Restores 1 health flask charge."
+msgstr "回复1次生命值"
+
+msgid "Restores ::+power:: HP."
+msgstr "回复 ::+power:: 生命值."
+
+msgid "Restores ::prct::% HP."
+msgstr "恢复 ::prct::% 生命值."
+
+msgid "Restores default values  for all options"
+msgstr "初始化所有选项"
+
+msgid "Resume"
+msgstr "继续"
+
+msgid "Resume current run"
+msgstr "继续游戏"
+
+msgid "Retry"
+msgstr "重新开始"
+
+msgid "Return to the entry"
+msgstr "返回入口"
+
+msgid "Return to the game"
+msgstr "返回游戏"
+
+msgid "Return to the main menu"
+msgstr "返回主菜单"
+
+msgid "Reveals secret passages."
+msgstr "可以显示隐藏的秘密."
+
+msgid "Reward"
+msgstr "奖励"
+
+msgid "Right"
+msgstr "右"
+
+msgid "Right click."
+msgstr "鼠标右键."
+
+msgid "Right trigger skill"
+msgstr "右主动技能"
+
+msgid "Risk of untimely death."
+msgstr "请不要拿自己的生命开玩笑."
+
+msgid "Roll"
+msgstr "翻滚"
+
+msgid "Rolling ignites the ground for ::duration:: seconds."
+msgstr "翻滚后点燃地面 ::duration:: 秒."
+
+msgid "Rub"
+msgstr "摩擦"
+
+msgid "Ruby"
+msgstr "红宝石"
+
+msgid "Ruby amulet"
+msgstr "红宝石护符"
+
+msgid "Run info"
+msgstr "游戏信息"
+
+msgid "Runes"
+msgstr "符文"
+
+msgid "Running zombie"
+msgstr "奔跑僵尸"
+
+msgid "Rusty sword"
+msgstr "锈蚀之剑"
+
+msgid "SFX volume"
+msgstr "特效音量"
+
+msgid "SHOULD NEVER DROP"
+msgstr "[不会掉落]"
+
+msgid "SURVIVAL"
+msgstr "生存"
+
+msgid "Sadism"
+msgstr "施虐"
+
+msgid "Sanctuary"
+msgstr "避难所"
+
+msgid "Sanctuary (exhausted)"
+msgstr "避难所(已探索)"
+
+msgid "Sand bird"
+msgstr "沙鸟"
+
+msgid "Sapphire amulet"
+msgstr "蓝宝石护符"
+
+msgid "Save ::name::"
+msgstr "::name::存档"
+
+msgid "Save inaccessible"
+msgstr "无法读取存档"
+
+msgid "Saves created in this version of the game CAN NOT be kept."
+msgstr "在这个版本的游戏中创建的存档不能保存."
+
+msgid "Saves you ONCE if you meet a premature end."
+msgstr "当你被终结时,救你一次."
+
+msgid "Saves your life ONCE. Does NOT work against Curses."
+msgstr "    复活一次,但对诅咒无效."
+
+msgid "Scarecrow"
+msgstr "稻草人"
+
+msgid "Score sent successfully!"
+msgstr "上传分数成功!"
+
+msgid "Scorpion"
+msgstr "蝎子"
+
+msgid "Scroll of power"
+msgstr "升级卷轴"
+
+msgid "Scroll of the Assassin"
+msgstr "刺客卷轴"
+
+msgid "Sealed chest"
+msgstr "已封印的宝箱"
+
+msgid "Secondary weapon"
+msgstr "副武器"
+
+msgid "Secondary weapon only."
+msgstr "只能用于副武器."
+
+msgid "Secret area uncovered!"
+msgstr "已发现隐藏区域!"
+
+msgid "Secret areas discovered"
+msgstr "已发现隐藏区域"
+
+msgid "Secret discovered"
+msgstr "发现秘密"
+
+msgid "Seems like something has changed around here..."
+msgstr "这里好像发生了一些变化…"
+
+msgid "Select"
+msgstr "选择"
+
+msgid "Select a mutation"
+msgstr "确认突变"
+
+msgid "Select an improvement"
+msgstr "选择一项升级"
+
+msgid "Seriously? Is this even worth picking up?"
+msgstr "开玩笑吗?这值得捡起来吗?"
+
+msgid "Settings"
+msgstr "设定"
+
+msgid "Shake"
+msgstr "摇摇"
+
+msgid "Shield"
+msgstr "盾牌"
+
+msgid "Shield bearer"
+msgstr "举盾兵"
+
+msgid "Shield improved!"
+msgstr "盾牌属性提升!"
+
+msgid "Shields"
+msgstr "盾牌"
+
+msgid "Shift"
+msgstr "Shift"
+
+msgid "Shift. L."
+msgstr "Shift. L."
+
+msgid "Shift. R."
+msgstr "Shift. R."
+
+msgid "Shiny rock"
+msgstr "闪亮的石头"
+
+msgid "Shocker"
+msgstr "电击者"
+
+msgid "Shoots ::count:: arrows at once."
+msgstr "一次射出 ::count:: 支箭矢."
+
+msgid "Shoots multiple bolts at once."
+msgstr "一次射出多支箭矢."
+
+msgid "Shots pierce all enemies."
+msgstr "攻击将穿透全部敌人."
+
+msgid "Shots pierce the first target."
+msgstr "攻击将穿透第一个敌人."
+
+msgid "Shove shield"
+msgstr "猛击盾"
+
+msgid "Shovel"
+msgstr "铲子"
+
+msgid "Show a little nerve!"
+msgstr "展现一点勇气!"
+
+msgid "Show a tutorial for the controls"
+msgstr "显示操作教学"
+
+msgid "Show attack warning marker"
+msgstr "敌人攻击提示"
+
+msgid "Show the controls at the beginning of the game."
+msgstr "在游戏一开始显示操作教学."
+
+msgid "Show the roll cooldown feedback"
+msgstr "显示翻滚冷却时间"
+
+msgid "Show unavailable items"
+msgstr "显示无法使用的物品"
+
+msgid "Sick worm"
+msgstr "恶心的蠕虫"
+
+msgid "Simply put, if you want more power, then bring me more cells!"
+msgstr "一句话!如果你渴望更强的力量,那就给我更多的细胞!"
+
+msgid "Skill power and cooldown improved!"
+msgstr "提升技能伤害且缩短冷却时间!"
+
+msgid "Skills"
+msgstr "技能"
+
+msgid "Slasher"
+msgstr "绞碎者"
+
+msgid "Slightly increases enemy strength"
+msgstr "略微增加敌人的强度"
+
+msgid "Slightly increases the number of cells dropped by enemies"
+msgstr "略微增加敌人掉落的细胞数量."
+
+msgid "Slot ::index::"
+msgstr "第::index::个"
+
+msgid "Slow and heavy, but looks badass. The best way to compensate."
+msgstr "笨重而缓慢,拉风帅气就够了.不是吗?"
+
+msgid "Slow, but devastating at longe range."
+msgstr "速度慢,远距离时造成大量伤害."
+
+msgid "Slowed down"
+msgstr "减速"
+
+msgid "Slows down all nearby enemies when the victim thaws out."
+msgstr "解冻后使周围敌人减速."
+
+msgid ""
+"Slows down enemies. Inflicts critical damage when an enemy is in water or "
+"covered in oil."
+msgstr "将敌人减速.对处于水中或身覆油渍的敌人暴击."
+
+msgid "Slows the movement of all nearby enemies for ::duration::s."
+msgstr "减缓附近敌人速度 ::duration:: 秒."
+
+msgid "Slumbering Sanctuary"
+msgstr "沉睡避难所"
+
+msgid "Small, but deadly if you know where to stick it."
+msgstr "匕首虽小,也能致命."
+
+msgid "Smart rolling"
+msgstr "智能翻滚"
+
+msgid "So if you have Cells, I can upgrade your stuff."
+msgstr "如果你有细胞,我可以帮你升级道具."
+
+msgid "So you like to play hardball, do ya?"
+msgstr "听说你想要挑战极限,试试看?"
+
+msgid "So you've come looking for a bit of a challenge eh?"
+msgstr "你是来找点挑战的吧?"
+
+msgid "So you've managed to come this far?"
+msgstr "所以你已经走了这么远?"
+
+msgid "So... Go on!"
+msgstr "所以,上吧!"
+
+msgid "Something is blocking the door."
+msgstr "有东西把门挡着."
+
+msgid "Sort order: Completion"
+msgstr "依完成度排列"
+
+msgid "Sort order: Level, decreasing"
+msgstr "依等级递减排序"
+
+msgid "Sort order: Level, increasing"
+msgstr "依等级升序"
+
+msgid "Sort order: cost"
+msgstr "依消耗量排列"
+
+msgid "Sound"
+msgstr "音效"
+
+msgid "Space"
+msgstr "空格"
+
+msgid "Spartan sandals"
+msgstr "斯巴达凉鞋"
+
+msgid "Spawnling"
+msgstr "尸液怪"
+
+msgid "Special item"
+msgstr "特殊物品"
+
+msgid "Special items"
+msgstr "特殊物品"
+
+msgid "Speed to the detriment of accuracy."
+msgstr "可快速射击,但略失准度."
+
+msgid "Spiked boots"
+msgstr "尖刺靴"
+
+msgid "Spiked shield"
+msgstr "尖刺盾"
+
+msgid "Spiker"
+msgstr "穿刺者"
+
+msgid "Spinner"
+msgstr "纺纱工"
+
+msgid "Spiteful sword"
+msgstr "怨恨之刃"
+
+msgid "Start again from the Prisoners' Cells"
+msgstr "放弃当前游戏,开始新的挑战"
+
+msgid "StaticHealer"
+msgstr "静态疗愈者"
+
+msgid "Stockchange"
+msgstr "库存变动"
+
+msgid "Stuns blocked enemies. Stuns last longer when you parry."
+msgstr "盾挡时击晕阻挡的敌人.当你盾反时眩晕持续时间更长."
+
+msgid "Stuns victims that have more than ::prct::% health."
+msgstr "击晕那些超过 ::prct::% 生命值的敌人."
+
+msgid "Sturdy shield"
+msgstr "坚固盾"
+
+msgid "Suicides"
+msgstr "自杀"
+
+msgid ""
+"Summons a bomb that inflicts ::+power:: damage when you kill an enemy "
+"without your hand to hand weapons."
+msgstr "当你不使用近战武器杀死一个敌人时,召唤一个炸弹造成 ::+power:: 伤害."
+
+msgid ""
+"Summons a slow moving but devastating orb of energy (::+dps:: damage/s)."
+msgstr "召唤一个缓慢的能量灵球造成( ::+dps:: 伤害/秒)."
+
+msgid "Summons a swarm of small biting creatures to attack for you."
+msgstr "召唤一群食人虫来替你攻击."
+
+msgid "Super Mario Mode: Jumping on an enemy's head stuns it."
+msgstr "超级马里奥模式:在敌人头上跳跃然后踩晕他们!"
+
+msgid "Support"
+msgstr "支援"
+
+msgid "Sure and certain, I'll get it back..."
+msgstr "当然, 我会把它夺回的..."
+
+msgid "Sure to warm up the crowd."
+msgstr "人多的地方当然要热一点."
+
+msgid "Survival"
+msgstr "生存"
+
+msgid "Survival +1"
+msgstr "生存 +1"
+
+msgid "Survival increased!"
+msgstr "生存能力提升!"
+
+msgid "Swap"
+msgstr "交换"
+
+msgid "Swap which item?"
+msgstr "替换哪个物品?"
+
+msgid "Swift sword"
+msgstr "追风剑"
+
+msgid "TACTICS"
+msgstr "战术"
+
+msgid "TODO"
+msgstr "TODO"
+
+msgid "Tab"
+msgstr "Tab"
+
+msgid "Tactics"
+msgstr "战术"
+
+msgid "Tactics +1"
+msgstr "战术 +1"
+
+msgid "Tactics increased!"
+msgstr "战术能力提升!"
+
+msgid ""
+"Take one little hit... and you're DEAD. Eliminate ::n:: enemies to lift the "
+"curse."
+msgstr "只要受伤立即死亡,消灭 ::n:: 个敌人来消除诅咒."
+
+msgid "Take your blueprints to the Collector to unlock new items."
+msgstr "将蓝图交给收藏家来解锁新道具."
+
+msgid ""
+"Take your time? Pft, what a joke. Hit hard and fast! Now there's a recipe "
+"for victory..."
+msgstr "慢慢来?开什么玩笑!打的又重又快,完美!这就是胜利的秘诀!"
+
+msgid "Talk"
+msgstr "对话"
+
+msgid "Talk to Guillain"
+msgstr "和 Guillain 说话"
+
+msgid "Teleport"
+msgstr "传送装置"
+
+msgid "Teleportation rune"
+msgstr "传送符文"
+
+msgid "Teleporter"
+msgstr "传送"
+
+msgid "Teleporters used"
+msgstr "传送装置使用次数"
+
+msgid ""
+"Temporarily allows you to float in the air while inflicting ::+dps:: damage/"
+"s to enemies below you."
+msgstr "允许你暂时浮空,并对身下的敌人造成 ::+dps:: 伤害/秒."
+
+msgid "Test Seb"
+msgstr "Test Seb"
+
+msgid "Test Thomas"
+msgstr "Debug Thomas"
+
+msgid "Thanks"
+msgstr "鸣谢"
+
+msgid "That have killed you ::n::"
+msgstr "被杀死 ::n:: 次"
+
+msgid "That you have killed ::n::"
+msgstr "杀死 ::n:: 只"
+
+msgid "That's my job."
+msgstr "这是我的工作."
+
+msgid "The Assassin"
+msgstr "刺客"
+
+msgid "The Black Bridge"
+msgstr "黑色大桥"
+
+msgid "The Clock Room"
+msgstr "时之室"
+
+msgid "The Clock Tower"
+msgstr "钟楼"
+
+msgid "The Collector"
+msgstr "收藏家"
+
+msgid "The Fog Fjord"
+msgstr "雾萦港湾"
+
+msgid "The Foundry isn't currently equipped to upgrade this item any further."
+msgstr "铸造厂目前不具备进一步升级此项的能力."
+
+msgid "The Guardian's Retreat"
+msgstr "守卫者的休憩处"
+
+msgid "The Incomplete One"
+msgstr "残缺者"
+
+msgid "The Incomplete One's Source Cell"
+msgstr "残缺者的原细胞"
+
+msgid "The Insufferable Crypt"
+msgstr "作呕墓穴"
+
+msgid "The Jailer's son was getting pretty good at hunting rats with this..."
+msgstr "囚犯们都善用这个杀老鼠.."
+
+msgid "The Minotaur's Scroll"
+msgstr "牛头怪卷轴"
+
+msgid "The Old Sewers"
+msgstr "旧下水道"
+
+msgid "The Prison Depths"
+msgstr "监狱深处"
+
+msgid "The Prisoners' Cells"
+msgstr "被囚者的牢房"
+
+msgid "The Promenade of the Condemned"
+msgstr "有罪者的大道"
+
+msgid "The Ramparts"
+msgstr "壁垒"
+
+msgid "The Spider's Rune"
+msgstr "蛛行符文"
+
+msgid "The Toxic sewers"
+msgstr "猛毒下水道"
+
+msgid "The Watcher"
+msgstr "守望者"
+
+msgid "The Watcher's Source Cell"
+msgstr "守望者的原细胞"
+
+msgid "The Watcher's tentacule"
+msgstr "守望者的触手"
+
+msgid "The Wharf"
+msgstr "码头"
+
+msgid "The barrier has already been deactivated!"
+msgstr "屏障已经解除!"
+
+msgid "The cream of the cream..."
+msgstr "奶油的精华…"
+
+msgid "The door seems to need electricity."
+msgstr "这扇门看起来需要通电."
+
+msgid "The fountain is empty"
+msgstr "血瓶是空的"
+
+msgid ""
+"The important part is that you have fun playing the game, while we get to "
+"work adding new content and fixing any problems..."
+msgstr "希望这款游戏能给你带来欢乐,我们之后将加入新内容并且修正一些问题..."
+
+msgid "The ite from this alter disappeared ::t:: ago."
+msgstr "此物品的改变将于 ::t:: 秒后消失."
+
+msgid "The last hit of the combo inflicts area damage and pushes enemies back."
+msgstr "连击的最后一下造成范围伤害并将敌人击退."
+
+msgid "The light of the guardian colonnades will protect you."
+msgstr "守护者石柱上的光会保护你."
+
+msgid ""
+"The merchants offer a certain category of items when you meet them from now "
+"on."
+msgstr "从现在起,商家们会提供一个确定种类的商品."
+
+msgid "The nutcracker"
+msgstr "碎蛋者"
+
+msgid ""
+"The speed bonus from killing multiple enemies in a row lasts ::count::x "
+"longer."
+msgstr "在一轮攻击中杀死多个敌人后,提升速度的奖励时间x ::count::."
+
+msgid "The starting bow is randomly drawn from those you have unlocked."
+msgstr "从解锁弓箭中随机挑选一样."
+
+msgid "The starting shield is randomly drawn from those you have unlocked."
+msgstr "从解锁盾牌中随机挑选一样."
+
+msgid "The starting weapon is randomly drawn from those you have unlocked."
+msgstr "从解锁近战武器中随机挑选一样."
+
+msgid ""
+"The time available to recover your health after taking damage is multiplied "
+"by ::count::."
+msgstr "受伤后恢复血量的持续时间 x::count::."
+
+msgid "The tracker"
+msgstr "追踪者"
+
+msgid "The victim suffers bleed damage when it thaws out."
+msgstr "解冻后使敌人出血."
+
+msgid "The viscera of dead victims explodes inflicting ::+power:: damage."
+msgstr "敌人死后产生爆炸,造成 ::+power:: 伤害."
+
+msgid "The weapon of choice for those who like to live dangerously."
+msgstr "游走在生命边缘的利器."
+
+msgid "There is no one..."
+msgstr "那里没有人..."
+
+msgid "There is no such thing as \"too many arrows\"."
+msgstr "谁会抱怨箭太多了呢?"
+
+msgid "There must be a way to open this barrier..."
+msgstr "一定有办法打开这个屏障…"
+
+msgid "There! Better, no?"
+msgstr "那里! 更好吗?"
+
+msgid "There's no one else..."
+msgstr "这里没有人..."
+
+msgid "There's no such thing as \"too many arrows\" - Legolas"
+msgstr "谁会抱怨箭太多了呢?-莱戈拉斯<魔戒>"
+
+msgid "They don't know what they're on about..."
+msgstr "他们不知道自己在做什么..."
+
+msgid ""
+"This PERMANENTE RUNE allows you to open the door leading to the daily run in "
+"the Prisoners' Cells."
+msgstr "这个永久的符文能让你在囚犯间打开通往日常挑战的大门."
+
+msgid ""
+"This PERMANENTE RUNE unlocks the door leading to the daily run in the "
+"Prisoners' Cells."
+msgstr "这个永久的符文能让你在囚犯间打开通往日常挑战的大门."
+
+msgid "This bag contains some of the gold from a previous life."
+msgstr "这个袋子中装着你的遗产,税已经扣了."
+
+msgid "This creature can not be transformed!"
+msgstr "这个生物不能被转化!"
+
+msgid "This door can't be opened from this side."
+msgstr "不能从这侧打开这扇门."
+
+msgid "This door has been sealed..."
+msgstr "这扇门已经被封印了!"
+
+msgid "This door is blocked..."
+msgstr "门被封锁了..."
+
+msgid "This door was sealed ::time:: ago. Too bad..."
+msgstr "糟糕,这扇门 ::time:: 前已经封印了..."
+
+msgid "This door won't open if you're still carrying cells."
+msgstr "只要携带有细胞,这扇门是不会打开的."
+
+msgid "This is a strange place..."
+msgstr "这是个陌生的环境..."
+
+msgid "This is going to be very pretty when it's done..."
+msgstr "当它完成时这将非常漂亮...."
+
+msgid "This isn't over!"
+msgstr "还没结束!"
+
+msgid "This mutation increases in strength with you Brutality level."
+msgstr "这种变异会随着你残暴等级的提升而提升."
+
+msgid "This mutation increases in strength with you Survival level."
+msgstr "这种变异会随着你生存等级的提升而提升."
+
+msgid "This mutation increases in strength with you Tactics level."
+msgstr "这种变异会随着你战术等级的提升而提升."
+
+msgid "This purple stone is worth ::$power:: GOLD! My precioooouuuusssss..."
+msgstr "这个紫色的石头,价值 ::$power:: 金币!我的宝!贝!"
+
+msgid "This purple stone is worth ::$power:: points! My precioooouuuusssss..."
+msgstr "这个紫色的石头价值 ::$power:: 积分!我的宝!贝!"
+
+msgid ""
+"This rune PERMANENTLY gives you the ability to break through fragile ground."
+msgstr "这个符文永久赋予你穿透脆弱地面能力."
+
+msgid "This rune PERMANENTLY gives you the ability to climb walls."
+msgstr "这个符文永久赋予你攀爬墙壁的能力."
+
+msgid "This rune PERMANENTLY gives you the ability to grow climbable vines."
+msgstr "这个符文永久给予你爬藤的能力."
+
+msgid ""
+"This rune PERMANENTLY gives you the ability to use the teleportation tombs."
+msgstr "这个符文永久给与你传送墓碑的能力."
+
+msgid "This save requires a newer version of the game."
+msgstr "此存档需要一个新的游戏版本."
+
+msgid "This save requires a newer version of the game. "
+msgstr "你需要更新游戏才能读取存档."
+
+msgid "This sells quite well! Easiest ::$power:: you'll ever make..."
+msgstr "这货卖得挺好!能很轻松地以 ::$power:: 金币卖掉..."
+
+msgid "This serves no purpose."
+msgstr "这毫无意义."
+
+msgid "This version has not been optimized"
+msgstr "此版本未经优化"
+
+msgid ""
+"This version of the game is subject to change (lots of it). Please report "
+"bugs on the Steam forum. Thanks for your help! :)"
+msgstr "这个版本内容随时会改变. 请在Steam论坛上回报错误. 谢谢你的帮忙! :)"
+
+msgid "This. Is. DEAD CELLS!"
+msgstr "这!就是!DEAD CELLS!"
+
+msgid "Thorny"
+msgstr "背刺者"
+
+msgid ""
+"Throw this grenade at a monster to aggravate it a little. Beat it down to ::"
+"prct::% health or less, then use the Blueprint Extractor on the monster to "
+"obtain a blueprint from it."
+msgstr ""
+"将手雷扔到怪物身上使其激怒.当它的生命值降低到 ::prct::% 以下时,启动怪物身上的"
+"蓝图提取器来从其身上提取蓝图."
+
+msgid "Throwing knife"
+msgstr "飞刀"
+
+msgid "Throws a grenade (::+power:: damage)"
+msgstr "投出一颗手雷( ::+power:: 伤害)"
+
+msgid "Tickle"
+msgstr "挠挠"
+
+msgid "Time bender"
+msgstr "时光控制器"
+
+msgid "Time left:"
+msgstr "剩余时间:"
+
+msgid "Timed door unlocked!"
+msgstr "限时门已解锁!"
+
+msgid "To continue..."
+msgstr "未完待续..."
+
+msgid ""
+"To help you out, you'll find equipment along the way, but some of those "
+"items might be locked."
+msgstr "为了帮助你,你会沿途找到一些物品,但是其中一些物品可能未被解锁."
+
+msgid "To the lower room"
+msgstr "到下层房间"
+
+msgid "To the upper room"
+msgstr "到上层房间"
+
+msgid "Tonic"
+msgstr "补药"
+
+msgid "Tonic (empty)"
+msgstr "补药(空的)"
+
+msgid "Too far!"
+msgstr "太远了!"
+
+msgid "Too much health!"
+msgstr "生命值太多了!"
+
+msgid "Topaz amulet"
+msgstr "黄宝石护符"
+
+msgid "Torch"
+msgstr "火炬"
+
+msgid "Total Active Skills unlocked"
+msgstr "总共已解锁技能数量"
+
+msgid "Total Score:"
+msgstr "总分:"
+
+msgid "Total elite monsters slain"
+msgstr "杀死精英"
+
+msgid "Total gold collected"
+msgstr "总共获得金币"
+
+msgid "Total gold spent"
+msgstr "总共花费金币"
+
+msgid "Total monsters slain"
+msgstr "杀死怪物"
+
+msgid "Total number of completed runs"
+msgstr "通关次数"
+
+msgid "Total number of runs"
+msgstr "游戏次数"
+
+msgid "Total weapons unlocked"
+msgstr "总共已解锁武器数量"
+
+msgid "Toxic cloud"
+msgstr "毒雾"
+
+msgid "Trade in some speed, for a little range."
+msgstr "用速度来换取范围."
+
+msgid "Tranquility"
+msgstr "宁静"
+
+msgid "Transfer"
+msgstr "上传"
+
+msgid "Transfer my save files"
+msgstr "上传我的存档文件"
+
+msgid "Translation provided by the community"
+msgstr "创意工坊提供的翻译"
+
+msgid "Trap/Turret"
+msgstr "陷阱/炮塔"
+
+msgid "Traps & Turrets"
+msgstr "陷阱和炮塔"
+
+msgid "Traps & Turrets:"
+msgstr "陷阱和炮塔:"
+
+msgid "Treasure chests looted"
+msgstr "已开启宝箱"
+
+msgid "Triggers a force field when you parry."
+msgstr "格挡后产生力场."
+
+msgid "Try to send again"
+msgstr "尝试再次上传分数"
+
+msgid "Turkey"
+msgstr "火鸡"
+
+msgid "Turn the knife..."
+msgstr "武器不一定要厉害,名字一定要拉风!"
+
+msgid "Twin daggers"
+msgstr "双匕首"
+
+msgid "Two knives for the price of one, more violence for your dollar!"
+msgstr "两把刀,一个价,砍人也要讲实惠!"
+
+msgid "UNUSED"
+msgstr "未使用"
+
+msgid "Ugly worm"
+msgstr "丑陋蠕虫"
+
+msgid "Unavailable"
+msgstr "不可用"
+
+msgid "Undead archer"
+msgstr "亡灵射手"
+
+msgid "Under construction! You can't go any further for now."
+msgstr "施工中!你现在无法再前进了."
+
+msgid ""
+"Unfortunately you didn't beat your record for today, which is ::pts:: points."
+msgstr "很遗憾,你没有超越你今天的记录.(::pts::分)"
+
+msgid "Unlimited ammo."
+msgstr "无限箭矢."
+
+msgid "Unlock"
+msgstr "解锁"
+
+msgid ""
+"Unlock this item from the Collector in the normal game mode to use it in "
+"your Daily Runs"
+msgstr "在普通游戏模式中从收集器中解锁此物品,以便在日常挑战中使用它."
+
+msgid "Unlockable in normal mode"
+msgstr "在普通模式下解锁"
+
+msgid ""
+"Unlocks a special item, the \"Hunter's Grenade\" in the Prison Cells. The "
+"grenade allows you to hunt for rare Blueprints more easily."
+msgstr "在牢房里解锁一个特殊的道具\"猎人手榴\".手雷让你更容易搜寻稀有蓝图."
+
+msgid "Unlocks doors. Who would have guessed?"
+msgstr "解锁某扇门.谁猜到了?"
+
+msgid "Unstable experiment"
+msgstr "不稳定实验"
+
+msgid "Up"
+msgstr "上"
+
+msgid "Upgrades"
+msgstr "升级"
+
+msgid "Upon death, victims freeze nearby enemies for ::duration:: seconds."
+msgstr "敌人死后将附近的敌人冻结 ::duration:: 秒."
+
+msgid "Use"
+msgstr "使用"
+
+msgid "Use ::name::!"
+msgstr "使用::name::!"
+
+msgid "Use the D-Pad to move"
+msgstr "使用十字键移动"
+
+msgid "Use the rune"
+msgstr "使用符文"
+
+msgid ""
+"Use this on a monster transformed by the Hunter's Grenade with less than ::"
+"prct::% health remaining."
+msgstr "将此物使用在被猎人手雷转化过的,生命值低于 ::prct::% 的怪物身上."
+
+msgid "Use/Interact"
+msgstr "使用/互动"
+
+msgid "Valmont's whip"
+msgstr "贝尔蒙特的鞭子"
+
+msgid "Vampirism"
+msgstr "吸血鬼"
+
+msgid "Vampirism (empty)"
+msgstr "吸血鬼(空)"
+
+msgid "Vegetarian"
+msgstr "素食主义"
+
+msgid "Velocity"
+msgstr "速度"
+
+msgid "Vengance"
+msgstr "复仇"
+
+msgid "Video"
+msgstr "影像"
+
+msgid "View all"
+msgstr "浏览"
+
+msgid "Village key"
+msgstr "村庄钥匙"
+
+msgid "Vine rune"
+msgstr "藤蔓符文"
+
+msgid "Violently crushes enemies in its area of effect (::+power:: damage)."
+msgstr "猛烈地粉碎范围内的敌人( ::+power:: 伤害)."
+
+msgid ""
+"Violently knocks back enemies. Double the effect if you parry correctly."
+msgstr "剧烈击退被格挡的敌人.盾反成功时,击退距离双倍."
+
+msgid ""
+"WARNING!\n"
+"You can no longer change the Runes once you pass through this door!"
+msgstr ""
+"警告!\n"
+"一旦你穿过这扇门,你就不能改变符文!"
+
+msgid "WHERE ARE YOU!?! SCOUNDREL!!"
+msgstr "你在哪里!?!坏蛋!!"
+
+msgid "Walking pyramide"
+msgstr "行走的金字塔"
+
+msgid "War spear"
+msgstr "战矛"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "Watchmaker's key"
+msgstr "钟匠钥匙"
+
+msgid "Watermelon"
+msgstr "西瓜"
+
+msgid ""
+"We strongly advise that you deactivate this functionality if you want to "
+"play offline."
+msgstr "如果你想离线游戏,我们强烈建议你可以停用这个功能."
+
+msgid ""
+"We'll be adding new levels and bosses throughout the Early Access!\n"
+"While you wait, have you unlocked and explored all the side levels?"
+msgstr ""
+"在抢先体验版本中我们将持续增加新的关卡和魔王!\n"
+"在你等待的时候,你有解锁和探索所有的关卡吗?"
+
+msgid "We've detected that you're using an Intel HD Graphics card."
+msgstr "我们侦测到你正在使用 Intel 显示芯片."
+
+msgid "Weapon"
+msgstr "武器"
+
+msgid "Weapon blueprints recoverd"
+msgstr "已发现武器蓝图数量"
+
+msgid "Weapon blueprints recovered"
+msgstr "已获得武器蓝图数量"
+
+msgid "Weapon damage increased!"
+msgstr "提升武器伤害!"
+
+msgid "Weapon improved!"
+msgstr "武器属性提升!"
+
+msgid "Weapons"
+msgstr "武器"
+
+msgid "Well I'm going back to digging through the filth for some more goodies!"
+msgstr "好吧,我要回去挖更多的宝物了,虽然脏了点!"
+
+msgid "Well it doesn't seem to be going all that well  for you..."
+msgstr "嗯,这一切对你来说似乎有点不太顺利…"
+
+msgid "Well well well, you're back..."
+msgstr "噢噢噢,你回来了..."
+
+msgid "Well? Nothing to say for yourself?"
+msgstr "嗯?没什么要对自己说的吗?"
+
+msgid ""
+"What am I saying, the ELITEST of the ELITEST-EST... manage to achieve an "
+"honourable score!"
+msgstr "我的意思是,要成为精英中的精英…设法创造光辉的成绩吧!"
+
+msgid "What are you waiting for? Get out there!"
+msgstr "你在等什么? 快出去找!"
+
+msgid "What can I do for you?"
+msgstr "要买些东西么?"
+
+msgid "What? A little blood letting always does the trick!"
+msgstr "什么?别为了那一点血而耍小聪明!"
+
+msgid "What? No!, You have nothing to fear!"
+msgstr "什么?不!你无所畏惧!"
+
+msgid "What?!"
+msgstr "什么鬼?!"
+
+msgid "Where could he have gotten to?"
+msgstr "他到哪儿去了?"
+
+msgid "Who says you can't cheat Death?"
+msgstr "凡人皆有一死,凡人皆需侍奉."
+
+msgid ""
+"Will intelligently stop a roll if it would have taken you off a platform."
+msgstr "如果你在翻滚时将要从平台上掉落,会智能的停止动作."
+
+msgid "Windowed"
+msgstr "窗口模式"
+
+msgid "Wipe ALL the progression of this save file"
+msgstr "警告!清除存档内的所有进度!"
+
+msgid "Would you like to restart your run?"
+msgstr "你想要重新开始你的挑战?"
+
+msgid ""
+"Would you like to transfer your Steam Cloud save files to your computer?\n"
+"Warning! If you already have local save files they will be permanently "
+"overwritten!"
+msgstr ""
+"您要将本地存档文件上传到Steam云吗?\n"
+"警告!如果你已经在Steam云中保存有文件,它们将被永久地覆盖!"
+
+msgid ""
+"Would you like to transfer your local save files to the Steam Cloud?\n"
+"Warning! If you already have save files in the Steam Cloud they will be "
+"permanently overwritten!"
+msgstr ""
+"您要将本地存档文件上传到Steam云吗?\n"
+"警告!如果你已经在Steam云中保存有文件,它们将被永久地覆盖!"
+
+msgid "Wrench"
+msgstr "夺取"
+
+msgid "Wrenching whip"
+msgstr "缠绕鞭"
+
+msgid "Yes"
+msgstr "确认"
+
+msgid "Yes, just like Scorpion..."
+msgstr "如屠夫一般 Oh,Fresh meat!<Dota>"
+
+msgid "Yes, of course it is..."
+msgstr "当然啦..."
+
+msgid "Yes..."
+msgstr "嗯..."
+
+msgid "Yes... I know of ALL your little secrets."
+msgstr "是的,我知道你所有的小秘密."
+
+msgid "Ygdar Orus Li Ox"
+msgstr "Ygdar Orus Li Ox"
+
+msgid "Yolo!"
+msgstr "活在当下,及时行乐!"
+
+msgid "You again... Interesting..."
+msgstr "你又再一次...真有趣..."
+
+msgid "You already have the ::name:: blueprint."
+msgstr "你已经拥有 ::name:: 这个蓝图."
+
+msgid "You already have this meta item."
+msgstr "你已经拥有这个东西了."
+
+msgid "You are now at position ::rng::!"
+msgstr "你现排在第 ::rng:: 名!"
+
+msgid "You can buy for ::price::"
+msgstr "你可以用 ::price:: 金币购买"
+
+msgid "You can do better than this..."
+msgstr "你可以做得比以前更好..."
+
+msgid "You can jump three times in the air."
+msgstr "你可以在空中多跳跃一次."
+
+msgid "You can no longer die."
+msgstr "你不会再死了."
+
+msgid ""
+"You can refresh the contents of a shop, for a completely reasonable price..."
+msgstr "您可以刷新一个商店的内容,以一个完全合理的价格…"
+
+msgid ""
+"You can transform the items you find on the ground or in chests into gold "
+"(at ::prct::% of the sale price)."
+msgstr "你可以将你在地上或箱子中找到物品变成金子 (出售价格的 ::prct::% )."
+
+msgid "You can't even imagine all the stuff you can find in here!"
+msgstr "你想象不到在这里竟然能找到所有的物资!"
+
+msgid "You can't sell this item."
+msgstr "你不能出售这个装备."
+
+msgid "You conserve up to ::power:: GOLD when you die."
+msgstr "当你死的时候,你会保存 ::power:: 金币."
+
+msgid "You could also increase its power!"
+msgstr "你也可以提升它的力量!"
+
+msgid ""
+"You deal +::prct::% damage for ::duration:: seconds. You also take +::prct2::"
+"% extra damage during this period."
+msgstr ""
+"在 ::duration:: 秒内伤害增加 ::prct::%.你同时承受 ::prct2::% 的额外伤害."
+
+msgid ""
+"You deal about ::+dps:: DPS for ::duration:: seconds. You also take +::prct::"
+"% extra damage during this period."
+msgstr ""
+"在 ::duration:: 秒内增加 ::+dps:: 伤害.但你同时承受 ::prct::% 的额外伤害."
+
+msgid ""
+"You disappear for ::duration:: seconds and leave a lure in your place which "
+"attracts all nearby enemies."
+msgstr "隐身::duration::秒并放置一个诱饵以吸引周围敌人注意."
+
+msgid ""
+"You disappear for ::duration:: seconds and leave a lure in your place which "
+"attracts all nearby enemies. Explodes after ::duration:: seconds (::+power:: "
+"damage)."
+msgstr ""
+"隐身 ::duration:: 秒并放置一个诱饵以吸引周围敌人注意.在 ::duration:: 秒后爆炸"
+"(::+power:: 伤害).破隐可暴击."
+
+msgid "You don't know it yet, but you're already dead."
+msgstr "你不知道发生了什么.但是,你已经死了.<北斗神拳>"
+
+msgid "You don't want to see what I've got for you?"
+msgstr "你不看一下我给你的东西吗?"
+
+msgid "You failed. The treasure has been sealed. Forever."
+msgstr "你失败了,宝藏已经永远封印了."
+
+msgid "You found a RARE blueprint:"
+msgstr "你发现了一张稀有蓝图:"
+
+msgid "You get 2 bonus jump in the air."
+msgstr "你可以在空中多跳跃两次."
+
+msgid "You get gold when you get a Dead Cell from an enemy."
+msgstr "敌人死亡后若掉落细胞同时掉落金币."
+
+msgid "You have outraged the gods!"
+msgstr "你已经激怒了众神!"
+
+msgid "You have put an end to your curse, which brings you back ::pts:: extra!"
+msgstr "你已经破除了诅咒,给你带来额外的 ::pts:: 分!"
+
+msgid "You haven't unlocked another teleporter yet."
+msgstr "你尚未解锁其他传送装置."
+
+msgid "You know I'm hiding a lot inside..."
+msgstr "你知道我在里面藏着很多东西..."
+
+msgid "You know, this is going to get old..."
+msgstr "你知道的,这些东西卖不掉就要变旧了..."
+
+msgid "You leave behind a cloud of toxic gas when you roll."
+msgstr "翻滚时在你身后留下毒雾."
+
+msgid "You lost ::n:: cells!"
+msgstr "你失去了 ::n:: 个细胞!"
+
+msgid "You lost one cell."
+msgstr "你失去了一个细胞."
+
+msgid "You managed somehow to reach this place alive."
+msgstr "你竟然能活着到达这里."
+
+msgid ""
+"You may only equip one amulet at a time, but their effects are powerful..."
+msgstr "你只能拥有一个护符,但他们的效果都很强大..."
+
+msgid "You must be connected to the internet to play in this mode."
+msgstr "此模式必须连接网络才能开始."
+
+msgid "You must be the anomaly she's looking for..."
+msgstr "你一定很惊讶她在寻找什么..."
+
+msgid "You must to complete the challenge first."
+msgstr "你必须先完成这个挑战."
+
+msgid "You need to be close by for this to work."
+msgstr "你需要接近它才能使用."
+
+msgid "You now have access to the boss!"
+msgstr "你现在可以进入魔王房间了!"
+
+msgid "You now own a health flask you can use at any time."
+msgstr "你现在拥有一个随时可以使用的血瓶."
+
+msgid "You really aren't getting any better are you?"
+msgstr "你真的没有变得更厉害吗?"
+
+msgid "You recover ::+power:: HP per hit you give for ::duration:: seconds."
+msgstr "在 ::duration:: 秒内每次攻击回复 ::+power:: 生命值."
+
+msgid ""
+"You recover ::+power:: HP per melee hit that you deal for ::duration:: "
+"seconds. You also take +::prct::% extra damage during this period."
+msgstr ""
+"每次近战攻击恢复 ::+power:: 生命值,持续 ::duration:: 秒,在此期间承受 ::prct::"
+"% 的额外伤害."
+
+msgid "You recover your arrows when you kill your victim."
+msgstr "杀死敌人后收回箭矢."
+
+msgid "You release a toxic cloud when you take damage."
+msgstr "受到伤害时释放毒云."
+
+msgid "You take +::prct::% damage."
+msgstr "你受到的伤害增加 ::prct::%"
+
+msgid ""
+"You teleport behind an enemy. The damage of your next melee attack is "
+"increased by ::prct::%."
+msgstr "传送至敌人后方,你的下一次近战伤害增加 ::prct::%."
+
+msgid "You unlocked"
+msgstr "你解锁了"
+
+msgid "You weren't all that good now were you?"
+msgstr "你现在活得好好的吗?"
+
+msgid "You wouldn't abandon a friend in need now would you, huh?"
+msgstr "嗯?你不会在你的朋友需要援手的时候放弃他们吧?"
+
+msgid "You wouldn't happen to be the headless chap now would you?"
+msgstr "你不会碰巧是个无头的家伙吧?"
+
+msgid "You wouldn't mind finding it for me now would you?"
+msgstr "你不介意帮我找找吧?"
+
+msgid "You're dead, too bad!"
+msgstr "糟糕!你死了!"
+
+msgid "You're going to regret this!"
+msgstr "你会后悔的!"
+
+msgid "You're looking a little... pale. You must have the sickness..."
+msgstr "你看起来有点...苍白. 你一定生病了..."
+
+msgid "You're not going to find the... my... rune, sitting there like that!"
+msgstr "你坐在那里不会找到我的符文!"
+
+msgid "You're still at position ::rng::."
+msgstr "你仍然在第 ::rng:: 名."
+
+msgid "You've beaten your record!"
+msgstr "你已经打破了你的记录!"
+
+msgid "You've beaten your record, but not enough to change rank."
+msgstr "你已经超越了自我!但是还不足以改变排名."
+
+msgid "You've been killing things I see..."
+msgstr "我知道你一直在杀些什么..."
+
+msgid "You've climbed to position ::rng::!"
+msgstr "你已经爬到了第 ::rng:: 名!"
+
+msgid "You've come adventuring far below the surface, Fallen."
+msgstr "你坠落到了地底深处,开始探险吧!"
+
+msgid "You've lifted the curse and earned ::pts:: extra points!"
+msgstr "你已经解除了诅咒,获得额外的 ::pts:: 分!"
+
+msgid "You've looted"
+msgstr "你捡到了"
+
+msgid "You've made it all this way! You're not going to chicken out now!"
+msgstr "你已经完成这一切了!你不用再临阵脱逃了!"
+
+msgid "You've made it past the last boss... for now..."
+msgstr "你打败了最终魔王... 只是现在..."
+
+msgid "You've reached the maximum number of mutations."
+msgstr "你已经达到最大突变数量."
+
+msgid "You. Back again. Of course."
+msgstr "哦也!你!又回来了!"
+
+msgid "You? Here? My warriors will take care of you, you can be sure of that."
+msgstr "你?这里?我的勇士会照顾你的,你肯定可以的?"
+
+msgid "You? I don't have the time to take care of your case right now."
+msgstr "你?我现在没有时间来处理你的事情."
+
+msgid "Your 3 stats have been improved!"
+msgstr "你的3个属性都得到了提升!"
+
+msgid "Your first attack after a successful parry inflicts +::+power:: damage."
+msgstr "你成功格挡后的第一次攻击增加 ::+power:: 伤害."
+
+msgid "Your game is not up to date. Please update the game."
+msgstr "你的游戏还没有升级.请先升级你的游戏."
+
+msgid "Your health flask now has 2 charges."
+msgstr "你的血瓶现在可以使用两次."
+
+msgid "Your health flask now has 3 charges."
+msgstr "你的血瓶现在可以使用三次."
+
+msgid "Your health flask now has four charges."
+msgstr "你的血瓶现在可以使用四次."
+
+msgid ""
+"Your health flasks only restore ::prct::% HP but they add +::+dps:: damage/s "
+"for ::duration:: seconds when used."
+msgstr ""
+"当你使用血瓶时只会回复 ::prct::% 生命值,但是会增加 ::+dps:: 伤害/秒 持续 ::"
+"duration:: 秒."
+
+msgid "Your health is already full"
+msgstr "您的生命值已满"
+
+msgid ""
+"Your score could not be saved, you need to be connected to ::platform:: for "
+"this to work."
+msgstr "你的分数将无法保存,请连接到::platform::网络以正常保存."
+
+msgid "Zombie"
+msgstr "僵尸"
+
+msgid "[CURRENT]"
+msgstr "[当前]"
+
+msgid "of course it is..."
+msgstr "当然啦..."
