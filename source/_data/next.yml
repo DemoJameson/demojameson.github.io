@@ -167,8 +167,6 @@ fancybox: true
 local_search:
   enable: true
 
-
-
 # ---------------------------------------------------------------
 # Statistics and Analytics
 # See: https://theme-next.org/docs/third-party-services/statistics-and-analytics
