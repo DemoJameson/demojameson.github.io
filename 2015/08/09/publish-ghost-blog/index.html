@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16.png">
+  <link rel="mask-icon" href="/uploads/safari-pinned-tab.svg" color="#222">
+  <meta name="msapplication-config" content="/uploads/browserconfig.xml">
+  <meta name="google-site-verification" content="PaxlLPbUKdotLhqUxwiOUCOaKVrScE_3A0yub5zGWZQ">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.demojameson.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Ghost 简介 Ghost 是一个基于 Node.js 的开源博客平台，由前 WordPress UI 部门主管 John O’Nolan 和 WordPress 开发人员 Hannah Wolfe 创立，目的是为了给用户提供一种更加纯粹的内容写作发布平台。  Ghost 简单轻量部署快，后台使用具备预览功能的 Markdown 编辑器进行写作，这些就是我选择它的原因。（下面提及的 Bug">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 OpenShift 上免费搭建 Ghost 博客的过程">
+<meta property="og:url" content="https://www.demojameson.com/2015/08/09/publish-ghost-blog/index.html">
+<meta property="og:site_name" content="DemoJameson&#39;s Blog">
+<meta property="og:description" content="Ghost 简介 Ghost 是一个基于 Node.js 的开源博客平台，由前 WordPress UI 部门主管 John O’Nolan 和 WordPress 开发人员 Hannah Wolfe 创立，目的是为了给用户提供一种更加纯粹的内容写作发布平台。  Ghost 简单轻量部署快，后台使用具备预览功能的 Markdown 编辑器进行写作，这些就是我选择它的原因。（下面提及的 Bug">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.demojameson.com/2015/08/09/publish-ghost-blog/ghost.png">
+<meta property="og:image" content="https://www.demojameson.com/2015/08/09/publish-ghost-blog/ghost-markdown-bug.png">
+<meta property="article:published_time" content="2015-08-09T12:49:11.000Z">
+<meta property="article:modified_time" content="2017-07-21T07:15:12.062Z">
+<meta property="article:author" content="DemoJameson">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Ghost">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.demojameson.com/2015/08/09/publish-ghost-blog/ghost.png">
+
+<link rel="canonical" href="https://www.demojameson.com/2015/08/09/publish-ghost-blog/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>在 OpenShift 上免费搭建 Ghost 博客的过程 | DemoJameson's Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aca76279b37859f804fdc464e85add45";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="DemoJameson's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DemoJameson's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">LIFE IS A GAME , SO LEVEL UP</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.demojameson.com/2015/08/09/publish-ghost-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="DemoJameson">
+      <meta itemprop="description" content="一枚普通的游戏玩家兼程序员">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DemoJameson's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 OpenShift 上免费搭建 Ghost 博客的过程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2015-08-09 20:49:11" itemprop="dateCreated datePublished" datetime="2015-08-09T20:49:11+08:00">2015-08-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-07-21 15:15:12" itemprop="dateModified" datetime="2017-07-21T15:15:12+08:00">2017-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <img src="/2015/08/09/publish-ghost-blog/ghost.png" class="">
+
+<h3 id="Ghost-简介"><a href="#Ghost-简介" class="headerlink" title="Ghost 简介"></a>Ghost 简介</h3><blockquote>
+<p>Ghost 是一个基于 Node.js 的开源博客平台，由前 WordPress UI 部门主管 John O’Nolan 和 WordPress 开发人员 Hannah Wolfe 创立，目的是为了给用户提供一种更加纯粹的内容写作发布平台。</p>
+</blockquote>
+<p>Ghost 简单轻量部署快，后台使用具备预览功能的 Markdown 编辑器进行写作，这些就是我选择它的原因。（下面提及的 Bug 还没修复，所以现在改用 Hexo 了 —— <a target="_blank" rel="noopener" href="http://ghost.demojameson.com/">Ghost 博客一览请点击</a></p>
+<span id="more"></span>
+
+<h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><p>主要参考了<a target="_blank" rel="noopener" href="http://hjc.im/free-ghost-blog-openshift-guide/">《使用 Nitrous.IO+OpenShift 免费搭建 Ghost 博客》</a>这篇文章，下面就将搭建的过程简单的记录一下，说说遇到的坑以及解决方法。</p>
+<ol>
+<li><p>注册 <a target="_blank" rel="noopener" href="https://www.openshift.com/">OpenShift</a>使用其提供的免费服务搭建 Ghost Blog。</p>
+</li>
+<li><p>注册 <a target="_blank" rel="noopener" href="https://www.nitrous.io/">nitrous.io</a>，该服务提供了一个在线的 Linux 开发环境，稍后需要使用这个环境安装 Ghost 和配置。注册后创建 Node.js IDE 时需要通过手机短信进行验证，经测试中国移动的号码无法使用免费的方案，遂借用 <a target="_blank" rel="noopener" href="http://www.heywire.com/">Heywire</a> 这个手机应用（获得虚拟的美国号码，免费接收短信）完成了验证。</p>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://www.nitrous.io/">nitrous.io</a> 的 Node.js IDE 环境搭建 Ghost Blog：</p>
+</li>
+</ol>
+<ul>
+<li>安装 rhc 工具（OpenShift 的客户端工具）：<code>sudo gem install rhc</code></li>
+<li>初始化 rhc 工具：<code>rhc setup</code>（按照提示输入用户名密码）</li>
+<li>安装 Ghost Blog：<code>rhc app create ghost nodejs-0.10 mysql-5.1 --env NODE_ENV=production --from-code https://github.com/openshift-quickstart/openshift-ghost-quickstart.git</code>（该语句中的 ghost 以及下文 rhc 命令中的 ghost 同为 OpenShift 中的应用名，可自行更改为其它内容）</li>
+</ul>
+<ol start="4">
+<li>这时已经可以通过<code>http://ghost-用户名.rhcloud.com</code>连接访问 Ghost Blog 了，但是由于众所周知的原因 OpenShift 很可能被墙了，这时候就得通过自定义域名来绕过围墙：</li>
+</ol>
+<ul>
+<li>在 OpenShift 中自定义域名：<code>rhc alias add ghost [你自己的域名]</code></li>
+<li>在 DNS 服务商处，将对应域名的 CNAME 记录指向 <code>ghost-用户名.rhcloud.com</code></li>
+<li>在 nitrous 中打开 <code>ghost/config.js</code> 文件，将 <code>&#39;http://&#39;+process.env.OPENSHIFT_APP_DNS</code> 替换为 <code>&#39;http://[你的域名]&#39;</code></li>
+</ul>
+<ol start="5">
+<li>使用 CDN 加速访问（非必须）：</li>
+</ol>
+<ul>
+<li>不知为何无法使用 <a target="_blank" rel="noopener" href="https://www.incapsula.com/">Incapsula</a> 服务，获取不到我的 IP，所以选择了 <a target="_blank" rel="noopener" href="https://www.cloudflare.com/">Cloudflare</a>。</li>
+<li>经测试国内访问<a target="_blank" rel="noopener" href="https://www.cloudflare.com/">Cloudflare</a>速度也不够快，考虑备案然后使用国内的 CDN 服务。</li>
+</ul>
+<ol start="6">
+<li><p>也是因为众所周知的原因，需要替换 Google Font 使用 360 CDN 提供的字体库，打开 <code>ghost/content/themes/[主题]/default.hbs</code> 文件，搜索<code>fonts.googleapis.com</code>全部替换为<code>fonts.useso.com</code></p>
+</li>
+<li><p>参考<a target="_blank" rel="noopener" href="http://www.kisshc.com/ghost-gravatar/">《解决 Ghost 中 gravatar 被墙不能显示的问题》</a>，数据库相关信息可在 OpenShift 中找到：</p>
+<pre><code> mysql -u [数据库用户名] -p -D [数据库名称]
+ Enter password:[数据库密码]
+ select image from users where email = &quot;your email address&quot;;
+ update users set image = &quot;//去掉www的Gravatar地址&quot; where email = &quot;your email address&quot;;
+</code></pre>
+</li>
+<li><p>主题安装：</p>
+<pre><code> cd ~/ghost/content/themes/
+ git clone [git地址]
+</code></pre>
+<p>可能需要为 git 设置默认的用户名以及邮箱，下载完主题后需删除目录下的 .git 目录以及 .gitignore，以免稍后无法应用更新。</p>
+</li>
+<li><p>添加<del><a target="_blank" rel="noopener" href="http://duoshuo.com/">多说</a></del>（试用多说过程中弹出了广告）<a target="_blank" rel="noopener" href="https://disqus.com/">Disqus</a>评论区以及 <a target="_blank" rel="noopener" href="https://swiftype.com/">Swiftype</a> 站内搜索的代码可以放置在后台<code>Setting -&gt; Code Injection</code>中，不必修改主题。以下是我修改过的多说脚本（请将 short_name 改为自己的）：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">var</span> s = <span class="built_in">document</span>.createElement(<span class="string">&quot;section&quot;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    s.className = <span class="string">&quot;post-comments&quot;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    s.innerHTML = <span class="string">&#x27;&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&#x27;</span> + location.pathname.replace(<span class="regexp">/\//g</span>,<span class="string">&quot;&quot;</span>) + <span class="string">&#x27;&quot; data-title=&quot;&#x27;</span>+ <span class="built_in">document</span>.title +<span class="string">&#x27;&quot; data-url=&quot;&#x27;</span> + location.href.replace(<span class="regexp">/^https/</span>, <span class="string">&quot;http&quot;</span>) + <span class="string">&#x27;&quot;&gt;&lt;/div&gt;&#x27;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="built_in">document</span>.querySelector(<span class="string">&quot;.post-container&quot;</span>).parentNode.appendChild(s);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">var</span> duoshuoQuery = &#123;<span class="attr">short_name</span>:<span class="string">&quot;xxxxxxxxx&quot;</span>&#125;;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        ds.type = <span class="string">&#x27;text/javascript&#x27;</span>;ds.async = <span class="literal">true</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">&#x27;https:&#x27;</span> ? <span class="string">&#x27;https:&#x27;</span> : <span class="string">&#x27;http:&#x27;</span>) + <span class="string">&#x27;//static.duoshuo.com/embed.js&#x27;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        ds.charset = <span class="string">&#x27;UTF-8&#x27;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>]</span></span></span><br><span class="line"><span class="javascript"><span class="xml">         || <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>]).appendChild(ds);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;)();</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;!-- 多说公共JS代码 end --&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>更新应用，在 nirtous 中做的所有更改均需通过 git 同步到 OpenShift 中，使用以下命令即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ~/ghost</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;[随便输入什么内容]&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>等待更新成功提示出现：<code>remote: Deployment completed with status: success</code></p>
+</li>
+<li><p>开始写作，通过网址<code>http://[你的域名]/ghost</code>初始化博客，设置管理员账号密码，然后进入后台写作以及配置</p>
+</li>
+</ol>
+<h3 id="未解之谜"><a href="#未解之谜" class="headerlink" title="未解之谜"></a>未解之谜</h3><ul>
+<li>尝试配置<a target="_blank" rel="noopener" href="https://github.com/Minwe/qn-store">七牛云存储</a>后无法启动 Ghost -_-</li>
+<li>尝试在  cloudflare 中使用 page rule 功能使 <code>demojameson.com</code> 跳转到 <code>www.demojameson.com</code> <del>失败，转而使用 <a target="_blank" rel="noopener" href="http://wwwizer.com/naked-domain-redirect">wwwizer</a> 实现该功能</del>，两个域名均需在 cloudflare 中添加 CNAME 记录，在 OpenShift 中添加 Alias</li>
+<li>有序列表中插入代码块会扰乱顺序，使用8 个空格的缩进又不能指定代码高亮，心好累……原来是个已知 <a target="_blank" rel="noopener" href="https://github.com/TryGhost/Ghost/issues/5632">Bug</a><img src="/2015/08/09/publish-ghost-blog/ghost-markdown-bug.png" class=""></li>
+</ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
+<li><a target="_blank" rel="noopener" href="http://hjc.im/free-ghost-blog-openshift-guide/">使用 Nitrous.IO+OpenShift 免费搭建 Ghost 博客</a></li>
+<li><a target="_blank" rel="noopener" href="http://hjc.im/ghost-share-qzone-weibo-renren/">简单实现 Ghost 独立博客的 QQ 空间、新浪微博和人人网分享按钮</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.kisshc.com/ghost-gravatar/">解决 Ghost 中 gravatar 被墙不能显示的问题</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/russellluo/p/3363209.html">绑定 GoDaddy 域名到 OpenShift 应用</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.denpe.com/prism-ghost-code-highlight/">用 Prism 给 Ghost 添加代码高亮</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.applecho.com/ghost-duoshuo-disqus/">Ghost 博客平台：安装多说, Disqus</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.erguotou.me/ghost-swiftype-guide/">使用 Swiftype 完成 Ghost 搜索功能</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>DemoJameson
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.demojameson.com/2015/08/09/publish-ghost-blog/" title="在 OpenShift 上免费搭建 Ghost 博客的过程">https://www.demojameson.com/2015/08/09/publish-ghost-blog/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Blog/" rel="tag"># Blog</a>
+              <a href="/tags/Ghost/" rel="tag"># Ghost</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2015/11/08/why-kotlin/" rel="next" title="[译] 为什么 Kotlin 是我下一门要使用的语言">
+      [译] 为什么 Kotlin 是我下一门要使用的语言 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ghost-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Ghost 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">搭建过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C"><span class="nav-number">3.</span> <span class="nav-text">未解之谜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="DemoJameson"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">DemoJameson</p>
+  <div class="site-description" itemprop="description">一枚普通的游戏玩家兼程序员</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/demojameson" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;demojameson" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/21222" title="B 站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;21222" rel="noopener" target="_blank"><i class="fa fa-tv fa-fw"></i>B 站</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备19151874号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DemoJameson</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5da6e60de5263c3f" async="async"></script>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'ZZaxq6dfjxnb7KCheqS8FtRecoMRToXqteIeESSSmJN85T2ewtgEwECHNMtfDIo6',
+      shortname : 'demojameson',
+      url       : "https://www.demojameson.com/2015/08/09/publish-ghost-blog/",
+      identifier: "2015/08/09/publish-ghost-blog/",
+      title     : "在 OpenShift 上免费搭建 Ghost 博客的过程",
+    });
+  }, window.DisqusJS);
+});
+</script>
+
+</body>
+</html>

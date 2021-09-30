@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16.png">
+  <link rel="mask-icon" href="/uploads/safari-pinned-tab.svg" color="#222">
+  <meta name="msapplication-config" content="/uploads/browserconfig.xml">
+  <meta name="google-site-verification" content="PaxlLPbUKdotLhqUxwiOUCOaKVrScE_3A0yub5zGWZQ">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.demojameson.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="简介最近在 @莫伊图拉‍ 的安利下开始了魂一的受苦之旅并借助 DSfix 打上了一系列的 MOD，其中有个很受欢迎的界面文字与会话对白高清 MOD 能够很好的提升玩家的游戏体验，不过该 MOD 对繁体中文的支持不太好，只有界面文字得到了调整并且许多文字有污点（位图字体没对准所致）。在打完小隆德四天王后我的忍耐达到了极限（你这不怎么看道具说明和对白的人有什么要忍耐的←_←），遂对位图字体进行重绘做">
+<meta property="og:type" content="article">
+<meta property="og:title" content="黑暗之魂受死版繁体中文文字高清 MOD">
+<meta property="og:url" content="https://www.demojameson.com/2016/10/17/darksouls-hd-text/index.html">
+<meta property="og:site_name" content="DemoJameson&#39;s Blog">
+<meta property="og:description" content="简介最近在 @莫伊图拉‍ 的安利下开始了魂一的受苦之旅并借助 DSfix 打上了一系列的 MOD，其中有个很受欢迎的界面文字与会话对白高清 MOD 能够很好的提升玩家的游戏体验，不过该 MOD 对繁体中文的支持不太好，只有界面文字得到了调整并且许多文字有污点（位图字体没对准所致）。在打完小隆德四天王后我的忍耐达到了极限（你这不怎么看道具说明和对白的人有什么要忍耐的←_←），遂对位图字体进行重绘做">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.demojameson.com/2016/10/17/darksouls-hd-text/darksouls_firelink_shrine.jpeg">
+<meta property="og:image" content="https://www.demojameson.com/2016/10/17/darksouls-hd-text/interface_text_before.png">
+<meta property="og:image" content="https://www.demojameson.com/2016/10/17/darksouls-hd-text/interface_text_after.png">
+<meta property="og:image" content="https://www.demojameson.com/2016/10/17/darksouls-hd-text/subtitle_before.png">
+<meta property="og:image" content="https://www.demojameson.com/2016/10/17/darksouls-hd-text/subtitle_after.png">
+<meta property="article:published_time" content="2016-10-17T06:42:03.000Z">
+<meta property="article:modified_time" content="2016-10-17T06:42:03.000Z">
+<meta property="article:author" content="DemoJameson">
+<meta property="article:tag" content="darksouls">
+<meta property="article:tag" content="黑暗之魂">
+<meta property="article:tag" content="受苦">
+<meta property="article:tag" content="传火">
+<meta property="article:tag" content="MOD">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.demojameson.com/2016/10/17/darksouls-hd-text/darksouls_firelink_shrine.jpeg">
+
+<link rel="canonical" href="https://www.demojameson.com/2016/10/17/darksouls-hd-text/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>黑暗之魂受死版繁体中文文字高清 MOD | DemoJameson's Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aca76279b37859f804fdc464e85add45";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="DemoJameson's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DemoJameson's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">LIFE IS A GAME , SO LEVEL UP</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.demojameson.com/2016/10/17/darksouls-hd-text/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="DemoJameson">
+      <meta itemprop="description" content="一枚普通的游戏玩家兼程序员">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DemoJameson's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          黑暗之魂受死版繁体中文文字高清 MOD
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-10-17 14:42:03" itemprop="dateCreated datePublished" datetime="2016-10-17T14:42:03+08:00">2016-10-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <img src="/2016/10/17/darksouls-hd-text/darksouls_firelink_shrine.jpeg" class="">
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>最近在 <a target="_blank" rel="noopener" href="https://cowlevel.net/people/moyitula">@莫伊图拉</a>‍ 的安利下开始了魂一的受苦之旅并借助 <a target="_blank" rel="noopener" href="https://github.com/PeterTh/dsfix?utm_source=cowlevel">DSfix</a> 打上了一系列的 MOD，其中有个很受欢迎的<a target="_blank" rel="noopener" href="http://www.nexusmods.com/darksouls/mods/21/?&utm_source=cowlevel">界面文字与会话对白高清 MOD</a> 能够很好的提升玩家的游戏体验，不过该 MOD 对繁体中文的支持不太好，只有界面文字得到了调整并且许多文字有污点（位图字体没对准所致）。在打完小隆德四天王后我的忍耐达到了极限（你这不怎么看道具说明和对白的人有什么要忍耐的←_←），遂对位图字体进行重绘做出了此 MOD。</p>
+<span id="more"></span>
+
+<h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h1><h2 id="界面文字对比"><a href="#界面文字对比" class="headerlink" title="界面文字对比"></a>界面文字对比</h2><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>改动前</strong></th>
+<th><strong>改动后</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>界面文字对比</strong></td>
+<td><img src="/2016/10/17/darksouls-hd-text/interface_text_before.png" class=""></td>
+<td><img src="/2016/10/17/darksouls-hd-text/interface_text_after.png" class=""></td>
+</tr>
+<tr>
+<td><strong>会话文字对比</strong></td>
+<td><img src="/2016/10/17/darksouls-hd-text/subtitle_before.png" class=""></td>
+<td><img src="/2016/10/17/darksouls-hd-text/subtitle_after.png" class=""></td>
+</tr>
+</tbody></table>
+<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>包含 <a target="_blank" rel="noopener" href="https://steamcommunity.com/app/211420/discussions/0/392184522702551585?utm_source=cowlevel">GitHub 新版 DSfix</a>（增加预加载纹理材质文件的功能以及修复自动备份功能）和 MOD 本体<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1DBGeBBiJX3eh1kgVfd55Wg">https://pan.baidu.com/s/1DBGeBBiJX3eh1kgVfd55Wg</a> 提取码: cvvu</p>
+<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><ol>
+<li><p>解压所有文件到 DARKSOULS.exe 所在的目录</p>
+</li>
+<li><p>打开 DSfix.ini 并将以下两个参数修改为你游戏中的分辨率</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">renderWidth  3840</span><br><span class="line">renderHeight 2160</span><br></pre></td></tr></table></figure></li>
+<li><p> 打开游戏进入设置界面关闭抗锯齿，不然加载存档时游戏会报错</p>
+</li>
+<li><p>开始受苦</p>
+</li>
+</ol>
+<p>根据我制作 MOD 时的瞌睡程度有可能出现错字、污点、缺字等等问题，反馈时麻烦告知是界面字体还是会话字体并且出现在何处，感谢配合。</p>
+<h1 id="制作历程"><a href="#制作历程" class="headerlink" title="制作历程"></a>制作历程</h1><p>首先 DSfix 提供了导出纹理材质文件的功能，从中找出需要修改的位图字体文件。字体文件分成界面字体和会话字体两类，这两类字体我在重绘时分别选择了新细明体和标楷体两种与原来十分相似的字体，并且将界面字体中出现的日文异体字替换成正常的字形（如原字体中的<strong>道</strong>字走之底是两点，因为日文与繁体中文使用的是同一套字体），而会话字体我在参照原字体进行描边处理后发现在游戏中缩放后会有白色的斑点，所以最终我取消了描边。</p>
+<p>找到字体文件后下一步就是将图片中的文本提取出来，借助<a target="_blank" rel="noopener" href="http://www.onlineocr.net/?utm_source=cowlevel">在线 OCR 服务</a>或者 <a target="_blank" rel="noopener" href="http://www.abbyy.cn/finereader/?utm_source=cowlevel">OCR 软件</a>还有直接从 <a target="_blank" rel="noopener" href="http://unicode-table.com/cn?utm_source=cowlevel">Unicode 编码表</a>中复制等手段可以完成该工作。</p>
+<p>最后则是用 Photoshop 将原字体图片放大 4 倍，然后把准备好的文本铺上去调整每个文字的位置使其和原图一致，大功告成！（总共三十几张图，很惭愧，就做了一点微小的工作）</p>
+<h1 id="MOD-与插件推荐"><a href="#MOD-与插件推荐" class="headerlink" title="MOD 与插件推荐"></a>MOD 与插件推荐</h1><p>下面是我在用的一些 MOD 和插件，个人感觉可以提高游戏体验并且不会造成游戏卡顿，请根据个人喜好下载安装：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.nexusmods.com/darksouls/mods/446/?&utm_source=cowlevel">游戏场景高清材质包</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.nexusmods.com/darksouls/mods/289/?&utm_source=cowlevel">SweetFX HDR</a> 游戏画面效果增强插件，与上一个 MOD 是同一个作者建议配套使用，我比较喜欢其中的 Natural and Soft 风格效果。游戏中可按 **Scroll Lock **键开启 / 关闭效果</li>
+<li><a target="_blank" rel="noopener" href="http://www.nexusmods.com/darksouls/mods/1107/?&utm_source=cowlevel">魂三界面 MOD</a>，使用中文语言进行游戏的话需要将 40fbc4ad.dds 文件改名为 8fdc74b1.dds 不然手柄按钮高清图将不起作用</li>
+<li><a target="_blank" rel="noopener" href="http://www.nexusmods.com/darksouls/mods/1047/?&utm_source=cowlevel">联机增强插件</a> 提高连接上其他玩家的几率与个数，并且可以方便与特定玩家联机（后者我还没尝试过）</li>
+<li><a target="_blank" rel="noopener" href="http://www.nexusmods.com/darksouls/mods/585/?&utm_source=cowlevel">开始界面的 Logo 动画</a>，篝火加配乐十分融洽</li>
+<li>取用网上的 GIF 动画制作了 <a target="_blank" rel="noopener" href="http://steamcommunity.com/sharedfiles/filedetails/?id=356583468&utm_source=cowlevel">Artorias</a> 和 <a target="_blank" rel="noopener" href="http://steamcommunity.com/sharedfiles/filedetails/?id=217494524&utm_source=cowlevel">Nito</a> 的 Loding 动画以及原动画去污点版（与字体 MOD 同一下载地址）</li>
+<li>自制的<a href="/2016/10/17/darksouls-revised-text/">繁体中文文本校正补丁</a>，调整了标点符号和修复一些明显的错误</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>DemoJameson
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.demojameson.com/2016/10/17/darksouls-hd-text/" title="黑暗之魂受死版繁体中文文字高清 MOD">https://www.demojameson.com/2016/10/17/darksouls-hd-text/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/darksouls/" rel="tag"># darksouls</a>
+              <a href="/tags/%E9%BB%91%E6%9A%97%E4%B9%8B%E9%AD%82/" rel="tag"># 黑暗之魂</a>
+              <a href="/tags/%E5%8F%97%E8%8B%A6/" rel="tag"># 受苦</a>
+              <a href="/tags/%E4%BC%A0%E7%81%AB/" rel="tag"># 传火</a>
+              <a href="/tags/MOD/" rel="tag"># MOD</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2015/12/15/genymotion-bug/" rel="prev" title="Genymotion 安装记 —— 曾经最快的 Android 模拟器">
+      <i class="fa fa-chevron-left"></i> Genymotion 安装记 —— 曾经最快的 Android 模拟器
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/10/17/darksouls-revised-text/" rel="next" title="黑暗之魂受死版繁体中文文本校正补丁">
+      黑暗之魂受死版繁体中文文本校正补丁 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-number">2.</span> <span class="nav-text">预览</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%95%8C%E9%9D%A2%E6%96%87%E5%AD%97%E5%AF%B9%E6%AF%94"><span class="nav-number">2.1.</span> <span class="nav-text">界面文字对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="nav-number">4.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E5%8E%86%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">制作历程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MOD-%E4%B8%8E%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="nav-number">6.</span> <span class="nav-text">MOD 与插件推荐</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="DemoJameson"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">DemoJameson</p>
+  <div class="site-description" itemprop="description">一枚普通的游戏玩家兼程序员</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/demojameson" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;demojameson" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/21222" title="B 站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;21222" rel="noopener" target="_blank"><i class="fa fa-tv fa-fw"></i>B 站</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备19151874号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DemoJameson</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5da6e60de5263c3f" async="async"></script>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'ZZaxq6dfjxnb7KCheqS8FtRecoMRToXqteIeESSSmJN85T2ewtgEwECHNMtfDIo6',
+      shortname : 'demojameson',
+      url       : "https://www.demojameson.com/2016/10/17/darksouls-hd-text/",
+      identifier: "2016/10/17/darksouls-hd-text/",
+      title     : "黑暗之魂受死版繁体中文文字高清 MOD",
+    });
+  }, window.DisqusJS);
+});
+</script>
+
+</body>
+</html>

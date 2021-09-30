@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16.png">
+  <link rel="mask-icon" href="/uploads/safari-pinned-tab.svg" color="#222">
+  <meta name="msapplication-config" content="/uploads/browserconfig.xml">
+  <meta name="google-site-verification" content="PaxlLPbUKdotLhqUxwiOUCOaKVrScE_3A0yub5zGWZQ">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.demojameson.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="作者 原文    Mike Hearn Why Kotlin is my next programming language   Kotlin 是一门新的编程语言，它来自 JetBrains —— 世界上最伟大 IDE 的开发商。在做了许多研究后，我决定将 Kotlin 作为我未来 5 到 10 年的主力编程开发语言。 我十分喜爱 Kotlin，它将会是一个很成功的项目。人们看到我在开源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[译] 为什么 Kotlin 是我下一门要使用的语言">
+<meta property="og:url" content="https://www.demojameson.com/2015/11/08/why-kotlin/index.html">
+<meta property="og:site_name" content="DemoJameson&#39;s Blog">
+<meta property="og:description" content="作者 原文    Mike Hearn Why Kotlin is my next programming language   Kotlin 是一门新的编程语言，它来自 JetBrains —— 世界上最伟大 IDE 的开发商。在做了许多研究后，我决定将 Kotlin 作为我未来 5 到 10 年的主力编程开发语言。 我十分喜爱 Kotlin，它将会是一个很成功的项目。人们看到我在开源">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.demojameson.com/2015/11/08/why-kotlin/index-page-header-bg.jpg">
+<meta property="article:published_time" content="2015-11-08T12:49:11.000Z">
+<meta property="article:modified_time" content="2015-12-11T03:02:06.000Z">
+<meta property="article:author" content="DemoJameson">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="Kotlin">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="JVM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.demojameson.com/2015/11/08/why-kotlin/index-page-header-bg.jpg">
+
+<link rel="canonical" href="https://www.demojameson.com/2015/11/08/why-kotlin/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>[译] 为什么 Kotlin 是我下一门要使用的语言 | DemoJameson's Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aca76279b37859f804fdc464e85add45";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="DemoJameson's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DemoJameson's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">LIFE IS A GAME , SO LEVEL UP</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.demojameson.com/2015/11/08/why-kotlin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="DemoJameson">
+      <meta itemprop="description" content="一枚普通的游戏玩家兼程序员">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DemoJameson's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [译] 为什么 Kotlin 是我下一门要使用的语言
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2015-11-08 20:49:11" itemprop="dateCreated datePublished" datetime="2015-11-08T20:49:11+08:00">2015-11-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2015-12-11 11:02:06" itemprop="dateModified" datetime="2015-12-11T11:02:06+08:00">2015-12-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <img src="/2015/11/08/why-kotlin/index-page-header-bg.jpg" class="" title="坐落于俄罗斯岛屿 —— Kotlin 上的灯塔">
+
+<table>
+<thead>
+<tr>
+<th>作者</th>
+<th>原文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://medium.com/@octskyward">Mike Hearn</a></td>
+<td><a target="_blank" rel="noopener" href="https://medium.com/@octskyward/why-kotlin-is-my-next-programming-language-c25c001e26e3?source=latest---">Why Kotlin is my next programming language</a></td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="http://kotlinlang.org/">Kotlin</a> 是一门新的编程语言，它来自 <a target="_blank" rel="noopener" href="http://jetbrains.com/">JetBrains</a> —— 世界上最伟大 IDE 的开发商。在做了许多研究后，我决定将 Kotlin 作为我未来 5 到 10 年的主力编程开发语言。</p>
+<p>我十分喜爱 Kotlin，它将会是一个很成功的项目。人们看到我在开源项目中使用了该语言后让我介绍一下它，所以在本文中我将说明为什么 Kotlin 是优秀的，讨论一些使用中可能会遇到的问题，</p>
+<p><em>注意：Kotlin 目前处于 beta 阶段，有望于 2015 年底发布 1.0 正式版并且提供稳定的标准库。</em></p>
+<span id="more"></span>
+
+<h3 id="为什么说-Kotlin-是优秀的"><a href="#为什么说-Kotlin-是优秀的" class="headerlink" title="为什么说 Kotlin 是优秀的"></a>为什么说 Kotlin 是优秀的</h3><p>本文不会像一般介绍语言的文章那样，一开头就罗列出语言那些酷炫的特性，我们稍后再来探讨这些内容。</p>
+<p>首先我将介绍一些其它的信息，因为 <a target="_blank" rel="noopener" href="http://sns.cs.princeton.edu/docs/asr-oopsla13.pdf">2013 年一项研究</a>显示，当开发者评估一种编程语言时生态系统要比语言特性更重要。这符合我个人的经验，下面就让我开始介绍吧：</p>
+<p><strong>Kotlin 被编译成 JVM 字节码或者 JavaScript 代码</strong>。Java 开发者将会是对它最感兴趣的人，不过对于使用垃圾收集运行时语言的开发者而言它也具有一定的吸引力，比如 Scala、Go、Python、Ruby 和 JavaScript 等语言。</p>
+<p><strong>Kotlin 来自业界</strong>，而不是学术界。它解决了开发者现今面临的实际问题。例如它的类型系统可以帮助你避免空指针异常。</p>
+<p><strong>切换到 Kotlin 无需成本！</strong> 它是开源的但这不是重点，重点是它提供了一个高质量的一键从 Java 转换到 Kotlin 的工具，并且十分关注 Java 二进制文件的兼容性。你可以将现有 Java 项目的一次性转换成 Kotlin 项目，而该项目仍将可以正常编译，即使这是一个包含上百万行代码的复杂程序。</p>
+<p>显然你可以从上文得知，<strong>Kotlin 程序能够使用所有现存的 Java 框架和库</strong>，甚至那些依赖注解处理的高级框架。它们之间的交互是无缝的，不需要包装或者适配层。Kotlin 可以整合 Maven，Gradle 以及其它构建系统。</p>
+<p>它十分平易近人，语法精炼直观，仅仅是阅读语言参考文档<strong>几个小时就能学会使用</strong>。Kotlin 看起来十分像 Scala 但是更加简洁并且兼顾了可读性。</p>
+<p><strong>它不遵循特定的编程哲学</strong>，例如极度的函数式编程或者面向对象编程风格。</p>
+<p>它<strong>不会增加运行时的开销</strong>。Kotlin 的标准库十分小巧紧凑：专注于扩展 Java 标准库，编译阶段的大量内联操作意味像 map/filter/reduce 等管道结构函数将被编译成类似于命令式语言的代码。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/JetBrains/anko">Anko</a> 与 <a target="_blank" rel="noopener" href="http://kovenant.komponents.nl/android/features/">Kovenant</a> 等框架的出现意味着<strong>在 Android 开发者中 Kotlin 开始变得流行起来</strong>。如果你正在从事 Android 相关的工作，相信你很快就会获得好的工作。你可以阅读这份 <a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1ReS3ep-hjxWA8kZi0YqDbEhCqTt29hG8P44aA9W0DM8/edit?hl=en&forcehl=1">Square 公司开发者 JakeWharton 的报告</a>，了解用 Kotlin 进行 Android 开发的体验。</p>
+<p>Kotlin 允许你继续使用你的工作效率提升工具。<strong>IntelliJ 的 IDE 对 Kotlin 的支持十分完善</strong>：你可以对代码进行重构、搜索、导航以及使用自动完成，而且 IDE 充分支持调试、单元测试、性能分析等等功能。</p>
+<p>除了 Android，我认为 <strong>Kotlin 还非常适用于企业中 Java 的应用场景</strong> 。如果你的工作是整天埋头于大公司的代码库中，那么当 Kotlin 1.0 版本正式发布时你应该尽快去了解一下：</p>
+<ul>
+<li>   <strong>由知名公司为它提供强大的商业支持</strong>。 JetBrains 这家公司 有一个高度称职的大团队致力于该项目，有稳定的商业模式甚至在自己的部分旗舰产品中使用 Kotlin，这表明短期内 Kotlin 不会被放弃。</li>
+<li>   <strong>使用 Kotlin 风险较低</strong>：可以由一两个感兴趣的团队成员在项目中小范围的试验 Kotlin，这并不会扰乱你的项目，因为 Kotlin 的类对外提供的 Java API 看起来就与普通的 Java 代码一样。</li>
+<li>   因为 Kotlin 十分注重语法的可读性，<strong>代码审查不会成为问题</strong>，对 Kotlin 不熟悉的团队成员仍然能够完成该工作。</li>
+<li>   <strong>Kotlin 基于 Java 6</strong>，所以假如你难以在项目中升级使用新版本的 JVM，你可以使用 Kotlin。</li>
+</ul>
+<p>今年早些时候我向 Swiss Re 这家瑞士再保险公司的团队（他们使用 Java 和 .NET）展示了 Kotlin。首先我定义了一个简单的 Java 类包含一些字段以及 toString、equals、hashCode 等方法，大概有 50 行代码。然后我将它转换成 Kotlin 代码（大部分是自动完成的），结果仅剩 1 行代码，接着我还演示了其它节省时间的特性。他们看过后对 Kotlin 充满了热情并且认为 Kotlin 是它们项目中 C# 语言的一个潜在竞争对手。</p>
+<p>我认为 Kotlin 正中企业 Java 开发者的红心，所以尽管 Kotlin 是免费的，JetBrains 还是能够通过它增加商业版本 IDE 的销售来赚大钱。这将激励他们根据用户的意愿持续改进它。</p>
+<p>与此相比，对于那些由不相关产品资助的语言开发者来说，当用户需求与之前的设计理念冲突时，他们很少会因此作出调整。</p>
+<hr>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>Kotlin 作为一门新的编程语言能够脱颖而出，是因为它关注生态系统：JetBrains 懂得生产力的高低更多的取决于生态系统而不是便捷的语法。</p>
+<p>尽快如此，Kotlin 还是有许多有用的特性能让你编码的过程变得愉快：</p>
+<ul>
+<li>   我们已经提过 <a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/null-safety.html"><strong>null 安全</strong></a>（可选），它能够让编译器系统的标记潜在的空指针引用。与一些语言不同的是它不涉及 option 类，因此是零开销的，并且还有其它语言特性确保它不会造成不便。</li>
+<li>   <strong>精炼的语法</strong>：无处不在的类型推断、简单的函数只需要一行、简单的结构以及 JavaBeans 也只需要一行就能声明、<a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/properties.html"><strong>真正的属性</strong></a>——可以在背后自动生成 getFoo/setFoo 方法用于与 Java 进行交互、函数可以独立存在于类之外。</li>
+<li>   <strong>异常均为非检查型</strong>。（译者注：感兴趣的可以阅读一下 <a target="_blank" rel="noopener" href="https://www.ibm.com/developerworks/cn/java/j-jtp05254/">Java 理论与实践: 关于异常的争论</a>）</li>
+<li>   使用 <a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/data-classes.html">data class</a> 关键字创建数据类会<strong>自动生成通用方法</strong>，例如 equals、hashCode、toString 以及 copy 和 componentN（<a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/multi-declarations.html">同时声明多个变量时会调用该方法</a>）。这将帮助你在不使用构建器的情况下便捷的获得不变类（immutable classes）。</li>
+<li>   但如果你需要构造复杂的结构体，借助<a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/type-safe-builders.html">类型安全的构建器</a>这个特性可以简洁的实现。如果你使用 Google Protocol Buffers 来存储结构化数据， 通过 <a target="_blank" rel="noopener" href="http://levelmoney.github.io/kbuilders/">KBuilders</a> 这个库也能很轻易做到。</li>
+<li>   <strong>支持函数式编程</strong>以及<a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/lambdas.html">零开销的 lambda 表达式</a>，能够在 Java 的集合中做 Map、Filter、Folder 等处理。Kotlin 的类型系统能够自动识别可变或者不可变的集合。</li>
+<li>   <a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/extensions.html"><strong>扩展函数</strong></a>特性能够让你在不改动源码的情况下为类添加方法。乍眼一看以为是为了避免写出像 FooUtils 这种风格工具类的语法糖，不过随着使用的加深，你会认识到它不仅能帮你更加容易的通过自动完成使用方法，还能协助你集成现有的 Java API 以及借助其它 Kotlin 特性构建功能强大的扩展。</li>
+<li>   支持<a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/operator-overloading.html"><strong>运算符重载</strong></a>，但是不会像 Scala 或者 Perl 那样出现难以理解的代码。运算符被映射成相应名字的方法，通过重写这些方法改变运算符的行为（包括函数调用），但是不能定义新的运算符。这使得程序能够兼顾功能与可读性。</li>
+<li>   Kotlin 没有宏或者其它的方式来重定义语言，但是通过这些精心设计的特性能够使第三方库自由的对它进行扩展，官方对集合类进行的扩展也只是小试牛刀而已，请看以下例子。</li>
+<li>   想使用 <strong>fibers、actors 和 Go 风格的 channels</strong>？一个名为 <a target="_blank" rel="noopener" href="http://blog.paralleluniverse.co/2015/06/04/quasar-kotlin/">Quasar</a> 的库已经为你实现了。</li>
+<li>   <a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/kotlin-doc.html"><strong>使用 Markdown 替代 HTML</strong></a> 来编写 API 文档，这样编写 JavaDocs 可比以前舒适多了。（译者注：JetBrains 提供了相应的文档生成器 <a target="_blank" rel="noopener" href="http://github.com/kotlin/dokka">Dokka</a>）</li>
+<li>   更好用的<a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/generics.html"><strong>泛型</strong></a>。如果你没有完全掌握泛型参数中 super 以及 extends 的含义，别担心，这不是你的错。Java 的泛型的确令人费解，Kotlin 解决了这个问题。</li>
+<li>   <a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/delegation.html"><strong>委托</strong></a>是一个大家都知道的设计模式，Kotlin 原生支持它。</li>
+<li>   <a target="_blank" rel="noopener" href="http://kotlinlang.org/docs/reference/equality.html"><strong>== 运算符</strong></a> 的行为符合预期（译者注：简单来说 a == b 相当于 a.equals(b)；新增了 === 运算符，用来判断运算符两边是否指向同一个对象）</li>
+<li>   想快速便捷的进行<a target="_blank" rel="noopener" href="http://kovenant.komponents.nl/"><strong>异步编程</strong></a>吗？当然！</li>
+<li>   <strong><a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/reference/basic-types.html#string-templates">字符串插值</a></strong> “可以使用这样的写法在字符创中直接引用变量{this.example}”</li>
+<li>   函数中的参数可以指定默认值、使用可变长度以及通过参数名传参。</li>
+<li>   还有许多的调整与优化。假如 Java 中有某些让你觉得困扰的问题，我相信 Kotlin 一定已经把它处理好了。</li>
+</ul>
+<hr>
+<h3 id="现在就来试用一下！"><a href="#现在就来试用一下！" class="headerlink" title="现在就来试用一下！"></a>现在就来试用一下！</h3><p>跟很多现代编程语言一样，Kotlin 可以通过网页浏览器来进行体验。不过跟其他语言不一样的是，Kotlin 的实验网站提供了一个成熟的 IDE，包括响应很快的自动完成，实时的后台编译，甚至还有在线的静态分析！</p>
+<h4 id="在线试用一下吧"><a href="#在线试用一下吧" class="headerlink" title="在线试用一下吧"></a><a target="_blank" rel="noopener" href="http://try.kotlinlang.org/#"><strong>在线试用一下吧</strong></a></h4><p>好了，让我们继续接下来的内容</p>
+<hr>
+<h3 id="目前存在哪些问题？"><a href="#目前存在哪些问题？" class="headerlink" title="目前存在哪些问题？"></a>目前存在哪些问题？</h3><p>生活中没有什么是完美的，包括 Kotlin。以下是我尝试这门语言时遇到的一些问题。</p>
+<p>最大的问题是不够成熟，因为 Kotlin 目前还处于 Beta 阶段，这意味着：</p>
+<ul>
+<li>   <a target="_blank" rel="noopener" href="http://blog.jetbrains.com/kotlin/2015/06/kotlin-evolves-how-to-keep-your-code-up/">每更新一个版本，语法、ABI 以及标准库就变一次</a>。好消息是这些变化通常比较微小，可以借助 IntelliJ IDE 来自动升级你的代码，所以这个过程并不会太麻烦。</li>
+<li>   Java-to-Kotlin 的转换工具（J2K）还没有完成。它偶尔会大规模的破坏和默默地擦除 Java 8 中的 Lambdas（<em>修改：2015 年 10 月：M13 版本的转换工具已经可以正确地处理 Java 8 的特性了</em>）。由它转换而成的代码并不总是最好的写法，但是 JetBrains 为这个工具付出了大量努力，它已经是我用过的语言转换工具中最好的了。所以我并不太担心这个问题，这个转换器正在迅速的改进中，变得越来越成熟。</li>
+<li>   你<strong>会</strong>遇到编译器错误。尽管我的程序并不大，但还是会发生无法编译的情况，甚至错误的编译结果。诊断这些问题并不难，但终归还是影响了开发的体验。</li>
+<li>   你<strong>会</strong>遇到 IDE 内部错误。当这个错误发生时，IntelliJ IDE 会弹出一个悬浮窗口，附带向 JetBrains 报告的选项。大部分错误无需理会，不过依然会使人厌烦。</li>
+<li>   偶尔会出现无法加载提示文档的错误（<em>修改：M14 版本发布后，这个问题已被修复</em>）</li>
+</ul>
+<p>目前 JetBrains 正致力于完善发布 1.0 版本而不是添加新的功能，期待这些问题能够得到修复。</p>
+<p>第二个我遇到的比较大的问题是，有时与 Java 的交互会受到局限。</p>
+<p>一个典型的 Bug 是 Java 的类型系统无法防止你改变 Map 中 Key 的类型。按理来说，这样操作应该导致编译器报错，例如使用类型错误的 Key 删除元素。有些 JDK 中的集合使用了泛型，它们某些重要方法的泛型参数是 Obejct，所以编译器不会提示。当在 IntelliJ IDE 中编写 Java 代码时会有静态分析的警告，但是目前 Kotlin 环境还没有这个功能。因为 Kotlin 使用的是 Java 的集合框架没有自己实现，所以这导致了一些类型安全方面的问题，我已经遇到好几次了。<br>（<em>修改：1.0 Beta 版本中这个问题已经解决了，Java 中集合框架的类型安全缺陷在 Kotlin 已经不复存在。哟呵！</em>）</p>
+<p>另一个例子是，当调用或使用 Java 代码时 Kotlin 的 Null 安全特性无法发挥作用（可以借助注解弥补）。作为 Kotlin 的初学者，刚开始你可能会写许多调用 Java 库的代码，但是因为以上的问题它们并没有你想象中那么好用。这种情况的改善只能等待 Kotlin 使用人数的增长。<a target="_blank" rel="noopener" href="http://blog.jetbrains.com/kotlin/2015/04/upcoming-change-more-null-safety-for-java/">JetBrains 一直在尝试使 Null 安全特性能体现在 Java 交互中</a>，这种想法是好的，但有时考虑并太周全。（<em>修改: 从 M13 版本开始，在 Java 代码中将自动以 @NotNull @Nullable 等注解实现 Kotlin 的 Null 安全特性</em>）</p>
+<p>虽然有以上的问题存在，但同时也使得我们能更流畅的使用 Java API，我觉得这种权衡是值得的，只是在开发中要注意。</p>
+<p>其它需要考虑的问题:</p>
+<ul>
+<li>   Kotlin 的社区还比较小。虽然目前没有多少 Kotlin 的库可以使用，但是凭借优秀的 Java 交互能力，Kotlin 可以使用现有成熟的 Java 库。</li>
+<li>   如果你喜欢看书来学习，那么你需要等到今年晚些时候才能看到 Kotlin 开发者写的书（译者注：<a target="_blank" rel="noopener" href="https://manning.com/books/kotlin-in-action">Kotlin in Action</a>）</li>
+<li>   纯粹的函数编程风格开发者可能会觉得类型系统中缺乏一些 Scala 或 Haskell 拥有的高级功能。如果你对类型系统一些功能比较看重，那么 Kotlin 可能不适合你。</li>
+<li>   Kotlin 还能编译成 Javascript 代码，但是比较少用，所以可能会遇到更多的问题，这是我从论坛中得到的印象。（<em>修改: 目前 Kotlin 的开发重心在于完成 1.0 版本并使其稳定运行在 JVM 中，Javascript 方面的问题将会在 1.0 发布后着手解决</em>）</li>
+<li>   没有标准的编程风格指南，目前 Kotlin 提供了多种语法可供选择。不同人写出来的 Kotlin 代码很可能完全不一样。这与 Go 严格的风格形成了鲜明的对比。（<em>修改: Kotlin 1.0 版本开始，一些灵活的语法已经被移除了，例如现在重载运算符以及定义中缀函数时必须分别使用 operator 和  infix 关键字进行标记</em>）</li>
+<li>   Kotlin 的编译速度稍稍慢于 Java，以及 IntelliJ IDE 的智能提示反应有点缓慢，不算严重而且比 Scala 快多了。（<em>修改：Kotlin 1.0 开始编译速度有了明显提升</em>）</li>
+<li>   Kotlin 有一个 Eclipse 插件，但是很明显没有 IntelliJ 的好用。</li>
+<li>   Kotlin 在某些方面比 Java 要严格。它不会自动将 Int 转换为 Long 类型，需要开发者显示的转换。这是因为 Kotlin 关注正确性和试图解决《Java Puzzlers》一书中提出的问题。JetBrains 声称他们已经搞定一半了。</li>
+<li>   Kotlin 基于 Java 6，因此会受到它的局限。Kotlin 与 C# 在很多领域都很相似甚至比 C# 做得更好，但是它缺少一些功能，例如 Java 平台尚未支持的值类型。</li>
+</ul>
+<hr>
+<h3 id="为什么应该开始考虑使用-JVM"><a href="#为什么应该开始考虑使用-JVM" class="headerlink" title="为什么应该开始考虑使用 JVM"></a>为什么应该开始考虑使用 JVM</h3><p>最近一段时间我遇到了很多使用动态脚本语言（JavaScript 或者 Go —— 译者注：Go 应该是静态编译型语言）的创业公司。<br>我在 Bitcoin Space 工作的时候，使用动态语言是非常痛苦的事情。在这些语言里没有安全性的类型，这已经导致了<a target="_blank" rel="noopener" href="https://medium.com/@octskyward/type-safety-and-rngs-40e3ec71ab3a">巨大的货币损失</a>。Go 比较少出错，但是在基础层面上给人的体验依然很差，比如说缺少好的调试工具，快速 GC 机制，稳健的管理器以及可靠的分析工具。<br>过去 15 年或者更长时间里，Java 变得越来越健壮，越来越冗长，甚至有过度设计的迹象，这些变化很大程度上源于它的声誉。企业级 Java 类的名字 <a target="_blank" rel="noopener" href="http://docs.spring.io/autorepo/docs/spring/3.2.3.RELEASE/javadoc-api/org/springframework/web/servlet/mvc/method/annotation/PathVariableMapMethodArgumentResolver.html">PathVariableMapMethodArgumentResolver</a> 就是例证。在很长一段时间里我没有考虑 JVM，我确信这种环境并不适合我。</p>
+<p>最终我因为 Android 被迫回到 Java，发现 Java 的开发环境已经改变了。虽然 XML 仍然不合时宜的频繁出现在各种场合，但是一些基础功能十分完善，令人印象深刻。 IntelliJ 是比 Eclipse 更快并且更智能的 IDE。Maven 一出现就得到了迅速的发展，拥有许多原本我想要其它构建/依赖系统增加的功能。较新的 Web 框架像 Ninja 和 Play 从类似 Ruby on Rails 的框架中学到了轻量简洁。有大量的库可供使用。硬件性能变得更高以及 JVM 变得更有效率，等等转变。</p>
+<p>没有真正改变的是语言本身，Java 代码写起来依然是令人不快的冗长。</p>
+<p>现在有了 Kotlin，完全无需承受离开 Java 现有的生态系统的疼苦。你可以编写更富有表现力的代码，但是却比脚本语言更简洁，同时拥有更好的性能和更少的错误。</p>
+<p>如果你喜欢 JavaScript，可以尝试 Kotlin 的 JS 后端，或者在 <a target="_blank" rel="noopener" href="http://winterbe.com/posts/2014/04/05/java8-nashorn-tutorial/">Nashorn JS</a> 引擎里运行你现有的代码。</p>
+<p>最后，如果你喜欢 Go 语言是因为它可以编译独立运行的程序，那么试试 javapackager 工具。Kotlin 在本地为每个平台创建了捆绑包，这意味着在 linux 上不需要 JRE 的依赖就可以独立自主的获取 DEBs（linux 的安装包）或者压缩包。当然，它拆包之后不是单个文件而是单个目录，从部署的角度来看并不难操作。</p>
+<p>简而言之：如果你之前因为看 Java 不顺眼而忽略了 JVM 的生态系统，那么你应该借着 Kotlin 这门新语言进入这个世界瞧瞧。</p>
+<h3 id="译文更新历史"><a href="#译文更新历史" class="headerlink" title="译文更新历史"></a>译文更新历史</h3><ul>
+<li>2015 年 11 月 08 日 - 初稿</li>
+<li>2015 年 12 月 11 日 - 将段落 “<a href="#%E7%9B%AE%E5%89%8D%E5%AD%98%E5%9C%A8%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%9F">目前存在哪些问题</a>” 末尾的 value types 翻译改为“值类型”</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>DemoJameson
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.demojameson.com/2015/11/08/why-kotlin/" title="[译] 为什么 Kotlin 是我下一门要使用的语言">https://www.demojameson.com/2015/11/08/why-kotlin/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Android/" rel="tag"># Android</a>
+              <a href="/tags/Kotlin/" rel="tag"># Kotlin</a>
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/JVM/" rel="tag"># JVM</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2015/08/09/publish-ghost-blog/" rel="prev" title="在 OpenShift 上免费搭建 Ghost 博客的过程">
+      <i class="fa fa-chevron-left"></i> 在 OpenShift 上免费搭建 Ghost 博客的过程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2015/11/26/about-hexo/" rel="next" title="搭建使用 Hexo 的些许经验">
+      搭建使用 Hexo 的些许经验 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Kotlin-%E6%98%AF%E4%BC%98%E7%A7%80%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">为什么说 Kotlin 是优秀的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E5%9C%A8%E5%B0%B1%E6%9D%A5%E8%AF%95%E7%94%A8%E4%B8%80%E4%B8%8B%EF%BC%81"><span class="nav-number">3.</span> <span class="nav-text">现在就来试用一下！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%94%A8%E4%B8%80%E4%B8%8B%E5%90%A7"><span class="nav-number">3.1.</span> <span class="nav-text">在线试用一下吧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%89%8D%E5%AD%98%E5%9C%A8%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">目前存在哪些问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E8%AF%A5%E5%BC%80%E5%A7%8B%E8%80%83%E8%99%91%E4%BD%BF%E7%94%A8-JVM"><span class="nav-number">5.</span> <span class="nav-text">为什么应该开始考虑使用 JVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%91%E6%96%87%E6%9B%B4%E6%96%B0%E5%8E%86%E5%8F%B2"><span class="nav-number">6.</span> <span class="nav-text">译文更新历史</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="DemoJameson"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">DemoJameson</p>
+  <div class="site-description" itemprop="description">一枚普通的游戏玩家兼程序员</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/demojameson" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;demojameson" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/21222" title="B 站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;21222" rel="noopener" target="_blank"><i class="fa fa-tv fa-fw"></i>B 站</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备19151874号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DemoJameson</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5da6e60de5263c3f" async="async"></script>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
+      apikey    : 'ZZaxq6dfjxnb7KCheqS8FtRecoMRToXqteIeESSSmJN85T2ewtgEwECHNMtfDIo6',
+      shortname : 'demojameson',
+      url       : "https://www.demojameson.com/2015/11/08/why-kotlin/",
+      identifier: "2015/11/08/why-kotlin/",
+      title     : "[译] 为什么 Kotlin 是我下一门要使用的语言",
+    });
+  }, window.DisqusJS);
+});
+</script>
+
+</body>
+</html>

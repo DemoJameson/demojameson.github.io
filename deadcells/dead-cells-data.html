@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <!-- The jQuery library is a prerequisite for all jqSuite products -->
+  <script type="text/ecmascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/ecmascript" src="js/jquery.mark.min.js"></script>
+
+  <!-- This is the Javascript file of jqGrid -->
+  <script type="text/ecmascript" src="js/jquery.jqGrid.min.js"></script>
+
+  <!-- This is the localization file of the grid controlling messages, labels, etc. -->
+  <!-- We support more than 40 localizations -->
+  <script type="text/ecmascript" src="js/grid.locale-en.js"></script>
+
+  <!-- A link to a jQuery UI ThemeRoller theme, more than 22 built-in and many more custom -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui.min.css"/>
+
+  <!-- The link to the CSS that the grid needs -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css"/>
+
+  <link rel="stylesheet" type="text/css" href="css/header.css"/>
+
+  <meta charset="utf-8"/>
+  <title>Dead Cells Data</title>
+
+</head>
+<style type="text/css">
+  /*内容过长自动换行*/
+  .ui-jqgrid tr.jqgrow td {
+    white-space: normal !important;
+  }
+
+  /*@formatter:off*/
+    /*适合像素图片的设置*/
+    .icon {
+        image-rendering: optimizeSpeed; /* Older versions of FF          */
+        image-rendering: -moz-crisp-edges; /* FF 6.0+                       */
+        image-rendering: -webkit-optimize-contrast; /* Safari                        */
+        image-rendering: -o-crisp-edges; /* OS X & Windows Opera (12.02+) */
+        image-rendering: pixelated; /* Awesome future-browsers       */
+        -ms-interpolation-mode: nearest-neighbor; /* IE                            */
+    }
+
+    /*@formatter:on*/
+
+  #cardIcons {
+    display: none;
+  }
+
+  .ui-jqgrid-bdiv {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    max-height: 600px !important;
+  }
+
+  .zero-height {
+    height: 0;
+  }
+
+  .ui-jqgrid-title {
+    font-size: large;
+    padding: 10px;
+  }
+
+  br {
+    display: block;
+    margin: 5px 0;
+    content: " ";
+    line-height: 22px;
+  }
+
+  mark {
+    background: rgb(63, 81, 181);
+    color: white;
+  }
+
+  /* Start by setting display:none to make this hidden.
+ Then we position it in relation to the viewport window
+ with position:fixed. Width, height, top and left speak
+ for themselves. Background we set to 80% white with
+ our animation centered, and no-repeating */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .8) url('image/loading.gif') 50% 50% no-repeat;
+  }
+
+  /* When the body has the loading class, we turn
+     the scrollbar off with overflow:hidden */
+  body.loading {
+    overflow: hidden;
+  }
+
+  /* Anytime the body has the loading class, our
+     modal element will be visible */
+  body.loading .modal {
+    display: block;
+  }
+
+  .md-container {
+    background-color: #fcfcfc;
+  }
+
+  div[id^='gbox_jqGrid'] {
+    margin-bottom: 2rem !important;
+  }
+</style>
+<body>
+<header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          <a href="http://store.steampowered.com/app/588650/Dead_Cells/">Dead Cells Cheat Sheet</a>
+          <span class="md-header-nav__parent">version: 2017-12-22</span>
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+
+        <label class="md-icon md-icon--search md-header-nav__button" for="search_cells"></label>
+
+        <div class="md-search">
+          <label class="md-search__overlay" for="search_cells"></label>
+          <div class="md-search__inner">
+            <form class="md-search__form" name="search">
+              <input id="search_cells" type="search" class="md-search__input" name="query" required=""
+                     placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off"
+                     spellcheck="false">
+              <label class="md-icon md-search__icon" for="search_cells"></label>
+              <button type="reset" class="md-icon md-search__icon">close</button>
+            </form>
+            <div class="md-search__output">
+              <div class="md-search__scrollwrap">
+                <div class="md-search-result">
+                  <div class="md-search-result__meta">
+                    Type to start searching
+                  </div>
+                  <ol class="md-search-result__list"></ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="md-container">
+  <main class="md-main">
+    <div class="md-main__inner md-grid">
+      <table id="jqGridItem"></table>
+      <div id="jqGridPagerItem" class="pager"></div>
+      <table id="jqGridMob"></table>
+      <div id="jqGridPagerMob"></div>
+      <table id="jqGridLevel"></table>
+      <div id="jqGridPagerLevel"></div>
+      <table id="jqGridAffix"></table>
+      <div id="jqGridPagerAffix"></div>
+    </div>
+  </main>
+</div>
+<img id="cardIcons" src="resource/cardIcons.png"/>
+<div class="modal"><!-- Loading 界面 --></div>
+<script type="text/ecmascript">
+    // 显示 Loading 界面
+    var $body = $("body");
+    $body.addClass('loading');
+
+    // 语言参数，通过 url 传入，默认英文
+    var lang = getParameterByName('lang') || "en";
+
+    window.searchText = function (text) {
+        if (text) {
+            text = decodeURIComponent(text);
+        }
+        var $searchCells = $('#search_cells');
+        if ($searchCells.val() === text) {
+            $searchCells.val('').keyup();
+        } else {
+            $searchCells.val(text).keyup();
+        }
+    };
+
+    $(window).on("load", function () {
+        $.getJSON("resource/data_min.cdb", function (jsonData) {
+            // window.jsonData = jsonData;
+            var jsonItems = jsonData.sheets[1].lines;
+            var jsonMobs = jsonData.sheets[2].lines;
+            var jsonAffixs = jsonData.sheets[8].lines;
+            var jsonLevels = jsonData.sheets[10].lines;
+            var jsonBludeprintDrops = jsonData.sheets[39].lines;
+
+            // 预处理：去除无用数据和排序
+            jsonLevels = jsonLevels.filter(function (level) {
+                return level.name && !/debug/i.test(level.name) && level.biome !== 'SecretRooms'
+            }).sort(function (first, second) {
+                if (first.mobTier - second.mobTier === 0) {
+                    return first.lootLevel - second.lootLevel;
+                } else {
+                    return first.mobTier - second.mobTier;
+                }
+            });
+
+            // 预处理：将 group 分组序号改为有意义的文字
+            var hasGroups = [1, 2, 8];
+            jsonData.sheets.filter(function (_, index) {
+                return hasGroups.indexOf(index) >= 0;
+            }).forEach(function (sheet) {
+                sheet.lines.forEach(function (line) {
+                    line.group = sheet.props.separatorTitles[line.group];
+                });
+            });
+
+            function linkify(text) {
+                if (!text) {
+                    return "";
+                }
+
+                var encodeText = encodeURIComponent(text.replace(/(['"])/g, "\\$1"));
+                return '<a onclick="searchText(\'' + encodeText + '\')" href="#' + encodeText + '">' + text + '</a>';
+            }
+
+            function linkifyTranslation(cellValue) {
+                return linkify(translate(cellValue));
+            }
+
+            var AffixFormatter = {
+                forbiddenAffixes: function (cellValue, options, rowObject) {
+                    return cellValue.map(function (elem) {
+                        return linkify(elem.affix);
+                    }).join("<br/>");
+                },
+                forbiddenItem: function (cellValue, options, rowObject) {
+                    return cellValue.map(function (elem) {
+                        return linkifyTranslation(findItemName(elem.item));
+                    }).join("<br/>");
+                },
+                itemRestriction: function (cellValue, options, rowObject) {
+                    if (cellValue === undefined) {
+                        cellValue = 'undefined';
+                    }
+                    var restrictionType = {
+                        0: {
+                            'en': 'weapon',
+                            'zh': '武器'
+                        },
+                        1: {
+                            'en': 'skill',
+                            'zh': '技能'
+                        },
+                        2: {
+                            'en': 'weapon,skill',
+                            'zh': '武器,技能'
+                        },
+                        3: {
+                            'en': 'amulet',
+                            'zh': '护符'
+                        },
+                        'undefined': {
+                            'en': 'all items',
+                            'zh': '任意道具'
+                        }
+                    };
+
+                    return restrictionType[cellValue][lang].split(',').map(function (text) {
+                        return linkify(text);
+                    }).join('<br/>');
+                }
+            };
+
+            // 搜索
+            var searchObjs = [];
+            var searchString = '';
+            var lastSearchString = '';
+            var $searchCells = $('#search_cells');
+            $searchCells.on('search', function () {
+                if ($searchCells.val() === "") {
+                    $searchCells.keyup();
+                }
+            });
+            $searchCells.on('keyup', function () {
+                lastSearchString = searchString;
+                searchString = $(this).val().toLowerCase();
+
+                // 重复点击链接取消搜索
+                if (searchString === "") {
+                    setTimeout(function () {
+                        location.hash = "";
+                    }, 500)
+                }
+
+                if (searchString === lastSearchString) {
+                    return;
+                }
+
+                if (searchString.length >= 2) {
+                    $('td').unmark().mark(searchString, {
+                        separateWordSearch: false
+                    });
+                } else {
+                    $('td').unmark();
+                }
+                searchObjs.forEach(function (item) {
+                    var gridId = item.gridId;
+                    var gridData = item.gridData;
+                    var rowIds = item.rowIds;
+                    // You can't search unless grid values have been loaded
+                    if (gridData && rowIds) {
+                        var showTable = false;
+                        $.each(gridData, function (id, row) {
+                            var show = false;
+                            $.each(row, function (id, cell) {
+                                if (cell.toLowerCase().indexOf(searchString) >= 0) {
+                                    show = true;
+                                    showTable = true;
+                                    return false;
+                                }
+                            });
+
+                            var queryString = '#' + gridId + ' #' + rowIds[id].id;
+                            document.querySelectorAll(queryString).forEach(function (element) {
+                                if (show) {
+                                    $(element).show();
+                                } else {
+                                    $(element).hide();
+                                }
+                            });
+                        });
+
+                        $('#gbox_' + gridId).toggle(showTable);
+                    }
+                });
+            });
+
+            function whenComplete() {
+                var gridId = this.id;
+                var gridData = $(this).jqGrid('getRowData');
+                var rowIds;
+                for (var key in gridData[0]) {
+                    rowIds = $(this).jqGrid('getCol', key, true);
+                    break;
+                }
+                searchObjs.push({
+                    'gridId': gridId,
+                    'gridData': gridData,
+                    'rowIds': rowIds
+                });
+
+                if (searchObjs.length === $('table[id]').length) {
+                    searchHash();
+                    $body.removeClass('loading');
+                }
+            }
+
+            // 页面加载完成时自动搜索网址中 hash 的内容
+            function searchHash() {
+                var hash = location.hash;
+                if (hash) {
+                    $('#search_cells').val(decodeURIComponent(hash.slice(1))).keyup();
+                }
+            }
+
+            // 道具表格
+            $("#jqGridItem").jqGrid({
+                datatype: 'local',
+                data: jsonItems,
+                cmTemplate: {
+                    width: 65
+                },
+                colModel: [
+//                    {name: 'id', hidden: true},
+                    {name: 'group', width: 80},
+                    {name: 'icon', formatter: showIcon, align: 'center'},
+                    {name: 'name', formatter: linkifyTranslation},
+                    {name: 'gameplayDesc', formatter: translateDesc, width: 300},
+                    {name: 'blueprint', formatter: findBlueprint, width: 100},
+                    {name: 'cellCost', align: 'right'},
+                    {name: 'tier', formatter:findTier},
+                    {name: 'moneyCost', align: 'right'},
+                    {name: 'droppable', align: 'center'},
+                    {name: 'hasLevels', align: 'center'},
+                    {name: 'castCD', align: 'center'},
+                    {name: 'tags', formatter: formatTags, width: 100}
+                ],
+                caption: 'Item',
+                viewrecords: true,
+                height: 'auto',
+                width: 1200,
+                rownumbers: true,
+                rowNum: 9999,
+                pager: "#jqGridPagerItem",
+                loadComplete: whenComplete
+            });
+
+            // 怪物表格
+            $("#jqGridMob").jqGrid({
+                datatype: 'local',
+                data: jsonMobs,
+                cmTemplate: {
+                    width: 65
+                },
+                colModel: [
+                    {name: 'group'},
+                    {name: 'name', formatter: linkifyTranslation},
+                    {name: 'life', align: 'right'},
+                    {name: 'canBeElite', align: 'center'},
+                    {name: 'blueprints', formatter: formatBlueprints, width: 200},
+                    {name: 'level', formatter: findLevel, width: 600}
+                ],
+                caption: 'Monster',
+                viewrecords: true,
+                height: 'auto',
+                width: 1200,
+                rownumbers: true,
+                rowNum: 9999,
+                pager: "#jqGridPagerMob",
+                loadComplete: whenComplete
+            });
+
+            // 关卡表格
+            $("#jqGridLevel").jqGrid({
+                datatype: 'local',
+                data: jsonLevels,
+                cmTemplate: {
+                    width: 65
+                },
+                colModel: [
+                    {name: 'name', formatter: linkifyTranslation, width: 80},
+                    {name: 'mobTier', align: 'center'},
+                    {name: 'lootLevel', align: 'center'},
+                    {name: 'eliteWanderChance', formatter: formatChance, align: 'center'},
+                    {name: 'eliteRoomChance', formatter: formatChance, align: 'center'},
+                    {name: 'mobs', formatter: formatMobs, width: 300}
+                ],
+                caption: 'Level',
+                viewrecords: true,
+                height: 'auto',
+                width: 1200,
+                rownumbers: true,
+                rowNum: 9999,
+                pager: "#jqGridPagerLevel",
+                loadComplete: whenComplete
+            });
+
+            // 词缀表格
+            $("#jqGridAffix").jqGrid({
+                datatype: 'local',
+                data: jsonAffixs,
+                cmTemplate: {
+                    width: 65
+                },
+                colModel: [
+                    {name: 'group'},
+                    {name: 'id', formatter: linkifyTranslation},
+                    {name: 'desc', formatter: formatAffixDesc, width: 200},
+                    {name: 'chance', formatter: formatAffixChance, hidden: false},
+                    {name: 'itemRestriction', formatter: AffixFormatter.itemRestriction, hidden: false},
+                    {name: 'requiredTags', formatter: formatTags},
+                    {name: 'forbiddenTags', formatter: formatTags},
+                    {name: 'forbiddenAffixes', formatter: AffixFormatter.forbiddenAffixes},
+                    {name: 'forbiddenItem', formatter: AffixFormatter.forbiddenItem}
+                ],
+                caption: 'Affix',
+                viewrecords: true,
+                height: 'auto',
+                width: 1200,
+                rownumbers: true,
+                rowNum: 9999,
+                pager: "#jqGridPagerAffix",
+                loadComplete: whenComplete
+            });
+
+            function showIcon(cellValue, options, rowObject) {
+                var cardIconsImage = document.querySelector("#cardIcons");
+                var size = cellValue.size;
+                var displaySize = size * 2;
+
+                var canvas = $('<canvas width="' + size + '" height="' + size + '"></canvas>')[0],
+                    ctx = canvas.getContext('2d');
+                ctx.drawImage(cardIconsImage, cellValue.x * size, cellValue.y * size, size, size, 0, 0, size, size);
+                return '<img style="width:' + displaySize + 'px;" class="icon" src="' + canvas.toDataURL() + '"/>';
+            }
+
+            var langContentEng;
+            var langContentZh;
+
+            // window.en = langContentEng;
+            // window.zh = langContentZh;
+
+            // 读取英文中文文本
+            function translate(text) {
+                function loadLang(lang) {
+                    var result = {};
+                    jQuery.ajax({
+                        url: 'resource/lang/main.' + lang + '.po',
+                        success: function (resultText) {
+                            var langs = resultText.split(/\n\n/).slice(1);
+                            langs.forEach(function (lang) {
+                                var key;
+                                var keyMatchSingleLine = lang.match(/^msgid "(.+)"$/m);
+                                var keyMatchMultiLine = lang.match(/^msgid ""\n([\s\S]+)\nmsgstr/);
+                                if (keyMatchSingleLine) {
+                                    key = keyMatchSingleLine[1];
+                                } else if (keyMatchMultiLine) {
+                                    key = keyMatchMultiLine[1].replace(/^"|"$|\n/mg, "");
+                                }
+
+                                var value;
+                                var valueMatchSingleLine = lang.match(/^msgstr "(.+)"$/m);
+                                var valueMatchMultiLine = lang.match(/msgstr ""\n([\s\S]+)/);
+                                if (valueMatchSingleLine) {
+                                    value = valueMatchSingleLine[1];
+                                } else if (valueMatchMultiLine) {
+                                    value = valueMatchMultiLine[1].replace(/^"|"$|\n/mg, "");
+                                }
+
+                                if (key && value) {
+                                    result[key.replace(/^\s+|\s+$/g, '')] = value.replace(/^\s+|\s+$/g, '');
+                                }
+                            });
+                        },
+                        async: false
+                    });
+                    return result;
+                }
+
+                if (!text) {
+                    return "";
+                }
+
+                if (!langContentEng) {
+                    langContentEng = loadLang('en');
+                }
+
+                if (!langContentZh && lang === 'zh') {
+                    langContentZh = loadLang('zh');
+                }
+
+                text = text.replace(/^\s+|\s+$/g, '');
+
+                if (lang === 'en') {
+                    return langContentEng[text] || text;
+                } else if (lang === 'zh') {
+                    var translatedEn = langContentEng[text];
+                    var translatedZh = langContentZh[text];
+
+                    if (translatedZh) {
+                        text  = translatedZh;
+                    } else if (translatedEn) {
+                        text = langContentZh[translatedEn] || translatedEn;
+                    }
+
+                    return text;
+                }
+            }
+
+            function replaceProps(translateStr, rowObject) {
+                translateStr = translateStr.replace(/\*([^*]+)\*/g, '<b>$1</b>');
+
+                var matchResult = translateStr.match(/::.+?::/g);
+                if (!matchResult) {
+                    return translateStr;
+                }
+
+                matchResult.forEach(function (prop) {
+                    var propName = prop.replace(/::[^a-z]?(.+)::/g, '$1');
+                    var percent
+                    if (propName === 'prct' && rowObject.props[propName] > 0) {
+                        percent = (rowObject.props[propName] * 100).toFixed(0);
+                        translateStr = translateStr.replace(prop, percent || '???');
+                    } else {
+                        translateStr = translateStr.replace(prop, rowObject.props[propName] || '???');
+                    }
+                });
+
+                return translateStr;
+            }
+
+            function translateDesc(cellValue, options, rowObject) {
+                return replaceProps(translate(cellValue), rowObject) + translate(rowObject.ambiantDesc);
+            }
+
+            function formatTags(cellValue) {
+                return cellValue.map(function (elem) {
+                    return linkify(elem.tag);
+                }).join("<br/>");
+            }
+
+            function findItemName(itemId) {
+                var items = jsonItems.filter(function (item) {
+                    return item.id === itemId;
+                });
+
+                if (items && items.length > 0) {
+                    return items[0].name;
+                } else {
+                    return itemId;
+                }
+            }
+
+            function findMobName(mobId) {
+                var mobs = jsonMobs.filter(function (mob) {
+                    return mob.id === mobId;
+                });
+
+                if (mobs && mobs.length > 0) {
+                    return mobs[0].name;
+                } else {
+                    return mobId;
+                }
+            }
+
+            function formatBlueprints(cellValue) {
+                return cellValue.map(function (blueprint) {
+                    return linkifyTranslation(findItemName(blueprint.item)) + ': ' + formatChance(findBlueprintChance(blueprint.rarity));
+                }).join("<br/>");
+            }
+
+            function formatMobs(cellValue, options, rowObject) {
+                return cellValue.map(function (elem) {
+                    return linkifyTranslation(findMobName(elem.mob));
+                }).join("<br/>");
+            }
+
+            function findBlueprint(cellValue, options, rowObject) {
+                var result = jsonMobs.filter(function (monster) {
+                    return monster.blueprints.some(function (blueprint) {
+                        if (blueprint.item === rowObject.id) {
+                            monster.blueprintChance = formatChance(findBlueprintChance(blueprint.rarity));
+                        }
+                        return blueprint.item === rowObject.id;
+                    })
+                }).map(function (monster) {
+                    return linkify(translate(monster.name)) + ': ' + monster.blueprintChance;
+                });
+
+                return result.join("<br/>");
+            }
+
+            function findTier(cellValue, options, rowObject) {
+                var result = linkify(rowObject.tier1);
+                if (rowObject.tier2) {
+                    result += '\n' + linkify(rowObject.tier2);
+                }
+                return result;
+            }
+
+            // 根据单词查询具体概率
+            function findBlueprintChance(rarity) {
+                var result = jsonBludeprintDrops.filter(function (blueprintDrop) {
+                    return blueprintDrop.id === rarity;
+                });
+                if (result.length > 0) {
+                    return result[0].chance;
+                }
+            }
+
+            function formatChance(chance) {
+                return (chance * 100).toFixed(2) * 100 / 100 + "%";
+            }
+
+            function formatAffixChance(chance) {
+                return chance + "%";
+            }
+
+            function formatAffixDesc(cellValue, options, rowObject) {
+                return replaceProps(translate(cellValue), rowObject);
+            }
+
+            function findLevel(cellValue, options, rowObject) {
+                var result = jsonLevels.filter(function (level) {
+                    return level.mobs.some(function (mob) {
+                        return mob.mob === rowObject.id;
+                    })
+                }).sort(function (first, second) {
+                    return first.lootLevel - second.lootLevel;
+                })
+                    .map(function (level) {
+                        return linkifyTranslation(level.name);
+                    });
+
+                return result.join("<br/>");
+            }
+        });
+    });
+
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+</script>
+</body>
+</html>
