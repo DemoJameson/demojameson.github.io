@@ -1,0 +1,164 @@
+# NexT 主题配置（Alternate Theme Config）
+# 由 Hexo 自动加载根目录 _config.next.yml 并合并进 theme_config
+# 原 source/_data/next.yml 机制在 NexT 8 已废弃，不再被合并
+
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+favicon:
+  small: /uploads/favicon-16x16.png
+  medium: /uploads/favicon-32x32.png
+  apple_touch_icon: /uploads/apple-touch-icon.png
+  safari_pinned_tab: /uploads/safari-pinned-tab.svg
+  #android_manifest: /manifest.json
+
+footer:
+  # Specify the year when the site was setup.
+  since: 2015
+
+  # Beian ICP and gongan information for Chinese users.
+  beian:
+    enable: true
+    icp: 粤ICP备2026145805号-1
+    # The digit in the num of gongan beian.
+    gongan_id:
+    # The full num of gongan beian.
+    gongan_num:
+    # The icon for gongan beian.
+    gongan_icon_url:
+
+# ---------------------------------------------------------------
+# SEO Settings
+# ---------------------------------------------------------------
+
+# Google Webmaster tools verification setting
+google_site_verification: PaxlLPbUKdotLhqUxwiOUCOaKVrScE_3A0yub5zGWZQ
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# Usage: `Key: /link/ || icon`
+menu:
+  home: / || fa fa-home
+  #about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+  #schedule: /schedule/ || fa fa-calendar
+  #commonweal: /404/ || fa fa-heartbeat
+
+# ---------------------------------------------------------------
+# Scheme Settings
+# ---------------------------------------------------------------
+
+# Schemes
+#scheme: Muse
+#scheme: Mist
+#scheme: Pisces
+scheme: Gemini
+
+# Dark Mode
+darkmode: true
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+
+# Social Links.
+# Usage: `Key: permalink || icon`
+social:
+  GitHub: https://github.com/demojameson || fab fa-github
+  B 站: https://space.bilibili.com/21222 || fa fa-tv
+  RSS: /atom.xml || fa fa-rss
+
+# Sidebar Avatar
+avatar:
+  # in site directory(source/uploads): /uploads/avatar.png
+  url: /uploads/avatar.png
+  # If true, the avatar will be displayed in circle.
+  rounded: true
+  # If true, the avatar will be rotated with the cursor.
+  rotated: false
+
+# Creative Commons 4.0 International License.
+# Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
+creative_commons:
+  license: by-nc-sa
+  sidebar: true
+  post: true
+  language: deed.zh
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+codeblock:
+  # Code Highlight theme, names refer to highlight.js styles
+  # 原先 NexT 7.8 的 `highlight_theme: night`（Tomorrow Night）在 highlight.js 11 中已无同名样式，
+  # 改用同色系的 tomorrow-night-bright，并保持 light/dark 一致以还原原来的深色代码块外观
+  theme:
+    light: tomorrow-night-bright
+    dark: tomorrow-night-bright
+  # Add copy button on codeblock
+  copy_button:
+    enable: true
+    # Available values: default | flat | mac
+    style: default
+
+# Pangu Support
+pangu: true
+
+# FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
+fancybox: true
+
+# Local search
+local_search:
+  enable: true
+
+# CDN provider for third-party plugins
+# NexT 8 默认 cdnjs（Cloudflare），对国内访问不友好；原站点这些库是本地自托管的，
+# 这里改用 jsDelivr 以保证国内可用性。若想恢复全自托管，改装 @next-theme/plugins 并把 plugins 设为 local
+vendors:
+  # The CDN provider of NexT internal scripts.
+  internal: local
+  # The default CDN provider of third-party plugins.
+  plugins: jsdelivr
+
+# ---------------------------------------------------------------
+# Statistics and Analytics
+# ---------------------------------------------------------------
+
+# Baidu Analytics
+baidu_analytics: aca76279b37859f804fdc464e85add45
+
+# Show Views/Visitors of the website/page with busuanzi.
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: fa fa-user
+  total_views: true
+  total_views_icon: fa fa-eye
+  post_views: true
+  post_views_icon: far fa-eye
+
+# ---------------------------------------------------------------
+# Comments Settings
+# ---------------------------------------------------------------
+
+# AddToAny Share. See: https://www.addtoany.com
+# NexT 7.8 用的 AddThis（add_this_id）在 NexT 8 已移除，改为 AddToAny
+addtoany:
+  enable: true
+  buttons: [facebook, twitter]
+
+# DisqusJS
+disqusjs:
+  enable: true
+  # API Endpoint of Disqus API (https://disqus.com/api/docs/).
+  # Leave api empty if you are able to connect to Disqus API.
+  # Otherwise you need a reverse proxy for Disqus API.
+  api: https://disqus.skk.moe/disqus/
+  apikey: ZZaxq6dfjxnb7KCheqS8FtRecoMRToXqteIeESSSmJN85T2ewtgEwECHNMtfDIo6
+  shortname: demojameson
